@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+import { Routes, Route } from "react-router-dom";
+import Navbar from './Component/Navbar/Navbar';
+import Home from './Component/Pages/Home/Home';
+import Post from './Component/Pages/Scooter/Post/Post';
+import Scooter from './Component/Pages/Scooter/Scooter';
+import ScooterNav from './Component/Pages/Scooter/ScooterNav';
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Routes>
+        <Route path="/" element={<Navbar />} >
+          <Route index element={<Home />} />
+          <Route path="/scooter" element={<ScooterNav />} >
+            <Route path="" element={<Scooter />} />
+            <Route path=":post" element={<Post />} />
+          </Route>
+        </Route>
+
+      </Routes>
+
+    </>
+  )
 }
 
-export default App;
+export default App

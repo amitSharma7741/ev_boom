@@ -1,0 +1,63 @@
+#backTopSpeed {
+    background: hsla(139, 70%, 75%, 1);
+
+background: linear-gradient(90deg, hsla(139, 70%, 75%, 1) 0%, hsla(63, 90%, 76%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(139, 70%, 75%, 1) 0%, hsla(63, 90%, 76%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(139, 70%, 75%, 1) 0%, hsla(63, 90%, 76%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#95ECB0", endColorstr="#F3F98A", GradientType=1 );
+}
+
+#backRange {
+    background: hsla(18, 76%, 85%, 1);
+
+    background: linear-gradient(90deg, hsla(18, 76%, 85%, 1) 0%, hsla(203, 69%, 84%, 1) 100%);
+    
+    background: -moz-linear-gradient(90deg, hsla(18, 76%, 85%, 1) 0%, hsla(203, 69%, 84%, 1) 100%);
+    
+    background: -webkit-linear-gradient(90deg, hsla(18, 76%, 85%, 1) 0%, hsla(203, 69%, 84%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F6CFBE", endColorstr="#B9DCF2", GradientType=1 );
+}
+
+#backBattery {
+    background: hsla(29, 92%, 70%, 1);
+
+    background: linear-gradient(90deg, hsla(29, 92%, 70%, 1) 0%, hsla(0, 87%, 73%, 1) 100%);
+    
+    background: -moz-linear-gradient(90deg, hsla(29, 92%, 70%, 1) 0%, hsla(0, 87%, 73%, 1) 100%);
+    
+    background: -webkit-linear-gradient(90deg, hsla(29, 92%, 70%, 1) 0%, hsla(0, 87%, 73%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F9B16E", endColorstr="#F68080", GradientType=1 );
+}
+
+#backCharging {
+    background: hsla(298, 68%, 90%, 1);
+
+    background: linear-gradient(90deg, hsla(298, 68%, 90%, 1) 0%, hsla(30, 82%, 91%, 1) 100%);
+    
+    background: -moz-linear-gradient(90deg, hsla(298, 68%, 90%, 1) 0%, hsla(30, 82%, 91%, 1) 100%);
+    
+    background: -webkit-linear-gradient(90deg, hsla(298, 68%, 90%, 1) 0%, hsla(30, 82%, 91%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F6D5F7", endColorstr="#FBE9D7", GradientType=1 );
+}
+
+/* if screen size between 450 to 750  */
+@media screen and (min-width: 450px) and (max-width: 750px) {
+    p{
+        font-size:  14px;
+     }
+}
+@media (max-width: 450px) {
+    p {
+        font-size:  10px;
+    }
+    .box {
+        height :  70px;
+    }
+}
+ 
