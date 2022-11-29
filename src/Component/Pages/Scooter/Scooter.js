@@ -3,6 +3,7 @@ import AllScooter from './Component/AllScooter'
 import Camparsion from './Component/Camparsion'
 import { Outlet } from 'react-router-dom'
 import ThreeBestScooter from './Component/ThreeBestScooter'
+import HorrizontalImageScooters from './Component/HorrizontalImageScooters'
 // import "./Post/Post.css"
 const Scooter = () => {
   return (
@@ -26,12 +27,12 @@ const Scooter = () => {
       <section className="section pt-0 position-relative pull-top" style={{ marginTop: "-100px" }}>
         <div className="container">
           <div className="rounded shadow dataContainer bg-white">
-          <h3 className='text-center'>
+            <h3 className='text-center'>
               Three best scooters in india
             </h3>
             <div className="row d-flex justify-content-center ">
 
-              <ThreeBestScooter/>
+              <ThreeBestScooter />
               {/* add three top scooter card */}
               {/* <div className="col-lg-4 col-md-6 d-flex mt-3 justify-content-center   text-center">
                 <div className="card" style={{ width: '18rem' }}>
@@ -66,7 +67,7 @@ const Scooter = () => {
                 </div>
 
               </div> */}
-             {/*  <div className="col-lg-4 col-md-6 mt-5 mt-md-0 text-center">
+              {/*  <div className="col-lg-4 col-md-6 mt-5 mt-md-0 text-center">
                 <i className="ti-paint-bucket text-primary h1" />
                 <h3 className="mt-4 text-capitalize h5 ">themes made easy</h3>
                 <p className="regular text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae
@@ -85,11 +86,18 @@ const Scooter = () => {
 
           {/* placed all content here */}
           <div className="mt-5">
-          <AllScooter/> </div>
-<hr/>
-{/* cmparesion */}
-<Camparsion/>
+            <AllScooter /> </div>
+          <hr />
+          {/* cmparesion */}
+          <Camparsion />
 
+
+          {/* horrizontal image gallery */}
+          <HorrizontalImageScooters />
+
+
+
+          
           {/* above spce for all content */}
         </div>
 
@@ -99,7 +107,7 @@ const Scooter = () => {
 
 
 
-   
+
 
 
 
@@ -527,7 +535,7 @@ const Scooter = () => {
           </div>
         </div>
 
-        
+
       </div>
 
     </>
