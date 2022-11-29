@@ -1,5 +1,5 @@
 import React from 'react'
-
+// import ReactPlayer from 'react-player'
 import "./VideoCarousel.css"
 
 
@@ -50,7 +50,8 @@ const VideoCarousel = () => {
                     {showData.map((item, index) => {
                         return (
                             <div className={index === 0 ? "carousel-item active" : "carousel-item"} key={item.id}>
-                                <video playsinline autoplay muted loop style={{
+                             {/*    <ReactPlayer url={item.video} playing={true} playsinline = {true} loop={true} muted={true} width="100%" height="100%" /> */}
+                                <video playsInline autoPlay muted loop style={{
                                         minHeight: "100%",
                                         minWidth: "100%"
                                     }}>
