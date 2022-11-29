@@ -5,6 +5,7 @@ import Home from './Component/Pages/Home/Home';
 import Post from './Component/Pages/Scooter/Post/Post';
 import Scooter from './Component/Pages/Scooter/Scooter';
 import ScooterNav from './Component/Pages/Scooter/ScooterNav';
+import Popup from './Component/POPUP/Popup';
 const App = () => {
   return (
     <>
@@ -18,6 +19,8 @@ const App = () => {
         </Route>
 
       </Routes>
+
+      <Popup/>
 
     </>
   )
