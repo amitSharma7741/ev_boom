@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link  } from 'react-router-dom'
+import { Link, useNavigate  } from 'react-router-dom'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import scooter from "../Databse/ScooterData.json"
 const AllScooter = () => {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
 
 
@@ -53,7 +53,9 @@ const AllScooter = () => {
                         <div className="row">
                             {item.value.map((item) => (
                                 <div className="col-lg-4 col-md-6 d-flex mt-3 justify-content-center col-6 d-md-flex align-items-md-stretch  text-center" key={item.id}>
-                                    <div className="card" style={{ width: '18rem' }}>
+                                    <div className="card" style={{ width: '18rem' }} onClick={()=>{
+                                        navigate(`/scooter/${item.path}`)
+                                    }}>
                                         <img src={item.image} className="card-img-top" alt={item.company}
                                             style={{
                                                 height: "180px"
@@ -61,7 +63,7 @@ const AllScooter = () => {
                                         <div className="card-body" style={{
                                             backgroundColor: "rgb(238, 238, 238)"
                                         }}>
-                                            <Link to={`/scooter/${item.path}`} style={{
+                                            <Link to={`/scooter/${item.path}`}  style={{
                                                 textDecoration: "none",
                                                 color: "black"
                                             }}>
@@ -69,7 +71,7 @@ const AllScooter = () => {
                                                 {item.scootername}
                                             </h5>
                                             </Link>
-                                            <p className="card-text" style={{
+                                            <div className="card-text" style={{
                                                 fontWeight: "500px"
                                             }}>
 
@@ -81,7 +83,7 @@ const AllScooter = () => {
                                                     lineHeight: "0px",
                                                     marginLeft: "5px"
                                                 }}>Estimated Price</div>
-                                            </p>
+                                            </div>
                                             <p className="card-text">
                                                 {item.oneLine}
                                             </p>
