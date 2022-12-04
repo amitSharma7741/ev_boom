@@ -46,10 +46,10 @@ const FourSpecification = (props) => {
                             overflowWrap: "break-word"
                         }} >
                             
-                            <p className='d-flex pt-4 justify-content-center'> <b>{item.name} </b></p>
+                            <p className='d-flex pt-4 justify-content-center text-black'> <b>{item.name} </b></p>
                            
                             
-                            <p className='d-flex  justify-content-center'><b>{item.value} </b></p> 
+                            <p className='d-flex  justify-content-center text-black'><b>{item.value} </b></p> 
                         </div>
 
                     </div>

@@ -1,7 +1,10 @@
 import React from 'react'
 import scooter from "../../Databse/ScooterData.json"
+// import { useMediaQuery } from 'react-responsive'
 const ImageCarousel = () => {
     const data = scooter.find((item) => item.id === 1)
+
+
 
     return (
         <>
@@ -9,6 +12,9 @@ const ImageCarousel = () => {
                 id="carouselExampleFade"
                 className="carousel slide carousel-fade"
                 data-bs-ride="carousel"
+                style={{
+                    maxHeight: "350px",
+                }}
             >
                 <div className="carousel-inner">
                     {/* <div className="carousel-item active">
