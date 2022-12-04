@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import AllScooter from './Component/AllScooter'
 import Camparsion from './Component/Camparsion'
 import { Outlet } from 'react-router-dom'
 import ThreeBestScooter from './Component/ThreeBestScooter'
 import HorrizontalImageScooters from './Component/HorrizontalImageScooters'
+import ReactGA from 'react-ga';
 // import "./Post/Post.css"
 const Scooter = () => {
+
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, [])
   return (
     <>
 

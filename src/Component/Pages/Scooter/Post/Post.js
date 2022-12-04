@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Post.css"
 import { useParams } from "react-router-dom";
 // how to import json file
@@ -10,6 +10,7 @@ import ImageCarousel from './Component/ImageCarousel'
 import blob from "./Component/SVG/scooter.svg"
 import RunningCostCalculator from './Component/RunningCostCalculator';
 import ImageGallery from './Component/ImageGallery';
+import ReactGA from 'react-ga';
 // import TryEmiCalculator from './Component/TryEmiCalculator';
 const Post = () => {
 
@@ -24,6 +25,9 @@ const Post = () => {
     const [isreadMore, setIsreadMore] = useState(true)
     const text = showData[0].shortDescription;
 
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname + window.location.search);
+      }, [])
 
 
     return (

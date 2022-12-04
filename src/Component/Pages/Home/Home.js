@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import AllScooter from '../Scooter/Component/AllScooter'
 import VideoCarousel from './Component/VideoCarousel'
 import "./Home.css"
+import ReactGA from 'react-ga';
 const Home = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, [])
+
   return (
     <>
 
