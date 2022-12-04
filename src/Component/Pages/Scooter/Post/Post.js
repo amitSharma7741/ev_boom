@@ -10,6 +10,7 @@ import ImageCarousel from './Component/ImageCarousel'
 import blob from "./Component/SVG/scooter.svg"
 import RunningCostCalculator from './Component/RunningCostCalculator';
 import ImageGallery from './Component/ImageGallery';
+// import TryEmiCalculator from './Component/TryEmiCalculator';
 const Post = () => {
 
     const { post } = useParams();
@@ -173,7 +174,7 @@ const Post = () => {
                         {/* short info */}
                         <div>
                             <h1>Info</h1>
-                            <p>
+                            <p className='text-black'>
                                 {isreadMore ? text.slice(0, 200) : text}
                             </p>
                             <button onClick={() => setIsreadMore(!isreadMore)}>{isreadMore ? "Read More" : "Read Less"}</button>
@@ -187,7 +188,7 @@ const Post = () => {
 
 
                         {/*  specification */}
-                        <div className='row'>
+                        <div className='row mt-5'>
                             <div className="col-lg-6 col-md-6 col-12">
                                 <h1>Specification</h1>
                                 <table className="table table-striped" style={{ maxWidth: "500px" }}>
@@ -232,7 +233,7 @@ const Post = () => {
 
                         <div>
                             <h1>Full Detail</h1>
-                            <p>
+                            <p className='text-black'>
                                 {isreadMore ? text.slice(0, 300) : text}
                             </p>
                             <button onClick={() => setIsreadMore(!isreadMore)}>{isreadMore ? "Read More" : "Read Less"}</button>
@@ -244,15 +245,16 @@ const Post = () => {
 
                         <RunningCostCalculator />
                         {/* similar scooter */}
-                        <SimilarScooter name = "ola-s1-pro" />
+                        <SimilarScooter name="ola-s1-pro" />
 
 
 
 
 
-<ImageGallery/>
+                        <ImageGallery />
 
-
+                        {/* try new emi calculator */}
+                        {/* <TryEmiCalculator price={showData[0].price}  /> */}
 
 
                     </div>
