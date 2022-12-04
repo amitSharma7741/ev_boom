@@ -1,18 +1,27 @@
 import React, { useEffect, useState } from 'react'
-
+// import "./CSS/RunningCostCalculator.css"
+import { useMediaQuery } from 'react-responsive'
 const RunningCostCalculator = () => {
- // eslint-disable-next-line
+
+    const isMobile = useMediaQuery({
+        // screen width is less than 768px or greater than 450px
+        query: '(max-width: 950px) and (min-width: 450px)' 
+    })
+    const isSmallMobile = useMediaQuery({
+        query: '(max-width: 450px)'
+    })
+    // eslint-disable-next-line
     const [pDistPerDay, setpDistPerDay] = useState(50)
-    const [pCostPerLtr, setpCostPerLtr] = useState(70)
+    const [pCostPerLtr, setpCostPerLtr] = useState(100)
     const [pYear, setpYear] = useState(2)
     const [pFinalCost, setpFinalCost] = useState(0)
 
 
     // for electric 
     const [eDistPerDay, seteDistPerDay] = useState(50)
-    const [eCostPerUnit, seteCostPerUnit ] = useState(10);
-    const [eYear , seteYear] = useState(2);
-    const [eFinalCost,seteFinalCost] = useState(0);
+    const [eCostPerUnit, seteCostPerUnit] = useState(10);
+    const [eYear, seteYear] = useState(2);
+    const [eFinalCost, seteFinalCost] = useState(0);
     useEffect(() => {
 
         const perYearDist = pDistPerDay * 365 * pYear;
@@ -30,22 +39,27 @@ const RunningCostCalculator = () => {
 
         seteFinalCost(electricFinalCost.toFixed(0))
 
-    }, [pDistPerDay, pCostPerLtr, pYear,eDistPerDay,eCostPerUnit,eYear ])
+    }, [pDistPerDay, pCostPerLtr, pYear, eDistPerDay, eCostPerUnit, eYear])
 
     const styles = {
         rightInput: {
             float: "right",
-            width: "4rem",
+            width: isMobile || isSmallMobile ? "2rem" : "4rem",
             height: "2rem",
             padding: "0.2rem ",
-            textAlign: "center"
+            textAlign: "center",
+            fontSize:isMobile || isSmallMobile ? "0.8rem"  : "1rem",
+        },
+        labelText: {
+            fontSize: isMobile ? "11px" : isSmallMobile ? "8px" : "14px",
+            fontWeight: "700",
         }
 
     }
     return (
         <>
-            <div>
-                <p>Running Cost Calculator</p>
+            <div className='mt-5'>
+                <h2 className='  text-black '>Running Cost Calculator</h2>
 
                 <div className="card mb-3"  >
                     <div className="row g-0">
@@ -56,17 +70,17 @@ const RunningCostCalculator = () => {
                             <div className="card-body">
                                 <div className="row">
 
-                                    <div className="col-md-6" style={{
+                                    <div className="col-md-6 col-xs-6 col-6" style={{
                                         backgroundColor: ""
                                     }}>
-                                        <p className='text-center'>
+                                        <p className='text-center text-black '>
                                             Petrol cost Calculator
                                         </p>
                                         <div className="card-text">
-                                            <label htmlFor="myRange">Petrol price / litre (INR) </label>
+                                            <label htmlFor="myRange " style={styles.labelText}>Petrol price / litre (INR) </label>
                                             <input type="number"
                                                 className="form-control"
-                                                style={ styles.rightInput}
+                                                style={styles.rightInput}
                                                 value={pCostPerLtr}
 
                                                 onChange={({ target: { value: radius } }) => {
@@ -88,10 +102,10 @@ const RunningCostCalculator = () => {
                                             />
                                         </div>
                                         <div className="card-text">
-                                            <label htmlFor="myRange">Number of Years</label>
+                                            <label htmlFor="myRange " style={styles.labelText}>Number of Years</label>
                                             <input type="number"
                                                 className="form-control"
-                                                style={ styles.rightInput}
+                                                style={styles.rightInput}
                                                 value={pYear}
 
                                                 onChange={({ target: { value: radius } }) => {
@@ -115,47 +129,53 @@ const RunningCostCalculator = () => {
 
 
                                         <div className="card-text">
-                                            <label htmlFor="myRange">
+                                            <label htmlFor="myRange " style={styles.labelText}>
                                                 Distance / day (KM)
-                                                </label>
+                                            </label>
                                             <input type="number"
                                                 className="form-control"
-                                                style={ styles.rightInput}
-                                                value= {pDistPerDay}
+                                                style={styles.rightInput}
+                                                value={pDistPerDay}
 
                                                 onChange={({ target: { value: radius } }) => {
                                                     setpDistPerDay(radius)
                                                 }} />
                                             <input
-                                             type="range"
-                                             min={1}
-                                             max={500}
-                                             step={1}
-                                             default={pDistPerDay}
-                                             value={pDistPerDay} 
-                                             id="myRange"
-                                             className="slider w-100"
-                                             onChange={({ target: { value: radius } }) => {
-                                                 setpDistPerDay(radius)
-                                             }}
+                                                type="range"
+                                                min={1}
+                                                max={500}
+                                                step={1}
+                                                default={pDistPerDay}
+                                                value={pDistPerDay}
+                                                id="myRange"
+                                                className="slider w-100"
+                                                onChange={({ target: { value: radius } }) => {
+                                                    setpDistPerDay(radius)
+                                                }}
 
                                             />
-                                        </div> 
-                                        <h3 className='mt-3'>
-                                            Total Cost &#8377; {pFinalCost}
-                                        </h3>
+                                        </div>
+                                        <p  style={{
+                                            fontSize:"9px",
+                                            color:"rgb(136, 136, 136)"
+                                        }}>
+                                            Note : 1 litre petrol = 40 km
+                                        </p>
+                                        <h6 className=''>
+                                            Petrol Cost &#8377; {pFinalCost}
+                                        </h6>
 
                                     </div>
-                                    <div className="col-md-6"  >
-                                        <p className='text-center'>
+                                    <div className="col-md-6  col-xs-6 col-6"  >
+                                        <p className='text-center text-black'>
                                             Electric cost Calculator
                                         </p>
                                         <div className="card-text">
-                                            <label htmlFor="myRange">Electric price / unit </label>
+                                            <label htmlFor="myRange " style={styles.labelText}>Electricity  price / unit </label>
                                             <input type="number"
 
                                                 className="form-control"
-                                                style={ styles.rightInput}
+                                                style={styles.rightInput}
                                                 value={eCostPerUnit}
 
                                                 onChange={({ target: { value: radius } }) => {
@@ -163,8 +183,8 @@ const RunningCostCalculator = () => {
                                                 }} />
                                             <input
                                                 type="range"
-                                                min={1}
-                                                max={10}
+                                                min={5}
+                                                max={13}
                                                 step={1}
                                                 default={eCostPerUnit}
                                                 value={eCostPerUnit}
@@ -176,11 +196,11 @@ const RunningCostCalculator = () => {
                                             />
                                         </div>
                                         <div className="card-text">
-                                            <label htmlFor="myRange">Number of Years</label>
+                                            <label htmlFor="myRange " style={styles.labelText}>Number of Years</label>
                                             <input type="number"
 
                                                 className="form-control"
-                                                style={ styles.rightInput}
+                                                style={styles.rightInput}
                                                 value={eYear}
 
                                                 onChange={({ target: { value: radius } }) => {
@@ -201,11 +221,11 @@ const RunningCostCalculator = () => {
                                             />
                                         </div>
                                         <div className="card-text">
-                                            <label htmlFor="myRange">Distance / day (KM) </label>
+                                            <label htmlFor="myRange " style={styles.labelText}>Distance / day (KM) </label>
                                             <input type="number"
-                                                
+
                                                 className="form-control"
-                                                style={ styles.rightInput}
+                                                style={styles.rightInput}
                                                 value={eDistPerDay}
 
                                                 onChange={({ target: { value: radius } }) => {
@@ -225,12 +245,34 @@ const RunningCostCalculator = () => {
                                                 }}
                                             />
                                         </div>
-                                        <h3>
-                                            Total Cost &#8377;  {eFinalCost}
-                                        </h3>
+                                        <p  style={{
+                                            fontSize:"9px",
+                                            color:"rgb(136, 136, 136)"
+                                        }}>
+                                            Note : 1  unit electricity = 40 km
+                                        </p>
+                                        <h6 className=''>
+                                            Electric Cost &#8377;  {eFinalCost}
+                                        </h6>
                                     </div>
                                 </div>
+                                
                             </div>
+                            <p className='text-center text-black ' style={{
+                                    fontSize: '15px',
+                                    fontWeight: 'bold',
+                                    // background: aliceblue;
+                                    background: 'aliceblue',
+                                }}>
+                                    Electric Scooter Save <span style={{
+                                        color: 'green',
+                                        fontSize: '20px',
+
+
+                                    }}>
+                                        &#8377; {pFinalCost - eFinalCost}
+                                    </span>  in {eYear} years
+                                </p>
                         </div>
                     </div>
                 </div>
