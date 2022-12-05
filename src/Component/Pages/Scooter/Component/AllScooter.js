@@ -3,6 +3,7 @@ import { Link, useNavigate  } from 'react-router-dom'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import scooter from "../Databse/ScooterData.json"
+import ReactGA from 'react-ga';
 const AllScooter = () => {
     const navigate = useNavigate();
 
@@ -54,6 +55,11 @@ const AllScooter = () => {
                             {item.value.map((item) => (
                                 <div className="col-lg-4 col-md-6 d-flex mt-3 justify-content-center col-6 d-md-flex align-items-md-stretch  text-center" key={item.id}>
                                     <div className="card" style={{ width: '18rem' }} onClick={()=>{
+                                        ReactGA.event({
+                                            category: item.path,
+                                            action: 'Clicked on a scooter',
+                                            label: item.company
+                                        })
                                         navigate(`/scooter/${item.path}`)
                                     }}>
                                         <img src={item.image} className="card-img-top" alt={item.company}
