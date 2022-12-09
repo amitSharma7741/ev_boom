@@ -5,7 +5,7 @@ const RunningCostCalculator = () => {
 
     const isMobile = useMediaQuery({
         // screen width is less than 768px or greater than 450px
-        query: '(max-width: 950px) and (min-width: 450px)' 
+        query: '(max-width: 950px) and (min-width: 450px)'
     })
     const isSmallMobile = useMediaQuery({
         query: '(max-width: 450px)'
@@ -48,7 +48,7 @@ const RunningCostCalculator = () => {
             height: "2rem",
             padding: "0.2rem ",
             textAlign: "center",
-            fontSize:isMobile || isSmallMobile ? "0.8rem"  : "1rem",
+            fontSize: isMobile || isSmallMobile ? "0.8rem" : "1rem",
         },
         labelText: {
             fontSize: isMobile ? "11px" : isSmallMobile ? "8px" : "14px",
@@ -58,8 +58,10 @@ const RunningCostCalculator = () => {
     }
     return (
         <>
-            <div className='mt-5'>
-                <h2 className='  text-black '>Running Cost Calculator</h2>
+            <div className='' style={{
+                marginTop: "100px"
+            }}>
+                <h1 className='  text-black '>Running Cost Calculator</h1>
 
                 <div className="card mb-3"  >
                     <div className="row g-0">
@@ -155,9 +157,9 @@ const RunningCostCalculator = () => {
 
                                             />
                                         </div>
-                                        <p  style={{
-                                            fontSize:"9px",
-                                            color:"rgb(136, 136, 136)"
+                                        <p style={{
+                                            fontSize: "9px",
+                                            color: "rgb(136, 136, 136)"
                                         }}>
                                             Note : 1 litre petrol = 40 km
                                         </p>
@@ -245,9 +247,9 @@ const RunningCostCalculator = () => {
                                                 }}
                                             />
                                         </div>
-                                        <p  style={{
-                                            fontSize:"9px",
-                                            color:"rgb(136, 136, 136)"
+                                        <p style={{
+                                            fontSize: "9px",
+                                            color: "rgb(136, 136, 136)"
                                         }}>
                                             Note : 1  unit electricity = 40 km
                                         </p>
@@ -256,23 +258,43 @@ const RunningCostCalculator = () => {
                                         </h6>
                                     </div>
                                 </div>
-                                
+
                             </div>
-                            <p className='text-center text-black ' style={{
-                                    fontSize: '15px',
-                                    fontWeight: 'bold',
-                                    // background: aliceblue;
-                                    background: 'aliceblue',
+
+                            <div className="card-footer" style={{
+                                background: 'aliceblue',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                            }}>
+                                <p className='text-center text-black ' style={{
+                                    fontSize: '20px',
+                                    fontWeight: 'bold', 
+
                                 }}>
-                                    Electric Scooter Save <span style={{
+                                    Petrol Scooter Save <span style={{
                                         color: 'green',
-                                        fontSize: '20px',
-
-
+                                        fontSize: '25px',
                                     }}>
                                         &#8377; {pFinalCost - eFinalCost}
                                     </span>  in {eYear} years
                                 </p>
+                            </div>
+                           {/*  <p className='text-center text-black ' style={{
+                                fontSize: '15px',
+                                fontWeight: 'bold',
+                                // background: aliceblue;
+                                background: 'aliceblue',
+                            }}>
+                                Electric Scooter Save <span style={{
+                                    color: 'green',
+                                    fontSize: '20px',
+
+
+                                }}>
+                                    &#8377; {pFinalCost - eFinalCost}
+                                </span>  in {eYear} years
+                            </p> */}
                         </div>
                     </div>
                 </div>

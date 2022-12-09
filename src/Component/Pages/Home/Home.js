@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 import AllScooter from '../Scooter/Component/AllScooter'
-import VideoCarousel from './Component/VideoCarousel'
+// import VideoCarousel from './Component/VideoCarousel'
 import "./Home.css"
 import ReactGA from 'react-ga';
+import TryHeader from './Component/TryHeader/TryHeader';
 const Home = () => {
 
   useEffect(() => {
@@ -13,8 +14,8 @@ const Home = () => {
     <>
 
 
-
-    <VideoCarousel/>
+<TryHeader/>
+    
      {/*  <div className="header">
         <div className="headerTitles">
           <span className="headerTitleSm">React & Node</span>
@@ -35,7 +36,7 @@ const Home = () => {
 </div>
 
       {/* video carsoluel */}
-    
+      {/* <VideoCarousel/> */}
 
     </>
   )

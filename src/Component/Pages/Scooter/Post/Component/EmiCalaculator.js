@@ -88,9 +88,9 @@ const EmiCalaculator = (props) => {
                     <div className='row d-flex  justify-content-center '>
                         <div className='col-lg-4 col-md-6 d-flex mt-3 justify-content-center    text-center'>
                             <div className="card w-100"  >
-                                <h5 className="card-title bg-dark text-white">
+                                <h1 className="card-title bg-dark text-white">
                                     EMI Calculator
-                                </h5>
+                                </h1>
                                 <div className="card-body">
 
                                     <div className="card-text mb-5">

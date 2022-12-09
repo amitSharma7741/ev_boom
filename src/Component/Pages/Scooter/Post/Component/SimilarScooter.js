@@ -25,9 +25,9 @@ const SimilarScooter = (props) => {
                 <div className="row">
                     <div className="col-lg-12 col-md-12 col-12 d-md-flex align-items-md-stretch">
                         <div className="count-box py-5">
-                            <h3 className='text-center'>
+                            <h1 className='text-center'>
                                 Similar Scooter to {props.name.replace(/-/g, " ")}
-                            </h3>
+                            </h1>
                             <div className="row d-flex justify-content-center ">
                                 {/* add three top scooter card */}
                                 {showData.map((item) => {
@@ -45,8 +45,9 @@ const SimilarScooter = (props) => {
                                                         </Link>
 
 
-                                                        <p className="card-text" style={{
-                                                            fontWeight: "500px"
+                                                        <div className="card-text" style={{
+                                                            fontWeight: "700",
+                                                            fontSize: "20px",
                                                         }}>
 
                                                             <span>&#8377;</span> {item.value[0].price}
@@ -57,14 +58,15 @@ const SimilarScooter = (props) => {
                                                                 lineHeight: "0px",
                                                                 marginLeft: "5px"
                                                             }}>Estimated Price</div>
-                                                        </p>
+                                                        </div>
 
-                                                        <p className="card-text">
+                                                        <p className="card-text text-black">
                                                             {item.value[0].oneLine}
                                                         </p>
                                                         <Link to={`/scooter/${item.value[0].path}`} className="btn btn-primary">
                                                             Know More
                                                         </Link>
+
                                                     </div>
                                                 </div>
                                             </div>

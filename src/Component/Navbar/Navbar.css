@@ -23,8 +23,15 @@
   .topListItem {
     font-size: 20px;
     margin-right: 10px;
-    color: #444;
+    /* color: #444; */
     cursor: pointer;
+    /* color: "white",
+      textDecoration: "none",
+      // text in uppercase
+      textTransform: "uppercase", */
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
   }
   
   @media screen and (max-width: 768px) {
@@ -46,14 +53,15 @@
     list-style: none;
   }
   
-  .topListItem {
+  /* .topListItem {
     margin-right: 20px;
     font-size: 18px;
+  
     font-weight: 300;
     cursor: pointer;
-  }
+  } */
   
-  .topListItem:hover{
+  .topListItem:hover{ 
       color: gray;
   }
   

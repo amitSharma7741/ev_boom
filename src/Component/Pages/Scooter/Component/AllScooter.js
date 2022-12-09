@@ -67,7 +67,7 @@ const AllScooter = () => {
                                                 height: "180px"
                                             }} />
                                         <div className="card-body" style={{
-                                            backgroundColor: "rgb(238, 238, 238)"
+                                            // backgroundColor: "rgb(238, 238, 238)"
                                         }}>
                                             <Link to={`/scooter/${item.path}`}  style={{
                                                 textDecoration: "none",
@@ -78,7 +78,9 @@ const AllScooter = () => {
                                             </h5>
                                             </Link>
                                             <div className="card-text" style={{
-                                                fontWeight: "500px"
+                                                fontWeight: "700",
+                                                fontSize: "20px",
+                                                color:"crimson" 
                                             }}>
 
                                                 <span>&#8377;</span> {item.price}
@@ -90,12 +92,10 @@ const AllScooter = () => {
                                                     marginLeft: "5px"
                                                 }}>Estimated Price</div>
                                             </div>
-                                            <p className="card-text">
+                                            <p className="card-text text-black mt-2">
                                                 {item.oneLine}
                                             </p>
-                                            <a href="/" className="btn btn-primary">
-                                                View More
-                                            </a>
+                                            <Link to={`/scooter/${item.path}`} className="btn btn-primary">Know More</Link>
                                         </div>
                                     </div>
                                 </div>

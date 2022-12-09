@@ -4,28 +4,34 @@ import Camparsion from './Component/Camparsion'
 import { Outlet } from 'react-router-dom'
 import ThreeBestScooter from './Component/ThreeBestScooter'
 import HorrizontalImageScooters from './Component/HorrizontalImageScooters'
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga'; 
+import Seo from '../../SEO/Seo'
 // import "./Post/Post.css"
 const Scooter = () => {
-
+ 
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
+    window.scrollTo(0, 0)
   }, [])
   return (
     <>
-
+     
+     <Seo
+      title="Scooter"
+      // description should be 150 to 160 character
+      description = "Electric Scooter in India 2021: Check out the list of top-rated electric scooters available in the Indian market. Get on-road prices, mileage, reviews, specifications, pictures, videos, and more on Electric Scooter at AutoX."
+      image ="https://static.autox.com/uploads/2021/11/Ola-Electric-S1-Pro.jpg"
+      url="/scooter"
+      />
 
       <div className="header">
-        <div className="headerTitles">
-          <span className="headerTitleSm">Ola S1 Pro</span>
-          <span className="headerTitleLg">1,29,999 </span>
-        </div>
+         
         <img
           className="headerImg"
           src="https://imgd.aeplcdn.com/393x221/n/cw/ec/107243/s1-pro-right-front-three-quarter-2.jpeg?isig=0&q=75"
           alt=""
-        />
+        /> 
       </div>
 
       {/* <div className="container">

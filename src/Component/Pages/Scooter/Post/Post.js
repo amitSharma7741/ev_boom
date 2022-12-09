@@ -7,29 +7,65 @@ import FourSpecification from './Component/FourSpecification'
 import EmiCalaculator from './Component/EmiCalaculator'
 import SimilarScooter from './Component/SimilarScooter'
 import ImageCarousel from './Component/ImageCarousel'
-import blob from "./Component/SVG/scooter.svg"
+// import blob from "./Component/SVG/scooter.svg"
 import RunningCostCalculator from './Component/RunningCostCalculator';
 import ImageGallery from './Component/ImageGallery';
 import ReactGA from 'react-ga';
 // import TryEmiCalculator from './Component/TryEmiCalculator';
+import { useMediaQuery } from 'react-responsive'
 const Post = () => {
 
     const { post } = useParams();
+
+    const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
+
 
     const showData = scooter.filter((item) => item.path === post);
     // const realData = scooter.find((item) => item.id === 1)
     // console.log(realData)
 
     // add read more button in info className tag 
+    const title = showData[0].scootername  + " Price - Range, Images, Colours"
 
     const [isreadMore, setIsreadMore] = useState(true)
-    const text = showData[0].shortDescription;
+    const text = showData[0].longDescription;
+
+    const ForMobile = () => {
+        return (
+            <>
+                <div className="fixed-bottom" >
+                    <div className="row bg-dark"style={{
+                    backgroundColor: "rgba(0,0,0,0.5)",
+                    height: "50px",
+                }}>
+                        <div className="col-6 d-flex justify-content-center">
+                            <button className="btn  text-white btn-block">
+                                {showData[0].scootername}
+                            </button>
+                        </div>
+                        <div className="col-6  d-flex justify-content-center">
+                            <button className="btn  text-white btn-block">
+                              Rs.  {showData[0].price}
+                            </button>
+                            </div>
+                    </div>
+    
+                </div>
+            </>
+        )
+    }
 
     useEffect(() => {
         ReactGA.pageview(window.location.pathname + window.location.search);
-      }, [])
+        // open always in top
+        window.scrollTo(0, 0)
+    }, [])
 
-
+const styles = {
+    detailText:{
+        width:isMobile ? "100%" : "75%",
+    }
+}
     return (
         <>
             {/*  <header>
@@ -56,42 +92,40 @@ const Post = () => {
                     top: "50%",
                     left: "50%",
                     transform: "translate(-50%, -50%)",
-                    // color: "white",
-                    // textAlign: "center",
-                    // fontSize: "30px",
-                    // fontWeight: "bold",
-                    // textShadow: "2px 2px 4px #000000",
-                    // backgroundColor: "rgba(0, 0, 0, 0.5)",
-                    // padding: "20px",
-                    // borderRadius: "10px",
+                    color: "white",
+                    textAlign: "center",
+                    fontSize: "30px",
+                    fontWeight: "bold",
+                    textShadow: "2px 2px 4px #000000",
+                    backgroundColor: "rgba(0, 0, 0, 0.5)",
+                    padding: "20px",
+                    borderRadius: "10px",
                     // backgroundImage: `url(${blob})`,
-                    // backgroundSize: "cover",
-                    // backgroundRepeat: "no-repeat",
-                    // backgroundPosition: "center"
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center"
 
 
 
                 }}>
-                    <div className='card   text-white' style={{
+                    <p className='text-center'  >
+                        {showData[0].scootername}
+                    </p>
+                    <p className='text-center'  >
+                        {showData[0].price}
+                    </p>
+                    {/* <div className='card   text-white' style={{
                         backgroundColor: "rgba(0, 0, 0, 0)",
                         border: "0px solid",
-                    }}>
-                        <img src={blob} className="card-img" alt="..." />
+                    }}> 
                         <div className="card-img-overlay  " style={{
                             display: "inline-block",
                             marginTop: "40px",
                             overflowWrap: "break-word",
                         }}>
-                            <p className='text-center' style={{
-                                fontSize: "30px",
-                            }} >
-                                {showData[0].scootername}
-                            </p>
-                            <p className='text-center'  >
-                                {showData[0].price}
-                            </p>
+                            
                         </div>
-                    </div>
+                    </div> */}
                     {/* <div className="text-white" > 
                         
                          
@@ -101,7 +135,7 @@ const Post = () => {
                 <img
                     className="headerImg"
                     src={showData[0].image}
-                    alt=""
+                    alt={showData[0].company}
                 />
             </div>
 
@@ -176,12 +210,12 @@ const Post = () => {
 
                         </div>
                         {/* short info */}
-                        <div>
+                        <div className='mt-5'>
                             <h1>Info</h1>
-                            <p className='text-black'>
-                                {isreadMore ? text.slice(0, 200) : text}
+                            <p className='text-black' style={styles.detailText}>
+                              {   text.slice(0, 200) }
                             </p>
-                            <button onClick={() => setIsreadMore(!isreadMore)}>{isreadMore ? "Read More" : "Read Less"}</button>
+                         {/*    <button onClick={() => setIsreadMore(!isreadMore)}>{isreadMore ? "Read More" : "Read Less"}</button> */}
                         </div>
 
                         {/* emi calculator */}
@@ -192,7 +226,9 @@ const Post = () => {
 
 
                         {/*  specification */}
-                        <div className='row mt-5'>
+                        <div className='row ' style={{
+                            marginTop: "100px"
+                        }}>
                             <div className="col-lg-6 col-md-6 col-12">
                                 <h1>Specification</h1>
                                 <table className="table table-striped" style={{ maxWidth: "500px" }}>
@@ -225,7 +261,7 @@ const Post = () => {
                             </div>
                             <div className="col-lg-6 col-md-6 col-12">
                                 {/* image carousel */}
-                                <ImageCarousel />
+                                <ImageCarousel galleryData ={showData[0].gallery}  altText = {title} />
                             </div>
 
                         </div>
@@ -235,9 +271,11 @@ const Post = () => {
 
                         {/* full detail */}
 
-                        <div>
+                        <div className=''  style={{
+                            marginTop: "100px"
+                        }}>
                             <h1>Full Detail</h1>
-                            <p className='text-black'>
+                            <p className='text-black'style={styles.detailText}>
                                 {isreadMore ? text.slice(0, 300) : text}
                             </p>
                             <button onClick={() => setIsreadMore(!isreadMore)}>{isreadMore ? "Read More" : "Read Less"}</button>
@@ -255,7 +293,7 @@ const Post = () => {
 
 
 
-                        <ImageGallery />
+                        <ImageGallery galleryData ={showData[0].gallery}  altText = {title}/>
 
                         {/* try new emi calculator */}
                         {/* <TryEmiCalculator price={showData[0].price}  /> */}
@@ -265,9 +303,12 @@ const Post = () => {
                 </div>
             </section>
 
+{isMobile ? <ForMobile /> :  ""} 
 
         </>
     )
 }
+
+
 
 export default Post

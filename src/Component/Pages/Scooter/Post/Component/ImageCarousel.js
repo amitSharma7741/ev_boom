@@ -1,10 +1,15 @@
-import React from 'react'
-import scooter from "../../Databse/ScooterData.json"
+import React, { useEffect, useState } from 'react'
+// import scooter from "../../Databse/ScooterData.json"
 // import { useMediaQuery } from 'react-responsive'
-const ImageCarousel = () => {
-    const data = scooter.find((item) => item.id === 1)
+const ImageCarousel = (props) => {
+    // const data = scooter.find((item) => item.id === 1)
 
+const [showData , setShowData] = useState([])
 
+const title = props.altText;
+useEffect(() => {
+    setShowData(props.galleryData);
+}, [props.galleryData])
 
     return (
         <>
@@ -20,11 +25,11 @@ const ImageCarousel = () => {
                     {/* <div className="carousel-item active">
                         <img src="https://bd.gaadicdn.com/processedimages/tvs/iqube-electric/494X300/iqube-electric63368c7e20470.jpg?imwidth=400&impolicy=resize" className="d-block w-100" alt="..." />
                     </div> */}
-                    {data.gallery.map((item,index) => {
+                    {showData.map((item,index) => {
                         return (
                             <>
-                                <div className={index ===0 ? "carousel-item active":"carousel-item"} key={item}>
-                                    <img src={item} className="d-block w-100" alt="..." />
+                                <div className={index ===0 ? "carousel-item active":"carousel-item"} key={index}>
+                                    <img src={item} className="d-block w-100" alt= {title}/>
                                 </div>
                             </>
                         )})}
