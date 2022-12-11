@@ -4,6 +4,7 @@ import scooter from "../../Databse/ScooterData.json"
 import "./Style.css"
 
 const FourSpecification = (props) => {
+ 
 
     const data = scooter.find((item) => item.path === props.path)
 
@@ -34,6 +35,8 @@ const FourSpecification = (props) => {
         }
 
     ]
+     
+
     return (
         <>
             {showData.map((item) => {
