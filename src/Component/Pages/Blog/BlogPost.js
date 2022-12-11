@@ -26,6 +26,17 @@ const BlogPost = () => {
                         }}>
                             {blog[0]?.title}
                         </h1>
+
+                        <div className="mb-3">
+                            <div className="float-start">
+                                Author = "Rahul"
+                            </div>
+                            <div className="float-end">
+                                Date = "12/12/2021"
+                            </div>
+                        </div>
+                         
+
                         <p className="mt-5" style={{
                             color: "black",
                             fontWeight: "bold",
