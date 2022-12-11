@@ -14,7 +14,7 @@ const AllBlogs = () => {
                         >
                         <div className="row g-0">
                             <div className="col-md-4">
-                                <img src=" https://static.autox.com/uploads/2021/11/Ola-Electric-S1-Pro.jpg" className="img-fluid rounded-start" alt="..." />
+                                <img src=" https://static.autox.com/uploads/2021/11/Ola-Electric-S1-Pro.jpg" className="img-fluid rounded-start h-100" alt="..." />
                             </div>
                             <div className="col-md-8">
                                 <div className="card-body">
@@ -33,7 +33,7 @@ const AllBlogs = () => {
                     <div className="card mb-3" style={{ maxWidth: 540 }}>
                         <div className="row g-0">
                             <div className="col-md-4">
-                                <img src=" https://static.autox.com/uploads/2021/11/Ola-Electric-S1-Pro.jpg" className="img-fluid rounded-start" alt="..." />
+                                <img src=" https://static.autox.com/uploads/2021/11/Ola-Electric-S1-Pro.jpg" className="img-fluid rounded-start h-100" alt="..." />
                             </div>
                             <div className="col-md-8">
                                 <div className="card-body">
@@ -46,7 +46,7 @@ const AllBlogs = () => {
                     </div>
                 </div>
                 
-                <div className="d-flex justify-content-center">
+              {/*   <div className="d-flex justify-content-center">
 
 
                     <div className="card mb-3" style={{ maxWidth: 540 }}>
@@ -63,7 +63,7 @@ const AllBlogs = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 
 
             </div>
