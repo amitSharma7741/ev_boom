@@ -1,8 +1,12 @@
 import React  from 'react'
 import { FaAngleLeft, FaAngleRight  } from 'react-icons/fa'
 import "./CSS/HorrizontalImageScooters.css"
+import {   useNavigate } from 'react-router-dom'                                     
+import scooter from "../Databse/ScooterData.json"
 // import { useState, useRef } from "react";
 const HorrizontalImageScooters = () => {
+
+    const navigate = useNavigate();
 //    show button when horizantal scroll is done
    /*  const [showLeftBtn, setShowLeftBtn] = useState(false);
     const [showRightBtn, setShowRightBtn] = useState(false);
@@ -38,7 +42,7 @@ const HorrizontalImageScooters = () => {
         scrollRef.current.addEventListener('scroll', handleScroll);
     }, [scrollRef]); */
 
-    const showData = [
+    /* const showData = [
         {
             id: 1,
             imageUrl: " https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-product-cards/img2.webp",
@@ -71,7 +75,9 @@ const HorrizontalImageScooters = () => {
             name: "beaches",
             price: "Rs. 99,999"
         }
-    ]
+    ] */
+    
+    
     return (
         <>
 
@@ -84,17 +90,23 @@ const HorrizontalImageScooters = () => {
                     scrollBehavior: "smooth"
                 }}>
                     {/* CARD 1*/}
-                    {showData.map((item) => {
+                    {scooter.map((item) => {
                         return (
                             <>
-                                <div className="topBox" key={item.id}>
+                                <div className="topBox" key={item.id} onClick = {
+                                    () => navigate(`/scooter/${item.path}`)
+                                }>
                                     <div className="img-topBox">
-                                        <img src={item.imageUrl} alt="javohir" />
+                                        <img src={item.image} alt="javohir" />
                                     </div>
                                     <div className="content">
-                                        <h2> {item.name}
-                                            <br /><span>Javohir Berdiyev</span></h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quod perferendis blanditiis ab? Nulla voluptate deleniti eius hic, perferendis.</p>
+                                        <h2> {item.scootername}
+                                            <br /><span>
+                                                {item.price}
+                                                </span></h2>
+                                        <p>
+                                            {item.oneLine}
+                                        </p>
 
                                     </div>
                                 </div>
