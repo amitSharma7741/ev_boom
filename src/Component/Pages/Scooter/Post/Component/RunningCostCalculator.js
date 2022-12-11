@@ -18,9 +18,9 @@ const RunningCostCalculator = () => {
 
 
     // for electric 
-    const [eDistPerDay, seteDistPerDay] = useState(50)
+    // const [eDistPerDay, seteDistPerDay] = useState(50)
     const [eCostPerUnit, seteCostPerUnit] = useState(10);
-    const [eYear, seteYear] = useState(2);
+    // const [pYear, setpYear] = useState(2);
     const [eFinalCost, seteFinalCost] = useState(0);
     useEffect(() => {
 
@@ -33,13 +33,13 @@ const RunningCostCalculator = () => {
 
 
         // electric
-        const electricPerYearDist = eDistPerDay * 365 * eYear;
+        const electricPerYearDist = pDistPerDay * 365 * pYear;
         const electricPerYearCost = electricPerYearDist * eCostPerUnit
         const electricFinalCost = electricPerYearCost / 40;
 
         seteFinalCost(electricFinalCost.toFixed(0))
 
-    }, [pDistPerDay, pCostPerLtr, pYear, eDistPerDay, eCostPerUnit, eYear])
+    }, [pDistPerDay, pCostPerLtr, pYear,   eCostPerUnit])
 
     const styles = {
         rightInput: {
@@ -58,9 +58,7 @@ const RunningCostCalculator = () => {
     }
     return (
         <>
-            <div className='' style={{
-                marginTop: "100px"
-            }}>
+            <div className='' >
                 <h1 className='  text-black '>Running Cost Calculator</h1>
 
                 <div className="card mb-3"  >
@@ -203,22 +201,22 @@ const RunningCostCalculator = () => {
 
                                                 className="form-control"
                                                 style={styles.rightInput}
-                                                value={eYear}
+                                                value={pYear}
 
                                                 onChange={({ target: { value: radius } }) => {
-                                                    seteYear(radius)
+                                                    setpYear(radius)
                                                 }} />
                                             <input
                                                 type="range"
                                                 min={1}
                                                 max={5}
                                                 step={1}
-                                                default={eYear}
-                                                value={eYear}
+                                                default={pYear}
+                                                value={pYear}
                                                 className="slider w-100"
                                                 id="myRange"
                                                 onChange={({ target: { value: radius } }) => {
-                                                    seteYear(radius)
+                                                    setpYear(radius)
                                                 }}
                                             />
                                         </div>
@@ -228,22 +226,22 @@ const RunningCostCalculator = () => {
 
                                                 className="form-control"
                                                 style={styles.rightInput}
-                                                value={eDistPerDay}
+                                                value={pDistPerDay}
 
                                                 onChange={({ target: { value: radius } }) => {
-                                                    seteDistPerDay(radius)
+                                                    setpDistPerDay(radius)
                                                 }} />
                                             <input
                                                 type="range"
                                                 min={1}
                                                 max={500}
                                                 step={1}
-                                                default={eDistPerDay}
-                                                value={eDistPerDay}
+                                                default={pDistPerDay}
+                                                value={pDistPerDay}
                                                 className="slider w-100"
                                                 id="myRange"
                                                 onChange={({ target: { value: radius } }) => {
-                                                    seteDistPerDay(radius)
+                                                    setpDistPerDay(radius)
                                                 }}
                                             />
                                         </div>
@@ -277,7 +275,7 @@ const RunningCostCalculator = () => {
                                         fontSize: '25px',
                                     }}>
                                         &#8377; {pFinalCost - eFinalCost}
-                                    </span>  in {eYear} years
+                                    </span>  in {pYear} years
                                 </p>
                             </div>
                            {/*  <p className='text-center text-black ' style={{
@@ -293,7 +291,7 @@ const RunningCostCalculator = () => {
 
                                 }}>
                                     &#8377; {pFinalCost - eFinalCost}
-                                </span>  in {eYear} years
+                                </span>  in {pYear} years
                             </p> */}
                         </div>
                     </div>
