@@ -170,6 +170,9 @@ const EmiCalaculator = (props) => {
                                         <div className='float-start'>7%</div>
                                         <div className='float-end'>15%</div>
                                     </div>
+                                    <div className="card-text mt-5 ">
+                                        Vehicle Price: ₹ {props.price}
+                                    </div>
 
                                 </div>
                             </div>
