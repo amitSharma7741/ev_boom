@@ -18,12 +18,12 @@ const Footer = () => {
       id: 3,
       name: "Blog",
       path: "/blog"
-    }
-    /* {
+    },
+    {
       id: 4,
       name: "privacy policy",
       path: "/privacy-policy"
-    } */
+    }
   ]
   return (
     <>
