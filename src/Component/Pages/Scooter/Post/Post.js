@@ -25,7 +25,7 @@ const Post = () => {
     // console.log(realData)
 
     // add read more button in info className tag 
-    const title = showData[0].scootername  + " Price - Range, Images, Colours"
+    const title = showData[0].scootername + " Price - Range, Images, Colours"
 
     const [isreadMore, setIsreadMore] = useState(true)
     const text = showData[0].longDescription;
@@ -34,10 +34,10 @@ const Post = () => {
         return (
             <>
                 <div className="fixed-bottom" >
-                    <div className="row bg-dark"style={{
-                    backgroundColor: "rgba(0,0,0,0.5)",
-                    height: "50px",
-                }}>
+                    <div className="row bg-dark" style={{
+                        backgroundColor: "rgba(0,0,0,0.5)",
+                        height: "50px",
+                    }}>
                         <div className="col-6 d-flex justify-content-center">
                             <button className="btn  text-white btn-block">
                                 {showData[0].scootername}
@@ -45,11 +45,11 @@ const Post = () => {
                         </div>
                         <div className="col-6  d-flex justify-content-center">
                             <button className="btn  text-white btn-block">
-                              Rs.  {showData[0].price}
+                                Rs.  {showData[0].price}
                             </button>
-                            </div>
+                        </div>
                     </div>
-    
+
                 </div>
             </>
         )
@@ -61,11 +61,12 @@ const Post = () => {
         window.scrollTo(0, 0)
     }, [])
 
-const styles = {
-    detailText:{
-        width:isMobile ? "100%" : "75%",
+    const styles = {
+        detailText: {
+            width: isMobile ? "100%" : "75%",
+            textAlign: "justify",
+        }
     }
-}
     return (
         <>
             {/*  <header>
@@ -213,9 +214,9 @@ const styles = {
                         <div className='mt-5'>
                             <h1>Info</h1>
                             <p className='text-black' style={styles.detailText}>
-                              {   text.slice(0, 200) }
+                                {text.slice(0, 200)}
                             </p>
-                         {/*    <button onClick={() => setIsreadMore(!isreadMore)}>{isreadMore ? "Read More" : "Read Less"}</button> */}
+                            {/*    <button onClick={() => setIsreadMore(!isreadMore)}>{isreadMore ? "Read More" : "Read Less"}</button> */}
                         </div>
 
                         {/* emi calculator */}
@@ -261,7 +262,7 @@ const styles = {
                             </div>
                             <div className="col-lg-6 col-md-6 col-12">
                                 {/* image carousel */}
-                                <ImageCarousel galleryData ={showData[0].gallery}  altText = {title} />
+                                <ImageCarousel galleryData={showData[0].gallery} altText={title} />
                             </div>
 
                         </div>
@@ -271,11 +272,11 @@ const styles = {
 
                         {/* full detail */}
 
-                        <div className=''  style={{
+                        <div className='' style={{
                             marginTop: "100px"
                         }}>
                             <h1>Full Detail</h1>
-                            <p className='text-black'style={styles.detailText}>
+                            <p className='text-black' style={styles.detailText}>
                                 {isreadMore ? text.slice(0, 300) : text}
                             </p>
                             <button onClick={() => setIsreadMore(!isreadMore)}>{isreadMore ? "Read More" : "Read Less"}</button>
@@ -284,8 +285,12 @@ const styles = {
 
                         {/* Running Cost Calculator */}
 
+                        <div style={{
+                            marginTop: "100px"
+                        }}>
+                            <RunningCostCalculator />
+                        </div>
 
-                        <RunningCostCalculator />
                         {/* similar scooter */}
                         <SimilarScooter name="ola-s1-pro" />
 
@@ -293,7 +298,7 @@ const styles = {
 
 
 
-                        <ImageGallery galleryData ={showData[0].gallery}  altText = {title}/>
+                        <ImageGallery galleryData={showData[0].gallery} altText={title} />
 
                         {/* try new emi calculator */}
                         {/* <TryEmiCalculator price={showData[0].price}  /> */}
@@ -303,7 +308,7 @@ const styles = {
                 </div>
             </section>
 
-{isMobile ? <ForMobile /> :  ""} 
+            {isMobile ? <ForMobile /> : ""}
 
         </>
     )
