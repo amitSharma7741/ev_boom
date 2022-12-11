@@ -1,6 +1,9 @@
 import React from 'react'
+import { useNavigate  } from 'react-router-dom'
 import scooter from "../Databse/ScooterData.json"
 const Camparsion = () => {
+
+    const navigate = useNavigate();
 
     const showData = [
         {
@@ -90,7 +93,7 @@ const Camparsion = () => {
                                 )
                             })}
                         </tr>
-                        <tr>
+                      {/*   <tr>
                             <th scope="row">Tech Support</th>
                             <td>None</td>
                             <td>35$/incident</td>
@@ -101,10 +104,20 @@ const Camparsion = () => {
                             <td className="fw-bold">Free</td>
                             <td className="fw-bold">$99/mo</td>
                             <td className="fw-bold">$179/mo</td>
-                        </tr>
+                        </tr> */}
                         <tr>
                             <th className="" />
-                            <th className="">
+                            {showData.map((item) => {
+                                return (
+                                    <th key={item.id} className="">
+                                        <button className="btn btn-primary" 
+                                        onClick= {() => navigate(`/scooter/${item.value[0].path}`)}
+                                        >Know more</button>
+                                    </th>
+                                )
+                            })
+                            }
+                          {/*   <th className="">
                                 <button className="btn btn-primary">Sign-up</button>
                             </th>
                             <th className="">
@@ -112,7 +125,7 @@ const Camparsion = () => {
                             </th>
                             <th className="">
                                 <button className="btn btn-primary">Buy Now</button>
-                            </th>
+                            </th> */}
                         </tr>
                     </tbody>
                 </table>
