@@ -4,6 +4,8 @@ import AllScooter from '../Scooter/Component/AllScooter'
 import "./Home.css"
 import ReactGA from 'react-ga';
 import TryHeader from './Component/TryHeader/TryHeader';
+import EmiCalculator from "../Scooter/Post/Component/EmiCalaculator"
+import RunningCostCalculator from "../Scooter/Post/Component/RunningCostCalculator"
 const Home = () => {
 
   useEffect(() => {
@@ -14,9 +16,9 @@ const Home = () => {
     <>
 
 
-<TryHeader/>
-    
-     {/*  <div className="header">
+      <TryHeader />
+
+      {/*  <div className="header">
         <div className="headerTitles">
           <span className="headerTitleSm">React & Node</span>
           <span className="headerTitleLg">BLOG</span>
@@ -28,13 +30,27 @@ const Home = () => {
         />
       </div> */}
 
-<div className="bg-light">
-      <div className="container ">
-        <AllScooter />
+      <div className="bg-light ">
+        <div className="container  " style={{
+          padding: "50px 10px"
+        }}>
+          <AllScooter />
+        </div>
+
+      </div>
+      <div className="container " style={{
+        padding: "50px 10px"
+      }}>
+        <EmiCalculator price="100000" />
       </div>
 
-</div>
-
+      <div className='bg-light'>
+        <div className="container" style={{
+          padding: "30px 10px"
+        }}>
+          <RunningCostCalculator />
+        </div>
+      </div>
       {/* video carsoluel */}
       {/* <VideoCarousel/> */}
 
