@@ -35,7 +35,9 @@ const SimilarScooter = (props) => {
                                         <>
                                             <div className="col-lg-4 col-md-6 d-flex mt-3 justify-content-center   text-center" key={item.id}>
                                                 <div className="card" style={{ width: '18rem' }}>
-                                                    <img src={item.value[0].image} className="card-img-top" alt={item.value[0].company} />
+                                                    <img src={item.value[0].image} className="card-img-top " alt={item.value[0].company} style = {{
+                                                        height: "200px",
+                                                    }} />
                                                     <div className="card-body">
                                                         <Link to={`/scooter/${item.value[0].path}`}  >
 
