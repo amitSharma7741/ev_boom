@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
 import AllScooter from './Component/AllScooter'
-import Camparsion from './Component/Camparsion'
+// import Camparsion from './Component/Camparsion'
 import { Outlet } from 'react-router-dom'
 import ThreeBestScooter from './Component/ThreeBestScooter'
 import HorrizontalImageScooters from './Component/HorrizontalImageScooters'
 import ReactGA from 'react-ga'; 
 import Seo from '../../SEO/Seo'
+import VideoCarouselForScooterHeader from './Component/VideoCarouselForScooterHeader'
 // import "./Post/Post.css"
 const Scooter = () => {
  
@@ -25,14 +26,20 @@ const Scooter = () => {
       url="/scooter"
       />
 
-      <div className="header">
+
+{/* header videomcarsouel */}
+
+<VideoCarouselForScooterHeader/>
+
+{/*  */}
+      {/* <div className="header">
          
         <img
           className="headerImg"
           src="https://imgd.aeplcdn.com/393x221/n/cw/ec/107243/s1-pro-right-front-three-quarter-2.jpeg?isig=0&q=75"
           alt=""
         /> 
-      </div>
+      </div> */}
 
       {/* <div className="container">
                     <div className="rounded shadow dataContainer bg-white"> */}
@@ -101,7 +108,7 @@ const Scooter = () => {
             <AllScooter /> </div>
           <hr />
           {/* cmparesion */}
-          <Camparsion />
+          {/* <Camparsion /> */}
 
 
           {/* horrizontal image gallery */}
@@ -148,7 +155,7 @@ const Scooter = () => {
 
 
       {/* we will use later */}
-      <section style={{ backgroundColor: "#eee" }}>
+     {/*  <section style={{ backgroundColor: "#eee" }}>
         <div className="container py-5">
           <div className="row">
             <div className="col-md-12 col-lg-4 mb-4 mb-lg-0">
@@ -348,10 +355,10 @@ const Scooter = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* new section */}
-      <section style={{ backgroundColor: "#eee" }}>
+     {/*  <section style={{ backgroundColor: "#eee" }}>
         <div className="container py-5">
           <div className="row">
             <div className="col-md-12 col-lg-4 mb-4 mb-lg-0">
@@ -494,14 +501,13 @@ const Scooter = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
 
       {/* another section */}
-      <div className="container mt-3">
+     {/*  <div className="container mt-3">
         <h2>Toggleable Pills</h2>
-        <br />
-        {/* Nav pills */}
+        <br /> 
         <ul className="nav nav-pills" role="tablist">
           <li className="nav-item">
             <a className="nav-link active" data-bs-toggle="pill" href="#home">
@@ -518,8 +524,7 @@ const Scooter = () => {
               Menu 2
             </a>
           </li>
-        </ul>
-        {/* Tab panes */}
+        </ul> 
         <div className="tab-content">
           <div id="home" className="container tab-pane active">
             <br />
@@ -548,7 +553,7 @@ const Scooter = () => {
         </div>
 
 
-      </div>
+      </div> */}
 
     </>
   )
