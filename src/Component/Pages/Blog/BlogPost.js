@@ -1,11 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import { BlogsData } from './BlogsData';
+import ReactMarkdown from 'react-markdown' 
+import remarkGfm from 'remark-gfm'
 const BlogPost = () => {
     const { blogpost } = useParams();
 
 
     const blog = BlogsData.filter((blog) => blog.Id === blogpost);
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+       /*  // change table tag class name
+        const table = document.querySelector("table")
+        table.classList.add("table table-striped text-successtable-border border-light")
+        // change threr tag class name
+        const thead = document.querySelector("thead")
+        thead.classList.add("border-light")
+        // change  th tag  attribute scope 
+        const th = document.querySelectorAll("th")
+        th.forEach((item) => {
+        })
+        item.setAttribute("scope", "row") */
+    }, [])
 
 
     return (
@@ -39,10 +56,11 @@ const BlogPost = () => {
 
                         <p className="mt-5" style={{
                             color: "black",
-                            fontWeight: "bold",
-                            fontSize: "20px"
+                            // fontWeight: "bold",
+                            // fontSize: "20px"
                         }}>
-                            {blog[0]?.description}
+                            <ReactMarkdown children={blog[0]?.description} remarkPlugins={[remarkGfm]} />
+                            
                         </p>
                     </div>
                 </div>
