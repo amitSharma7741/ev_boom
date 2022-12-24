@@ -11,6 +11,7 @@ import BlogPost from './Component/Pages/Blog/BlogPost';
 import AllBlogs from './Component/Pages/Blog/AllBlogs';
 import PrivacyPolicy from './Component/Pages/PrivacyPolicy/PrivacyPolicy';
 import ErrorPage from './Component/Pages/ErrorPage/ErrorPage';
+import TermsAndCondition from './Component/Pages/TermsAndCondition/TermsAndCondition';
 const App = () => {
   return (
     <>
@@ -22,6 +23,7 @@ const App = () => {
             <Route path=":post" element={<Post />} />
           </Route>
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsAndCondition />} />
           <Route path="/blog" element={<Blog />} >
             <Route path="" element={< AllBlogs />} />
             <Route path=":blogpost" element={<BlogPost />} />
