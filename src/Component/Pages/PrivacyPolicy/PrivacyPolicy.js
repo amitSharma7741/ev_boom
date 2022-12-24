@@ -1,5 +1,6 @@
-import React from 'react'
-
+import React, { useEffect } from 'react'
+import { Player } from '@lottiefiles/react-lottie-player';
+import ReactGA from "react-ga";
 const PrivacyPolicy = () => {
 
     const styles = {
@@ -8,6 +9,11 @@ const PrivacyPolicy = () => {
             textAlign: 'justify',
         }
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }, [])
     return (
         <>
             {/*  write privacy policy for EVSTART website */}
@@ -23,6 +29,14 @@ const PrivacyPolicy = () => {
                 }}>
                     Privacy Policy for EVSTART
                 </h1>
+
+                <Player
+
+                    autoplay
+                    loop
+                    src="https://assets1.lottiefiles.com/packages/lf20_w4sm4VEVUC.json"
+                    style={{ height: '300px', width: '300px' }}
+                />
                 <p className='text-black mt-3' style={styles.text}>
                     At EVSTART, accessible from https://evstart.netlify.app, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by EVSTART and how we use it.
 
