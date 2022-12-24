@@ -21,8 +21,13 @@ const Footer = () => {
     },
     {
       id: 4,
-      name: "privacy policy",
+      name: "privacy",
       path: "/privacy-policy"
+    },
+    {
+      id: 5,
+      name: "terms and conditions",
+      path: "/terms-and-conditions"
     }
   ]
   return (
