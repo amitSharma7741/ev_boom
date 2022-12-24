@@ -11,7 +11,9 @@ function Blog() {
 
     return (
 
-        <div class="container">
+        <div class="container" style={{
+            maxWidth:"1000px"
+        }}>
             <h1 className="text-center mt-5 " style={{
                 color: "black",
                 fontWeight: "bold",
