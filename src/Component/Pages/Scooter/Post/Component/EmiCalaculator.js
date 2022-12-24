@@ -84,7 +84,7 @@ const EmiCalaculator = (props) => {
 
         return (
             <>
-                <div className='conatiner mt-3'>
+                <div className='conatiner mt-3 shadow p-3 mb-5 bg-body rounded'>
                     <div className='row d-flex  justify-content-center '>
                         <div className='col-lg-4 col-md-6 d-flex mt-3 justify-content-center    text-center'>
                             <div className="card w-100"  >

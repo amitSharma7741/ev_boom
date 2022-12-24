@@ -54,7 +54,7 @@ const AllScooter = () => {
                         <div className="row">
                             {item.value.map((item) => (
                                 <div className="col-lg-4 col-md-6 d-flex mt-3 justify-content-center col-6 d-md-flex align-items-md-stretch  text-center" key={item.id}>
-                                    <div className="card" style={{ width: '18rem' }} onClick={()=>{
+                                    <div className="card shadow p-3 mb-5 bg-body rounded" style={{ width: '18rem' }} onClick={()=>{
                                         ReactGA.event({
                                             category: item.path,
                                             action: 'Clicked on a scooter',

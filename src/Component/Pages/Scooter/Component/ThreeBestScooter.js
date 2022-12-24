@@ -9,7 +9,7 @@ const ThreeBestScooter = () => {
             {scooter.slice(0,3).map((item) => {
                 return (
                     <div className="col-lg-4 col-md-6 d-flex mt-3 justify-content-center   text-center" key={item.id}>
-                        <div className="card" style={{ width: '18rem' }} 
+                        <div className="card shadow  mb-5 bg-body rounded" style={{ width: '18rem' }} 
                         onClick={()=>{
                             navigate(`/scooter/${item.path}`)
                         }}
