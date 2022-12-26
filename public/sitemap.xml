@@ -1,0 +1,147 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <url>
+        <loc>https://www.evstart.com/</loc>
+        <Lastmod>
+            26 dec 2022 08:00:00
+        </Lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://www.evstart.com/scooter</loc>
+        <Lastmod>
+            26 dec 2022 08:00:00
+        </Lastmod>
+        <changefreq>
+            weekly
+        </changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>
+            https://www.evstart.com/scooter/ola-s1-pro
+        </loc>
+        <Lastmod>
+            26 dec 2022 08:00:00
+        </Lastmod>
+        <changefreq>
+            weekly
+        </changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>
+            https://www.evstart.com/scooter/ather-450x-gen3
+        </loc>
+        <Lastmod>
+            26 dec 2022 08:00:00
+        </Lastmod>
+        <changefreq>
+            weekly
+        </changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>
+            https://www.evstart.com/scooter/benling-aura
+        </loc>
+        <Lastmod>
+            26 dec 2022 08:00:00
+        </Lastmod>
+        <changefreq>
+            weekly
+        </changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>
+            https://www.evstart.com/scooter/hero-vida-v1
+        </loc>
+        <Lastmod>
+            26 dec 2022 08:00:00
+        </Lastmod>
+        <changefreq>
+            weekly
+        </changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>
+            https://www.evstart.com/scooter/tvs-iqube-electric
+        </loc>
+        <Lastmod>
+            26 dec 2022 08:00:00
+        </Lastmod>
+        <changefreq>
+            weekly
+        </changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>
+            https://www.evstart.com/scooter/ampere-magnus-ex
+        </loc>
+        <Lastmod>
+            26 dec 2022 08:00:00
+        </Lastmod>
+        <changefreq>
+            weekly
+        </changefreq>
+        <priority>1.0</priority>
+    </url>
+
+
+    <!-- blog -->
+
+
+    <url>
+        <loc>
+            https://www.evstart.com/scooter/blog
+        </loc>
+        <Lastmod>
+            26 dec 2022 08:00:00
+        </Lastmod>
+        <changefreq>
+            weekly
+        </changefreq>
+        <priority>1.0</priority>
+    </url>
+
+
+    <!-- terms and condition -->
+
+    <url>
+        <loc>
+            https://www.evstart.com/scooter/terms-and-condition
+        </loc>
+        <Lastmod>
+            26 dec 2022 08:00:00
+        </Lastmod>
+        <changefreq>
+            never
+        </changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- privacy policy -->
+
+    <url>
+        <loc>
+            https://www.evstart.com/scooter/privacy-policy
+        </loc>
+        <Lastmod>
+            26 dec 2022 08:00:00
+        </Lastmod>
+        <changefreq>
+            never
+        </changefreq>
+        <priority>1.0</priority>
+    </url>
+
+
+</urlset>

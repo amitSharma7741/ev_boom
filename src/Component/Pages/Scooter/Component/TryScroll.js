@@ -1,7 +1,9 @@
 import React from "react";
-import Slider from "react-slick"; 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Scooter from "../Databse/ScooterData.json";
-const HorrizontalImageScooters = () => {
+const TryScroll = () => {
   const setting = {
     dots: true,
     infinite: true,
@@ -12,7 +14,6 @@ const HorrizontalImageScooters = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
-   
     responsive: [
         {
             breakpoint: 1024,
@@ -41,38 +42,17 @@ const HorrizontalImageScooters = () => {
     ]
 
   };
-//   add css on card when some one hover on card
-
-   
   return (
     <>
       <div className="container">
         <Slider {...setting}>
           {Scooter.map((item) => {
             return (
-                <>
-                <div key={item.id} style={{
-                    width: "100%",
-                    display: "flex",
-                    justifyContent: "center",
-                }}>
-
-              <div className="card mx-2"  style={{
-                maxWidth: "18rem", 
-                cursor: "pointer",
-                transition: "all 0.3s ease-in-out",
-                boxShadow: "0 0 11px rgba(33,33,33,.2)",
-                borderRadius: "10px",
-                border: "none",
-                overflow: "hidden",
-                marginBottom: "20px",
-                marginTop: "20px",
-                backgroundColor: "#fff",
+              <div className="card"  key={item.id} style={{
+                maxWidth: "18rem",
                 
 
-              }}    
-              
-              >
+              }}>
                 <img src= {item.image} className="card-img-top" alt= {item.scootername} style={{
                     height: "180px"
                 }} />
@@ -86,8 +66,6 @@ const HorrizontalImageScooters = () => {
                   </p>
                 </div>
               </div>
-                </div>
-                </>
             );
           })}
         </Slider>
@@ -96,4 +74,4 @@ const HorrizontalImageScooters = () => {
   );
 };
 
-export default HorrizontalImageScooters;
+export default TryScroll;

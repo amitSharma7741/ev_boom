@@ -18,8 +18,9 @@ const ThreeBestScooter = () => {
                                 style={{
                                     height: "180px"
                                 }} />
-                            <div className="card-body" style={{
-                                backgroundColor: "rgb(238, 238, 238)"
+                            <div className="card-body" style={{ 
+                                // aad liner gradient
+                                 
                             }}>
                                 <h5 className="card-title">
                                     {item.scootername}

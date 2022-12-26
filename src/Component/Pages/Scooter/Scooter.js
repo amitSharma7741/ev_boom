@@ -1,37 +1,35 @@
-import React, { useEffect } from 'react'
-import AllScooter from './Component/AllScooter'
+import React, { useEffect } from "react";
+import AllScooter from "./Component/AllScooter";
 // import Camparsion from './Component/Camparsion'
-import { Outlet } from 'react-router-dom'
-import ThreeBestScooter from './Component/ThreeBestScooter'
-import HorrizontalImageScooters from './Component/HorrizontalImageScooters'
-import ReactGA from 'react-ga'; 
-import Seo from '../../SEO/Seo'
-import VideoCarouselForScooterHeader from './Component/VideoCarouselForScooterHeader'
+import { Outlet } from "react-router-dom";
+import ThreeBestScooter from "./Component/ThreeBestScooter";
+import HorrizontalImageScooters from "./Component/HorrizontalImageScooters";
+import ReactGA from "react-ga";
+import Seo from "../../SEO/Seo";
+import VideoCarouselForScooterHeader from "./Component/VideoCarouselForScooterHeader";
+import CompareTwo from "./Component/CompareTwo/CompareTwo";
+// import TryScroll from './Component/TryScroll'
 // import "./Post/Post.css"
 const Scooter = () => {
- 
-
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
-     
-     <Seo
-      title="Scooter"
-      // description should be 150 to 160 character
-      description = "Electric Scooter in India 2021: Check out the list of top-rated electric scooters available in the Indian market. Get on-road prices, mileage, reviews, specifications, pictures, videos, and more on Electric Scooter at AutoX."
-      image ="https://static.autox.com/uploads/2021/11/Ola-Electric-S1-Pro.jpg"
-      url="/scooter"
+      <Seo
+        title="Scooter"
+        // description should be 150 to 160 character
+        description="Electric Scooter in India 2021: Check out the list of top-rated electric scooters available in the Indian market. Get on-road prices, mileage, reviews, specifications, pictures, videos, and more on Electric Scooter at AutoX."
+        image="https://static.autox.com/uploads/2021/11/Ola-Electric-S1-Pro.jpg"
+        url="/scooter"
       />
 
+      {/* header videomcarsouel */}
 
-{/* header videomcarsouel */}
+      <VideoCarouselForScooterHeader />
 
-<VideoCarouselForScooterHeader/>
-
-{/*  */}
+      {/*  */}
       {/* <div className="header">
          
         <img
@@ -43,14 +41,14 @@ const Scooter = () => {
 
       {/* <div className="container">
                     <div className="rounded shadow dataContainer bg-white"> */}
-      <section className="section pt-0 position-relative pull-top" style={{ marginTop: "-100px" }}>
+      <section
+        className="section pt-0 position-relative pull-top"
+        style={{ marginTop: "-100px" }}
+      >
         <div className="container">
           <div className="rounded shadow dataContainer bg-white">
-            <h3 className='text-center'>
-              Three best scooters in india
-            </h3>
+            <h3 className="text-center">Three best scooters in india</h3>
             <div className="row d-flex justify-content-center ">
-
               <ThreeBestScooter />
               {/* add three top scooter card */}
               {/* <div className="col-lg-4 col-md-6 d-flex mt-3 justify-content-center   text-center">
@@ -105,57 +103,29 @@ const Scooter = () => {
 
           {/* placed all content here */}
           <div className="mt-5">
-            <AllScooter /> </div>
+            <AllScooter />{" "}
+          </div>
           <hr />
           {/* cmparesion */}
           {/* <Camparsion /> */}
 
-
           {/* horrizontal image gallery */}
           <HorrizontalImageScooters />
 
-
-
-          
+          {/* compare two */}
+          <div className="mt-5">
+            <CompareTwo />
+          </div>
+          {/* add try slider */}
+          {/* <TryScroll/> */}
           {/* above spce for all content */}
         </div>
 
         <Outlet />
       </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       {/* we will use later */}
-     {/*  <section style={{ backgroundColor: "#eee" }}>
+      {/*  <section style={{ backgroundColor: "#eee" }}>
         <div className="container py-5">
           <div className="row">
             <div className="col-md-12 col-lg-4 mb-4 mb-lg-0">
@@ -358,7 +328,7 @@ const Scooter = () => {
       </section> */}
 
       {/* new section */}
-     {/*  <section style={{ backgroundColor: "#eee" }}>
+      {/*  <section style={{ backgroundColor: "#eee" }}>
         <div className="container py-5">
           <div className="row">
             <div className="col-md-12 col-lg-4 mb-4 mb-lg-0">
@@ -503,9 +473,8 @@ const Scooter = () => {
         </div>
       </section> */}
 
-
       {/* another section */}
-     {/*  <div className="container mt-3">
+      {/*  <div className="container mt-3">
         <h2>Toggleable Pills</h2>
         <br /> 
         <ul className="nav nav-pills" role="tablist">
@@ -554,9 +523,8 @@ const Scooter = () => {
 
 
       </div> */}
-
     </>
-  )
-}
+  );
+};
 
-export default Scooter
+export default Scooter;

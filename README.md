@@ -68,3 +68,29 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+<!-- 
+<tbody><tr class="dtcolumns"><td>Manufacturer</td><td>Units sold</td></tr><tr><td class="factfileparam">Ola Electric</td><td data-label="Units sold">16,246</td></tr><tr><td class="factfileparam">Ampere</td><td data-label="Units sold">12,232</td></tr><tr><td class="factfileparam">Okinawa Autotech</td><td data-label="Units sold">9,038</td></tr><tr><td class="factfileparam">Hero Electric</td><td data-label="Units sold">9,008</td></tr><tr><td class="factfileparam">TVS</td><td data-label="Units sold">8,073</td></tr><tr><td class="factfileparam">Ather Energy</td><td data-label="Units sold">7,741</td></tr><tr><td class="factfileparam">Bajaj Auto</td><td data-label="Units sold">2,987</td></tr><tr><td class="factfileparam">Jitendra EV</td><td data-label="Units sold">1,253</td></tr><tr><td class="factfileparam">Pure Energy</td><td data-label="Units sold">921</td></tr><tr><td class="factfileparam">Kinetic Green Energy</td><td data-label="Units sold">838</td></tr><tr><td class="factfileparam">Revolt</td><td data-label="Units sold">524</td></tr><tr><td class="factfileparam">Tork Motors</td><td data-label="Units sold">33</td></tr><tr><td class="factfileparam">Others</td><td data-label="Units sold">7,269</td></tr><tr><td class="factfileparam">TOTAL</td><td data-label="Units sold">76,163</td></tr></tbody>
+
+ -->
+
+
+<!-- make  a table  -->
+
+| Rank   |      Companies     |  Unit Sold |
+|:----------|:-------------:|------:|
+| 1. |  Ola Electric | 16,246 |
+| 2. |  Ampere | 12,232 |
+| 3. |  Okinawa Autotech | 9,038 |
+| 4. |  Hero Electric | 9,008 |
+| 5. |  TVS | 8,073 |
+| 6. |  Ather Energy | 7,741 |
+| 7. |  Bajaj Auto | 2,987 |
+| 8. |  Jitendra EV | 1,253 |
+| 9. |  Pure Energy | 921 |
+| 10. |  Kinetic Green Energy | 838 |
+| 11. |  Revolt | 524 |
+| 12. |  Tork Motors | 33 |
+| 13. |  Others | 7,269 |
+| 14. |  TOTAL | 76,163 |
