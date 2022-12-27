@@ -300,7 +300,13 @@ const Post = () => {
                         <Camparsion/>
 
                         {/* similar scooter */}
-                        <SimilarScooter name="ola-s1-pro" />
+                        <div className="mb-5 mt-2">
+                            <h3 className="container" >
+                               Similar scooter to  {showData[0].scootername}
+                            </h3>
+                            <SimilarScooter name= {post} />
+                        </div>
+                        
 
                         <ImageGallery galleryData={showData[0].gallery} altText={title} />
 
