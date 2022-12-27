@@ -2,84 +2,92 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import Scooter from "../../Databse/ScooterData.json";
 // impoert react-responsive
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from "react-responsive";
 const CompareTwo = () => {
   const [data, setData] = useState([]);
 
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+
+  const first1 = Scooter.filter((item) => item.id < 3);
+  const first2 = Scooter.filter((item) => item.id < 5 && item.id > 2)
+  const first3 =  Scooter.filter((item) => item.id < 7 && item.id > 4)
 
   useEffect(() => {
     setData([
       {
         id: 1,
         name: "Scooter",
-        value: Scooter.filter((item) => item.id < 3),
+        value: first1,
+        comare:`${first1[0].scootername} vs ${first1[1].scootername}`
       },
       {
         id: 2,
         name: "Scooter",
-        value: Scooter.filter((item) => item.id < 5 && item.id > 2),
+        value: first2,
+        comare:`${first2[0].scootername} vs ${first2[1].scootername}`
       },
       {
         id: 3,
         name: "Scooter",
-        value: Scooter.filter((item) => item.id < 7 && item.id > 4),
+        value:first3,
+        comare:`${first3[0].scootername} vs ${first3[1].scootername}`
       },
     ]);
-  }, []);
+  }, [first1,first2,first3]);
 
   const settings = {
     dots: true,
+    // arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     cssEase: "linear",
     responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true
-            }
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
         },
-        {
-            breakpoint: 700,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                initialSlide: 2
-            }
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 2,
         },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
-    ]
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   const styles = {
-    para :{
-        fontSize:  isMobile ? "10px" : "13px",
-    }
-}
+    para: {
+      fontSize: isMobile ? "10px" : "13px",
+    },
+  };
   return (
-    <div className="container">
-      <h1 className="text-start">Compare Two</h1>
+    <div className="container mt-5">
+      <h3 className=" container text-start mb-4">Popular Electric Scooters Comparison</h3>
       <Slider {...settings}>
         {data.map((item) => {
           return (
             <>
               <div>
                 <div
-                  className="container"
+                  className="container "
                   key={item.id}
                   style={{
                     display: "flex",
@@ -87,12 +95,14 @@ const CompareTwo = () => {
                   }}
                 >
                   <div
-                    className="row row-cols-2"
+                    className="row  w-100"
                     style={{
                       border: "1px solid black",
                       borderRadius: "10px",
                       padding: "10px",
-                    //   height: "300px",
+                      position:"relative"
+                      
+                      //   height: "300px",
                     }}
                   >
                     {item.value.map((elem) => {
@@ -115,25 +125,47 @@ const CompareTwo = () => {
                                 }}
                               />
                               <div className="card-body">
-                                <h5 className="card-title" style={{
+                                <h5
+                                  className="card-title"
+                                  style={{
                                     textAlign: "center",
-                                    fontSize:isMobile ? "119px" : "16px",
-                                }}>
+                                    fontSize: isMobile ? "12px" : "16px",
+                                    fontWeight: "bold",
+                                  }}
+                                >
                                   {elem.scootername}
                                 </h5>
-                                <p className="card-text" style={styles.para}>
-                                    Price :<b style={{
-                                        color:"brown"
-                                    }}>{elem.price}</b> 
+                                <p className="card-text mb-4" style={styles.para}>
+                                  Price :{" "}
+                                  <span
+                                    style={{
+                                      color: "brown",
+                                      fontWeight: "bold",
+                                    }}
+                                  >
+                                    {elem.price}
+                                  </span>
                                 </p>
-                                <p className="card-text" style={styles.para}>
-                                    Top Speed : {elem.topSpeed}</p>
+                                {/* <p className="card-text" style={styles.para}>
+                                  Top Speed : {elem.topSpeed}
+                                </p> */}
                               </div>
                             </div>
                           </div>
                         </>
                       );
                     })}
+                    <div style={{
+                      position:"absolute",
+                      bottom:"0",
+                      display:"flex",
+                      justifyContent:"center",
+                      
+                    }}>
+                      <button className="btn btn-primary mb-2 " >
+                         {item.comare}
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
