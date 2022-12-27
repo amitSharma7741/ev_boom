@@ -52,7 +52,7 @@ const AllScooter = () => {
 
         {showData.map((item) => (
           <TabPanel key={item.id}>
-            <h2>{item.value[0].company}</h2>
+            {/* <h2>{item.value[0].company}</h2> */}
             <div className="row">
               {item.value.map((item) => (
                 <div
