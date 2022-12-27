@@ -4,8 +4,13 @@ import { BlogsData } from "./BlogsData";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import "./CSS/BlogPost.css";
+import { useMediaQuery } from "react-responsive";
 const BlogPost = () => {
   const { blogpost } = useParams();
+
+  
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+    
 
   const blog = BlogsData.filter((blog) => blog.Id === blogpost);
 
@@ -74,11 +79,11 @@ const BlogPost = () => {
               </div>
             </div>
             <h1
-              className="text-center "
+              className="text-start "
               style={{
                 color: "black",
                 fontWeight: "bold",
-                fontSize: "40px",
+                fontSize:  isMobile?"30px":"40px",
                 textAlign:"justify"
               }}
             >
