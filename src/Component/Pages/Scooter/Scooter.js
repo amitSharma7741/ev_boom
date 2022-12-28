@@ -18,7 +18,7 @@ const Scooter = () => {
   return (
     <>
       <Seo
-        title="Scooter"
+        title="Electric Scooter price , specification, images , mileage, reviews, offers in India | Evstart"
         // description should be 150 to 160 character
         description="Electric Scooter in India 2021: Check out the list of top-rated electric scooters available in the Indian market. Get on-road prices, mileage, reviews, specifications, pictures, videos, and more on Electric Scooter at AutoX."
         image="https://static.autox.com/uploads/2021/11/Ola-Electric-S1-Pro.jpg"
