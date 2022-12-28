@@ -1,6 +1,5 @@
 import React from 'react'
-import { Routes, Route } from "react-router-dom";
-import Popup from 'reactjs-popup';
+import { Routes, Route } from "react-router-dom"; 
 import Navbar from './Component/Navbar/Navbar';
 import Home from './Component/Pages/Home/Home';
 import Scooter from './Component/Pages/Scooter/Scooter';
@@ -12,6 +11,8 @@ import AllBlogs from './Component/Pages/Blog/AllBlogs';
 import PrivacyPolicy from './Component/Pages/PrivacyPolicy/PrivacyPolicy';
 import ErrorPage from './Component/Pages/ErrorPage/ErrorPage';
 import TermsAndCondition from './Component/Pages/TermsAndCondition/TermsAndCondition';
+import ReactSnowfall from './Component/POPUP/ReactSnowfall/ReactSnowfall';
+import Popup from './Component/POPUP/Popup';
 const App = () => {
   return (
     <>
@@ -33,7 +34,11 @@ const App = () => {
 
       </Routes>
 
+{/*  */}
       <Popup />
+
+      {/* react - snowfall */}
+      <ReactSnowfall/>
 
     </>
   )
