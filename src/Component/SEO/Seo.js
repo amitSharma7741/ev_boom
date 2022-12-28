@@ -1,5 +1,5 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 const Seo = (props) => {
   /* 
   title
@@ -13,15 +13,16 @@ const Seo = (props) => {
   return (
     <>
       <Helmet>
-        <title>
-          {props.title}
-        </title>
+        <title>{props.title}</title>
         <meta name="description" content={props.description} />
-        <meta name="keywords" content="Electric scooter , Electric vehicls, electric vehicles in india , ola , ola s1 pro , ather 450x " />
-        <meta name="author" content="Amit Sharma" />
+        <meta
+          name="keywords"
+          content="Electric scooter , Electric vehicls, electric vehicles in india , ola , ola s1 pro , ather 450x "
+        />
+        <meta name="author" content="EVSTART" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
-        <meta name="google" content="nositelinkssearchbox" />
+        {/* <meta name="google" content="nositelinkssearchbox" />   */}
         <meta name="google" content="notranslate" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#000000" />
@@ -55,7 +56,7 @@ const Seo = (props) => {
         <meta name="x5-fullscreen" content="true" />
         <meta name="x5-page-mode" content="app" />
         {/* Canonical url */}
-        <link rel="canonical" href={  url  } />
+        <link rel="canonical" href={url} />
 
         {/* Open Graph */}
         <meta property="og:locale" content="en_IN" />
@@ -65,9 +66,15 @@ const Seo = (props) => {
         <meta property="og:url" content={url} />
         <meta property="og:site_name" content="EVSTART" />
 
-        <meta property="og:article:author" content="Amit Sharma" />
-        <meta property="og:article:section" content="Electric vehicles Information" />
-        <meta property="og:article:tag" content="Electric scooter , Electric vehicls, electric vehiclesin india , ola , ola s1 pro , ather 450x " />
+        <meta property="og:article:author" content="EVSTART" />
+        <meta
+          property="og:article:section"
+          content="Electric vehicles Information"
+        />
+        <meta
+          property="og:article:tag"
+          content="Electric scooter , Electric vehicls, electric vehiclesin india , ola , ola s1 pro , ather 450x "
+        />
         {/* <meta property="og:article:published_time" content="2020-09-09T12:00:00+00:00" /> */}
         {/* <meta property="og:article:modified_time" content="2020-09-09T12:00:00+00:00" /> */}
 
@@ -81,7 +88,7 @@ const Seo = (props) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:description" content={props.description} />
         <meta name="twitter:title" content={props.title} />
-        <meta name="twitter:site" content="Amit Sharma" />
+        <meta name="twitter:site" content="EVSTART" />
         <meta name="twitter:domain" content={url} />
         <meta name="twitter:app:name:iphone" content="Electric vehicle" />
         <meta name="twitter:app:name:ipad" content="Electric vehicle" />
@@ -94,21 +101,18 @@ const Seo = (props) => {
         <meta name="twitter:app:url:googleplay" content={url} />
         <meta name="twitter:app:country" content="IN" />
 
-        <meta name="twitter:creator" content="Amit Sharma" />
+        <meta name="twitter:creator" content="EVSTART" />
         <meta name="twitter:image" content={props.image} />
         <meta name="twitter:image:alt" content={props.description} />
 
-
+        {/* 
 
         <meta name="referrer" content="origin" />
         <meta name="referrer" content="origin-when-crossorigin" />
-        <meta name="referrer" content="unsafe-url" />
-
-
+        <meta name="referrer" content="unsafe-url" /> */}
       </Helmet>
-
     </>
-  )
-}
+  );
+};
 
-export default Seo
+export default Seo;
