@@ -15,11 +15,7 @@
     "batteryCapacity": "3.97 kWh",
     "chargingTime": "6 Hours 30 Minutes",
     "batteryType": "Lithium-ion Battery",
-    "similarScooter": [
-      "Benling Aura",
-      "Ather 450X gen3",
-      "Hero vida v1"
-    ],
+    "similarScooter": ["Benling Aura", "Ather 450X gen3", "Hero vida v1"],
     "extraSpecifications": [
       {
         "Acceleration": "0-40 Kmph in 2.9 Seconds",
@@ -28,13 +24,7 @@
         "True Range (Normal Mode)": "135 Km"
       }
     ],
-    "tags": [
-      "Ola",
-      "Ola s1 pro",
-      "Scooter",
-      "125cc",
-      "Electric"
-    ],
+    "tags": ["Ola", "Ola s1 pro", "Scooter", "125cc", "Electric"],
     "gallery": [
       "https://static.autox.com/uploads/2021/11/Ola-Electric-S1-Pro.jpg",
       "https://compare.pricesofindia.com/src/wallpapers/ola/ola-s1-pro/Ola-S1-Pro-HD-Wallpapers-PricesOfIndia-1_th.jpg",
@@ -73,12 +63,7 @@
         "True Range (Normal Mode)": "146 Km"
       }
     ],
-    "tags": [
-      "Ather",
-      "Ather 450X",
-      "Scooter",
-      "Electric"
-    ],
+    "tags": ["Ather", "Ather 450X", "Scooter", "Electric"],
     "gallery": [
       "https://bd.gaadicdn.com/processedimages/ather-energy/450x/source/450x62d8d78a1ede1.jpg",
       "https://imgd.aeplcdn.com/1280x720/n/cw/ec/126579/450x-gen-3-right-rear-three-quarter.jpeg?isig=0&q=80",
@@ -212,5 +197,69 @@
       "https://bd.gaadicdn.com/processedimages/ampere/magnus/source/magnus6151931c72c36.jpg?imwidth=880"
     ],
     "longDescription": "Ampere Magnus Pro comes from an electric hub motor that uses a lead battery pack with a range of 100 km on a single charge in the Eco mode, and 80 km on a single charge in the Cruise mode. The scooter can sprint from 0-40 kmph in 10 seconds and has a top speed of 55 kmph. The electric offering comes with telescopic front forks and dual shock absorbers for improved handling and rideability, while there are drum brakes with regenerative braking. Ampere promises the best-in-class powertrain in the electric scooter commuter segment and claims that it is the lightest vehicle in its category with the highest power-to-weight ratio.\nThe Ampere Magnus Pro comes with ample legroom at the front that stands at 450 mm, which the company claims is more than that on the average petrol-powered scooter. The ground clearance stands at 150 mm, ensuring the scooter can take rough roads with ease. The feature list on the electric scooter is elaborate and includes a LED headlamp, digital instrument console, deep under-seat storage space with an LED light, keyless entry, anti-theft alarm, and Combined Braking System (CBS). The scooter also comes with a Limp home feature that offers an extra 10 km of charge when the battery is down to the last 10 per cent."
+  },
+  {
+    "id": "7",
+    "scootername": "Ola S1",
+    "path": "ola-s1",
+    "company": "ola",
+    "oneLine": "The Ola S1 is a premium electric scooter with a powerful motor and a long range.",
+    "price": "99,999",
+    "image": "https://images.91wheels.com//assets/b_images/main/models/profile/profile1663246383.jpg?width=360&q=60",
+    "rating": "4.5",
+    "reviews": "100",
+    "topSpeed": "116 Kmph",
+    "araiRange": "181 Kms",
+    "weight": "121 Kg",
+    "batteryCapacity": "2.98 kwh",
+    "chargingTime": "4 Hr 48 min",
+    "batteryType": "Lithium-ion Battery",
+    "gallery": [
+      "https://bd.gaadicdn.com/processedimages/ola-electric/appscooter/source/appscooter62d909eb8f2cb.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages/ola-electric/appscooter/source/appscooter62d909fb76687.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages/ola-electric/appscooter/source/appscooter62d909fccff2d.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages/ola-electric/appscooter/source/appscooter62d909fe261e7.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages/ola-electric/appscooter/source/appscooter62d90a0020ffb.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages/ola-electric/appscooter/source/appscooter62d90a015679a.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages/ola-electric/appscooter/source/appscooter62d90a212ddf0.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages/ola-electric/appscooter/source/appscooter62d90a21c2d21.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages/ola-electric/appscooter/source/appscooter62d90a24b4fe2.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages/ola-electric/appscooter/source/appscooter62d90a344d7b3.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages/ola-electric/appscooter/source/appscooter62d90a357b4c3.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages/ola-electric/appscooter/source/appscooter62d90a3613372.jpg?imwidth=880"
+    ],
+    "longDescription": "OLA S1 is an electric scooter available at a starting price of Rs. 99,999 in India. It is available in only 1 variant and 5 colours. OLA S1 generates 5500 W power from its motor. With both front and rear disc brakes, OLA S1 comes up with combined braking system of both wheels.\nOla Electric has launched its new electric scooter, the S1 in the Indian market. The Ola electric scooter will come in two variants, Ola S1 and Ola S1 Pro.\nBoth variants of the Ola Electric scooter feature a similar design that comprises a compact twin-pod headlight with an LED DRL ring, apron-mounted sleek LED indicators, a body-coloured front fender, curvy side panels, a sleek LED taillight, an external charging point at the back, and a split-style pillion grabrail. The Ola Electric scooter features a 36-litre under-seat storage that can accommodate two open-face helmets. The colour palette for the base model includes five options while the Pro variant is available in 10 choices.\nMechanical specifications on both scooters include an electric motor that produces a peak output of 8.5kW and maximum torque of 58Nm. The battery capacity for the base variant and the Pro model stands at 2.98kW and 3.97kW, respectively. In terms of performance, the Ola S1 boasts a top speed of 90kmph and a range of 121km per charge. The Ola S1 Pro, on the other hand, can achieve a top speed of 115kmph and features a range of 181km per charge.\nStandard features on both models include proximity lock/unlock, remote boot lock, call alert, message alert, infotainment, side-stand alert, anti-theft alert, geo fencing, WiFi, Bluetooth, GPS, onboard navigation, limp home mode, reverse mode, get home mode, take-me-home lights, find my scooter, HMI moods with sound, electronic steering lock, HMI brightness adjuster, welcome screen, OTA updates, manual SOS, and predictive maintenance. The Pro variant further benefits from hill hold system, cruise control, and voice assist. The Ola S1 version uses two riding modes (Normal and Sport) while the Ola S1 Pro variant packs three (Normal, Sport, and Hyper).\nThe hardware on both variants comprise a tubular frame, single front fork, rear mono-shock, disc brakes on both wheels, and a combined braking system."
+  },
+  {
+    "id": "8",
+    "scootername": "Bajaj Chetak",
+    "path": "bajaj-chetak",
+    "company": "bajaj",
+    "oneLine": "The Bajaj Chetak is a premium electric scooter with a powerful motor and a long range.",
+    "price": "1,52,000",
+    "image": "https://cdni.autocarindia.com/ExtraImages/20200107043003_20191115015517_Chetak.jpg",
+    "rating": "4.5",
+    "reviews": "100",
+    "topSpeed": "63 Kmph",
+    "araiRange": "95 Kms",
+    "weight": "100 Kg",
+    "batteryCapacity": "2.89 kwh",
+    "chargingTime": "5 Hrs",
+    "batteryType": "Lithium-ion Battery",
+    "gallery": [
+      "https://bd.gaadicdn.com/processedimages//source/5e59f56d447dc.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages//source/5e59f56dd2d34.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages//source/5e59f56f0380b.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages//source/5e59f58f543ac.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages//source/5e59f59081348.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages//source/5e59f591a777b.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages//source/5e59f5923fab7.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages//source/5e59f592c7108.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages//source/5e59f594866b6.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages//source/5e59f5b25046f.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages//source/5e59f5d9bb24a.jpg?imwidth=880",
+      "https://bd.gaadicdn.com/processedimages//source/5e59f5b4f2ea9.jpg?imwidth=880"
+    ],
+    "longDescription": "Bajaj Chetak is an electric scooter available at a starting price of Rs. 1,50,081 in India. It is available in only 1 variant and 6 colours. Bajaj Chetak generates 3800 W power from its motor. With front disc and rear drum brakes, Bajaj Chetak comes up with combined braking system of both wheels.\nBefore Bajaj Auto became popular for its modern range of motorcycles, it was principally known for its two-wheeler scooter, namely the Bajaj Chetak. Over the past few years, the Pune-based two-wheeler giant had completely stopped manufacturing scooters and since then it has been working on a new electric scooter offering and has now finally launched the Chetak, in an electric avatar.\nAs the name suggests, the scooter harks back to its roots by taking design cues from the iconic Chetak and giving it a contemporary and fresh look. It uses sheet metal body panels that offer a premium touch, while the smooth flowing lines, LED lighting and turn signals with sequential blinking similar to high-end cars add to its modernity. Furthermore, it packs fully-digital Bluetooth-enabled instrumentation that comes with a host of features.\nAs far as the powertrain is concerned, the Bajaj Chetak is equipped with an electric motor that draws its power from a 3kWh IP67 rated lithium-ion battery. The power rating of its motor is 4kW (peak) and 3.8kW (continuous) with 16Nm of peak torque. The powertrain comes with two drive modes — Sport and Eco, which are capable of returning a range of 95km and 85km, respectively. Bajaj claims that the battery will last for about 70,000km before a replacement is needed. Besides that, Bajaj has equipped the e-scooter with several innovative features like a reverse assist mode, regenerative braking and an onboard Intelligent Battery Management System (IBMS) to control charge and discharge seamlessly.\nBajaj is offering the Chetak electric scooter in two variants, Urbane and Premium. Meanwhile, the colour palette that is available on the Chetak comprises of six options — white, pink, black, yellow, red and blue. Competition-wise, the e-scooter rivals the likes of the Ather 450 and the Okinawa i-Praise in the premium electric scooter market space."
   }
 ]
