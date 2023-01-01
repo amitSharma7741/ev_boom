@@ -1,41 +1,45 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Slider from "react-slick";
 import Scooter from "../../Databse/ScooterData.json";
 // impoert react-responsive
 import { useMediaQuery } from "react-responsive";
-const CompareTwo = () => {
-  const [data, setData] = useState([]);
+const CompareTwo = () => { 
 
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   const first1 = Scooter.filter((item) => item.id < 3);
   const first2 = Scooter.filter((item) => item.id < 5 && item.id > 2)
   const first3 =  Scooter.filter((item) => item.id < 7 && item.id > 4)
+  const first4 = Scooter.filter((item) => item.id < 9 && item.id > 6)
+  const data = [
+    {
+      id: 1,
+      name: "Scooter",
+      value: first1,
+      comare:`${first1[0].scootername} vs ${first1[1].scootername}`
+    },
+    {
+      id: 2,
+      name: "Scooter",
+      value: first2,
+      comare:`${first2[0].scootername} vs ${first2[1].scootername}`
+    },
+    {
+      id: 3,
+      name: "Scooter",
+      value:first3,
+      comare:`${first3[0].scootername} vs ${first3[1].scootername}`
+    },
+    {
+      id: 4,
+      name: "Scooter",
+      value:first4,
+      comare:`${first4[0].scootername} vs ${first4[1].scootername}`
+    }
+  ]
+ 
 
-  useEffect(() => {
-    setData([
-      {
-        id: 1,
-        name: "Scooter",
-        value: first1,
-        comare:`${first1[0].scootername} vs ${first1[1].scootername}`
-      },
-      {
-        id: 2,
-        name: "Scooter",
-        value: first2,
-        comare:`${first2[0].scootername} vs ${first2[1].scootername}`
-      },
-      {
-        id: 3,
-        name: "Scooter",
-        value:first3,
-        comare:`${first3[0].scootername} vs ${first3[1].scootername}`
-      },
-    ]);
-  }, [first1,first2,first3]);
-
-  const settings = {
+  const settings = { 
     dots: true,
     // arrows: false,
     infinite: true,
@@ -77,6 +81,11 @@ const CompareTwo = () => {
     para: {
       fontSize: isMobile ? "10px" : "13px",
     },
+    val:{
+      fontSize: isMobile ? "10px" : "13px",
+      color: "brown",
+      fontWeight: "bold",
+    }
   };
   return (
     <div className="container mt-5">
@@ -135,7 +144,7 @@ const CompareTwo = () => {
                                 >
                                   {elem.scootername}
                                 </h5>
-                                <p className="card-text mb-4" style={styles.para}>
+                                {/* <p className="card-text mb-4" style={styles.para}>
                                   Price :{" "}
                                   <span
                                     style={{
@@ -145,7 +154,70 @@ const CompareTwo = () => {
                                   >
                                     {elem.price}
                                   </span>
-                                </p>
+                                </p> */}
+                                <div className="row">
+                                  <div className="col-12">
+                                    <p className ="float-start" style={styles.para}>
+                                      Price 
+                                    </p>
+                                    <p className="float-end" style={styles.val}>
+                                      {elem.price}
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="row">
+                                  <div className="col-12">
+                                    <p className ="float-start" style={styles.para}>
+                                      Range
+                                    </p>
+                                    <p className="float-end" style={styles.val}>
+                                      {elem.araiRange}
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="row">
+                                  <div className="col-12">
+                                    <p className ="float-start" style={styles.para}>
+                                      Top Speed
+                                    </p>
+                                    <p className="float-end" style={styles.val}>
+                                    {elem.topSpeed}
+                                    </p>
+                                  </div>
+                                </div>
+                                {/* <div className="card-text w-100" style={styles.para}> 
+                                    <p className="float-start" >
+                                      Price
+                                    </p>
+                                    <p className=" float-end" style={{
+                                      color: "brown",
+                                      fontWeight: "bold",
+                                    }}>
+                                      {elem.price}
+                                    </p> 
+                                </div> */}
+                                {/* <div className="card-text w-100" style={styles.para}> 
+                                    <p className="float-start" >
+                                      Range
+                                    </p>
+                                    <p className=" float-end" style={{
+                                      color: "brown",
+                                      fontWeight: "bold",
+                                    }}>
+                                      {elem.araiRange}
+                                    </p> 
+                                </div>
+                                <div className="card-tex w-100t" style={styles.para}> 
+                                    <p className="float-start" >
+                                      Top Speed
+                                    </p>
+                                    <p className=" float-end" style={{
+                                      color: "brown",
+                                      fontWeight: "bold",
+                                    }}>
+                                      {elem.topSpeed}
+                                    </p> 
+                                </div> */}
                                 {/* <p className="card-text" style={styles.para}>
                                   Top Speed : {elem.topSpeed}
                                 </p> */}
