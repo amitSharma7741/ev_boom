@@ -155,37 +155,13 @@ const Post = () => {
       >
         <div className="container">
           <div className="rounded shadow dataContainer bg-white">
-            {/*  <div className="row">
-                            <div className="col-lg-4 col-md-6 mt-5 mt-md-0 text-center">
-                                <i className="ti-paint-bucket text-primary h1" />
-                                <h3 className="mt-4 text-capitalize h5 ">themes made easy</h3>
-                                <p className="regular text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae
-                                    tempore ipsam dignissimos molestias.</p>
-                            </div>
-                            <div className="col-lg-4 col-md-6 mt-5 mt-md-0 text-center">
-                                <i className="ti-shine text-primary h1" />
-                                <h3 className="mt-4 text-capitalize h5 ">powerful design</h3>
-                                <p className="regular text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae
-                                    tempore ipsam dignissimos molestias.</p>
-                            </div>
-                            <div className="col-lg-4 col-md-12 mt-5 mt-lg-0 text-center">
-                                <i className="ti-thought text-primary h1" />
-                                <h3 className="mt-4 text-capitalize h5 ">creative content</h3>
-                                <p className="regular text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae
-                                    tempore ipsam dignissimos molestias.</p>
-                                <p />
-                            </div>
-                        </div> */}
-            <div className="row d-flex justify-content-center">
-              {/* {scooter.map((item) => {
-                                        return (
-                                            <>
-                                                <div className="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch" key={item.id}>
-                                                    <p>{item.topSpeed}</p>
-                                                </div>
-                                            </>
-                                        )
-                                    })} */}
+            <div className="container mt-3">
+              <h2 className="text-start" style={{ textAlign:"justify"}}>
+                {showData[0].scootername} Price, Range, Battery Charging Time, Top Speed, Images and many more
+              </h2>
+            </div>
+            <div className="row d-flex justify-content-center mt-5">
+           
 
               <FourSpecification path={showData[0].path} />
 
