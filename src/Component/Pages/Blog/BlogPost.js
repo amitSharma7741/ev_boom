@@ -11,7 +11,7 @@ const BlogPost = () => {
 
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
-  const blog = BlogsData.filter((blog) => blog.Id === blogpost);
+  const blog = BlogsData.filter((blog) => blog.path === blogpost);
   const urlParam = `/blog/${blogpost}`;
 
   useEffect(() => {
@@ -68,7 +68,7 @@ const BlogPost = () => {
                 <Link to="/scooter">
                   <img
                     className=" "
-                    src={blog[0]?.img}
+                    src={blog[0]?.authorImg}
                     style={{
                       width: "45px",
                       height: "45px",
