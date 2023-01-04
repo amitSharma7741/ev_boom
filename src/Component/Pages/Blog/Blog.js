@@ -18,7 +18,7 @@ function Blog() {
         image="https://static.autox.com/uploads/2021/11/Ola-Electric-S1-Pro.jpg"
         url="/blog"
       />
-      {/*  */}
+      {/*  */} 
       <div
         class="container"
         style={{
@@ -26,7 +26,7 @@ function Blog() {
         }}
       >
         <h1
-          className="text-center mt-5 "
+          className="text-center pt-5 "
           style={{
             color: "black",
             fontWeight: "bold",
