@@ -7,7 +7,7 @@ import HorrizontalImageScooters from "./Component/HorrizontalImageScooters";
 import ReactGA from "react-ga";
 import Seo from "../../SEO/Seo";
 import VideoCarouselForScooterHeader from "./Component/VideoCarouselForScooterHeader";
-import CompareTwo from "./Component/CompareTwo/CompareTwo";
+import CompareTwo from "../Home/Component/CompareTwo/CompareTwo";
 // import TryScroll from './Component/TryScroll'
 // import "./Post/Post.css"
 const Scooter = () => {
