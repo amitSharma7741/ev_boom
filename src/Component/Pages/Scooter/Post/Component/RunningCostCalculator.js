@@ -30,7 +30,7 @@ const RunningCostCalculator = () => {
     const finalCost = perYearCost / pMilage;
 
     setpFinalCost(finalCost.toFixed(0));
-    console.log(finalCost);
+    // console.log(finalCost);
 
     // electric
     const electricPerYearDist = pDistPerDay * 365 * pYear;
