@@ -1,21 +1,19 @@
-import React, { useEffect } from 'react'
-import AllScooter from '../Scooter/Component/AllScooter'
+import React, { useEffect } from "react";
+import AllScooter from "../Scooter/Component/AllScooter";
 // import VideoCarousel from './Component/VideoCarousel'
-import "./Home.css"
-import ReactGA from 'react-ga';
-import TryHeader from './Component/TryHeader/TryHeader';
-import EmiCalculator from "../Scooter/Post/Component/EmiCalaculator"
-import RunningCostCalculator from "../Scooter/Post/Component/RunningCostCalculator"
+import "./Home.css";
+import ReactGA from "react-ga";
+import TryHeader from "./Component/TryHeader/TryHeader";
+import EmiCalculator from "../Scooter/Post/Component/EmiCalaculator";
+import RunningCostCalculator from "../Scooter/Post/Component/RunningCostCalculator";
+import CompareTwo from "./Component/CompareTwo/CompareTwo";
 const Home = () => {
-
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
-  }, [])
+  }, []);
 
   return (
     <>
-
-
       <TryHeader />
 
       {/*  <div className="header">
@@ -30,34 +28,49 @@ const Home = () => {
         />
       </div> */}
 
-      <div className="bg-light ">
-        <div className="container  " style={{
-          padding: "50px 10px"
-        }}>
+      <div className=" ">
+        <div
+          className="container  "
+          style={{
+            padding: "50px 10px",
+          }}
+        >
           <AllScooter />
         </div>
-
       </div>
-      <div className="container " style={{
-        padding: "50px 10px"
-      }}>
+      <div
+        className="container "
+        style={{
+          padding: "50px 10px",
+        }}
+      >
         <EmiCalculator price="100000" />
       </div>
 
-      <div className='bg-light'>
-        <div className="container" style={{
-          padding: "30px 10px"
-        }}>
+      {/* compare two */}
+
+      <div className="" style={{
+        padding:"15px 0 70px 0"
+      }}>
+        <CompareTwo />
+      </div>
+      {/*  */}
+
+      <div className="">
+        <div
+          className="container"
+          style={{
+            padding: "30px 10px",
+          }}
+        >
           <RunningCostCalculator />
         </div>
       </div>
       {/* video carsoluel */}
       {/* <VideoCarousel/> */}
-
     </>
-  )
-}
-
+  );
+};
 
 /* 
 <video className="img-fluid" autoPlay loop muted>
@@ -76,4 +89,4 @@ const Home = () => {
 
 
 */
-export default Home
+export default Home;
