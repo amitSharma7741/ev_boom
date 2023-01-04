@@ -15,6 +15,7 @@ import ReactGA from "react-ga";
 import { useMediaQuery } from "react-responsive";
 import Camparsion from "../Component/Camparsion";
 import Seo from "../../../SEO/Seo";
+import RecentlyViewed from "./Component/RecentlyViewed/RecentlyViewed";
 const Post = () => {
   const { post } = useParams();
 
@@ -31,6 +32,7 @@ const Post = () => {
   const urlParam = `/scooter/${post}`;
 
   const [isreadMore, setIsreadMore] = useState(true);
+  const [localData, setLocalData] = useState([]);
   const text = showData[0].longDescription;
 
   const ForMobile = () => {
@@ -60,12 +62,68 @@ const Post = () => {
     );
   };
 
+  const setLocalStorage = (item) => {
+    let scooters = {
+      count: 1,
+      dataArr: [],
+    };
+    //  store the data in object
+    const data = {
+      id: Math.random() * 1000,
+      path: item,
+    };
+
+    if (localStorage.getItem("scooters") === null) {
+      // if the data is not present in the local storage then store it
+      scooters.dataArr?.push(data);
+      localStorage.setItem("scooters", JSON.stringify(scooters));
+    } else {
+      // if the data is present in the local storage then get the data and then store it
+      scooters = JSON.parse(localStorage.getItem("scooters"));
+      if (!scooters.dataArr?.some((item) => item.path === data.path)) {
+        scooters.dataArr?.push(data);
+        scooters.count = scooters.count + 1;
+        localStorage.setItem("scooters", JSON.stringify(scooters));
+      }
+    }
+    //  now check what we store in the local storage
+    // console.log(JSON.parse(localStorage.getItem("scooters")));
+  };
+
+  //  we set data in local storage localStorage.setItem("scooter", JSON.stringify(item)); // convert the object to string
+  //  we want get the local storage data
+
+  // let localData = [];
+  // console.log(localData);
+
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
     // open always in top
     window.scrollTo(0, 0);
-  }, []);
-
+    setLocalStorage(post);
+    const scooterLocalStorage = JSON.parse(localStorage.getItem("scooters"));
+    // remove the data from local storage
+    // localStorage.removeItem("scooters");
+    const dummyData = [];
+    // if scooterLocalStorage count is greater than 1 then move forward
+    if (scooterLocalStorage.length !== null) {
+      if (scooterLocalStorage.count > 1) {
+        for (let i = 0; i < scooterLocalStorage.dataArr.length; i++) {
+          for (let j = 0; j < scooter.length; j++) {
+            if (scooterLocalStorage.dataArr[i].path === scooter[j].path) {
+              dummyData.push(scooter[j]);
+            }
+          }
+        }
+        // dummyData.filter((item) => item.path !== post);
+        //  reverse the array
+        dummyData.reverse();
+        // console.log(dummyData);
+        setLocalData(dummyData);
+      }
+    }
+    // getLocalStorage();
+  }, [post]);
   const styles = {
     detailText: {
       width: isMobile ? "100%" : "75%",
@@ -124,22 +182,7 @@ const Post = () => {
         >
           <p className="text-center">{showData[0].scootername}</p>
           <p className="text-center">{showData[0].price}</p>
-          {/* <div className='card   text-white' style={{
-                        backgroundColor: "rgba(0, 0, 0, 0)",
-                        border: "0px solid",
-                    }}> 
-                        <div className="card-img-overlay  " style={{
-                            display: "inline-block",
-                            marginTop: "40px",
-                            overflowWrap: "break-word",
-                        }}>
-                            
-                        </div>
-                    </div> */}
-          {/* <div className="text-white" > 
-                        
-                         
-                    </div> */}
+        
         </div>
 
         <img
@@ -156,46 +199,14 @@ const Post = () => {
         <div className="container">
           <div className="rounded shadow dataContainer bg-white">
             <div className="container mt-3">
-              <h2 className="text-start" style={{ textAlign:"justify"}}>
-                {showData[0].scootername} Price, Range, Battery Charging Time, Top Speed, Images and many more
+              <h2 className="text-start" style={{ textAlign: "justify" }}>
+                {showData[0].scootername} Price, Range, Battery Charging Time,
+                Top Speed, Images and many more
               </h2>
             </div>
             <div className="row d-flex justify-content-center mt-5">
-           
-
               <FourSpecification path={showData[0].path} />
-
-              {/* 
-                                    <div className="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-                                        <div className="count-box pb-5 pt-0 pt-lg-5">
-                                            {" "}
-                                            <i className="bi bi-clock" />{" "}
-                                            <span
-                                                data-purecounter-start={0}
-                                                data-purecounter-end={27}
-                                                className="purecounter"
-                                                data-purecounter-duration={0}
-                                            >
-                                                27
-                                            </span>
-                                            <p>Years of experience</p>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-                                        <div className="count-box pb-5 pt-0 pt-lg-5">
-                                            {" "}
-                                            <i className="bi bi-award" />{" "}
-                                            <span
-                                                data-purecounter-start={0}
-                                                data-purecounter-end={22}
-                                                className="purecounter"
-                                                data-purecounter-duration={0}
-                                            >
-                                                22
-                                            </span>
-                                            <p>Awards</p>
-                                        </div>
-                                    </div> */}
+ 
             </div>
             {/* short info */}
             {/*  <div className="mt-5">
@@ -228,19 +239,19 @@ const Post = () => {
                   <tbody>
                     <tr>
                       <td>Top Speed</td>
-                      <td>80 kmph</td>
+                      <td>{showData[0].topSpeed}</td>
                     </tr>
                     <tr>
                       <td>Range</td>
-                      <td>80 km</td>
+                      <td>{showData[0].araiRange}</td>
                     </tr>
                     <tr>
                       <td>Battery</td>
-                      <td>2.5 kWh</td>
+                      <td> {showData[0].batteryCapacity}</td>
                     </tr>
                     <tr>
                       <td>Charging Time</td>
-                      <td>3.5 hours</td>
+                      <td>{showData[0].chargingTime}</td>
                     </tr>
                     <tr>
                       <td>Motor Power</td>
@@ -288,15 +299,23 @@ const Post = () => {
             <Camparsion />
 
             {/* similar scooter */}
-            <div className="mb-5 mt-2">
+            <div className="mb-5 mt-2 py-3 shadow-sm bg-body">
               <h3 className="container">
                 Similar scooter to {showData[0].scootername}
               </h3>
               <SimilarScooter name={post} />
-            </div>
+            </div> 
+
+            {/* image gallery */}
 
             <ImageGallery galleryData={showData[0].gallery} altText={title} />
-
+            {/*  */}
+            {/* get local storage items */}
+            <div className="mb-5 mt-5 py-3 shadow-sm bg-body">
+              <h3 className="container">Recently Viewed</h3>
+              <RecentlyViewed data={localData} />
+            </div>
+            {/*  */}
             {/* try new emi calculator */}
             {/* <TryEmiCalculator price={showData[0].price}  /> */}
           </div>
