@@ -23,7 +23,7 @@ const HorrizontalImageScooters = () => {
   ];
   const currentMonth = months[newDate.getMonth()];
   const setting = {
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -64,7 +64,7 @@ const HorrizontalImageScooters = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container shadow py-3">
         <h3 className=" container text-start mb-4">
           Electric Scooters in India
         </h3>
