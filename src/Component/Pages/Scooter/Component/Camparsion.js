@@ -27,7 +27,7 @@ const Camparsion = () => {
     const starArray = [...fullStarArray, ...halfStarArray, ...emptyStarArray];
     return starArray;
   };
-  console.log(rating(4.5));
+  // console.log(rating(4.5));
 
   const isMobile = useMediaQuery({
     query: `(max-width:750px)`,
