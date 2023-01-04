@@ -16,7 +16,7 @@ const AllBlogs = () => {
   return (
     <>
       <div className="container">
-        <div className="d-flex justify-content-center">
+        <div className="">
           {blogs.map((blog) => {
             return (
               <div
@@ -29,7 +29,7 @@ const AllBlogs = () => {
                   borderRadius: "5px",
                    
                 }} 
-                onClick={() => navigate(`/blog/${blog.Id}`)}
+                onClick={() => navigate(`/blog/${blog.path}`)}
                 key={blog.Id}
               >
                 <div className="row g-0">
@@ -70,7 +70,7 @@ const AllBlogs = () => {
                           <Link to="/scooter">
                             <img
                               className=" "
-                              src= {blog.img}
+                              src= {blog.authorImg}
                               style={{
                                 width: "45px",
                                 height: "45px",
