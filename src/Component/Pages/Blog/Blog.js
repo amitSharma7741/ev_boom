@@ -13,8 +13,8 @@ function Blog() {
     <>
       {/* add seo */}
       <Seo
-        title="Electric Vehicle Blogs , News , Reviews , Tips and Tricks"
-        description="Electric Vehicle Blogs , News , Reviews , Tips and Tricks"
+        title="Electric Vehicle Blogs, News, Reviews, Tips and Tricks"
+        description="Electric Vehicle Blogs, News, Reviews, Tips and Tricks"
         image="https://static.autox.com/uploads/2021/11/Ola-Electric-S1-Pro.jpg"
         url="/blog"
       />
