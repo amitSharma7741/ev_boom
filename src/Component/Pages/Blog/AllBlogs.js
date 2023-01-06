@@ -9,6 +9,8 @@ const AllBlogs = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
+    //   reverse the array to show latest blogs first
+     BlogsData.reverse();
     setBlogs(BlogsData);
     //  add location to google analytics 
     ReactGa.pageview(window.location.pathname + window.location.search); 
