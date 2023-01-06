@@ -1,10 +1,4 @@
-<!DOCTYPE rss [
-    <!ENTITY ixid "entity-value">
-    <!ENTITY auto "entity-value">
-    <!ENTITY fit "entity-value">
-    <!ENTITY w "entity-value">
-    <!ENTITY q "entity-value">
-]>
+ 
 <rss xmlns:media="http://search.yahoo.com/mrss/"
     xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
 
@@ -31,14 +25,7 @@
                 and air pollution. EVs are generally considered to be more environmentally friendly
                 than gasoline-powered vehicles,
             </description>
-           
-
-            <enclosure
-                url="https://images.unsplash.com/photo-1642665076339-ca50c80a44e7?ixlib=rb-4.0.3&ixid;=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto;=format&fit;=crop&w;=2070&q;=80"
-                length="40006000" type="image/jpg" />
-            <image>
-                https://images.unsplash.com/photo-1642665076339-ca50c80a44e7?ixlib=rb-4.0.3&ixid;=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto;=format&fit;=crop&w;=2070&q;=80
-            </image>
+            
             <pubDate>
                 Sun 25 dec 2022 10:10:00 +0000
             </pubDate>
@@ -63,14 +50,8 @@
                 emissions.
             </description>
 
-
-            <enclosure
-                url="https://images.unsplash.com/photo-1566936737687-8f392a237b8b?ixlib=rb-4.0.3&ixid;=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto;=format&fit;=crop&w;=1170&q;=80"
-                length="20003000" type="image/jpg" />
-
-            <image>
-                https://images.unsplash.com/photo-1566936737687-8f392a237b8b?ixlib=rb-4.0.3&ixid;=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto;=format&fit;=crop&w;=1170&q;=80
-            </image>
+ 
+ 
             <pubDate>
                 Wed 04 jan 2023 10:10:00 +0000
             </pubDate>
