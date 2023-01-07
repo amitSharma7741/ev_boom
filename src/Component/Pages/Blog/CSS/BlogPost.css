@@ -1,52 +1,53 @@
- 
+.boxy p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin: 0 0 1.5em 0;
+  padding: 0;
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-align: justify;
+  /* text wrapped */
+  word-wrap: break-word;
+}
 
- .boxy p{
-    font-size: 1.2em;
-    line-height: 1.5em;
-    margin: 0 0 1.5em 0;
-    padding: 0;
-    color: #333;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    text-align: justify;
- }
+.boxy table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  margin: 0 0 1.5em 0;
+  padding: 0;
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-align: justify;
+}
 
- .boxy table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    border: 1px solid #ddd;
-    margin: 0 0 1.5em 0;
-    padding: 0;
-    color: #333;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    text-align: justify;
- }
+.boxy table th,
+.boxy table td {
+  text-align: left;
+  padding: 16px;
+}
 
-    .boxy table th, .boxy table td {
-        text-align: left;
-        padding: 16px;
-    }
+.boxy table tbody tr:nth-child(even) {
+  background-color: #fff;
+}
 
-    .boxy table tbody tr:nth-child(even) {
-       
-        background-color: #fff;
-    }
+.boxy table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
 
-    .boxy table tbody tr:nth-child(odd) {
-        background-color: #f2f2f2;  
-    }
-
-
-    /* boxy image */
-    .boxy img {
-        max-width: 100%;
-        height: auto;
-        margin: 0 0 1.5em 0;
-        padding: 0;
-        color: #333;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 400;
-        text-align: justify;
-    }
+/* boxy image */
+.boxy img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 1.5em 0;
+  padding: 0;
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-align: justify;
+  filter: blur(0);
+  transition: filter 0.3s;
+}
