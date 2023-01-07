@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ReactGa from "react-ga";
 import { BlogsData } from "./BlogsData";
-
+// import { LazyLoadImage } from 'react-lazy-load-image-component';
+// import 'react-lazy-load-image-component/src/effects/blur.css';
 const AllBlogs = () => {
   const navigate = useNavigate();
 
@@ -11,7 +12,7 @@ const AllBlogs = () => {
   useEffect(() => {
     //   reverse the array to show latest blogs first
      BlogsData.reverse();
-    setBlogs(BlogsData);
+    setBlogs(BlogsData); 
     //  add location to google analytics 
     ReactGa.pageview(window.location.pathname + window.location.search); 
   }, []);
@@ -23,7 +24,7 @@ const AllBlogs = () => {
             return (
               <div
                 className="card mb-3"
-                style={{ maxWidth: 540,
+                style={{ maxWidth: 600,
                   cursor: "pointer", 
                   background: "linear-gradient(to right, #f5f7fa, #c3cfe2)",
                   boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
@@ -39,7 +40,7 @@ const AllBlogs = () => {
                     <img
                       src={blog.img}
                       className="img-fluid rounded-start h-100"
-                      alt="..."
+                      alt={blog.title}  
                     />
                   </div>
                   <div className="col-md-8">
