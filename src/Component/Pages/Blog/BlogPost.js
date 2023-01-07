@@ -6,6 +6,8 @@ import remarkGfm from "remark-gfm";
 import "./CSS/BlogPost.css";
 import { useMediaQuery } from "react-responsive";
 import Seo from "../../SEO/Seo";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 const BlogPost = () => {
   const { blogpost } = useParams();
 
@@ -47,9 +49,19 @@ const BlogPost = () => {
           color: "black",
         }}
       >
-        <div className="row shadow-sm mb-5 bg-body rounded">
-          <div className="col-12 ">
-            <img src={blog[0]?.img} className="img-fluid" alt={blog[0].title} />
+        <div className=" shadow-sm mb-5 bg-body rounded">
+          <div className="  ">
+            <LazyLoadImage
+           src={blog[0]?.img} className="img-fluid w-100" alt={blog[0].title}
+           effect="blur"
+           
+           style = {{ 
+              borderRadius: "5px 5px 0 0"
+
+            }} />
+            <div  style= {{
+              padding:"10px 20px"
+            }}>
             <div
               className=" mb-2 mt-2 "
               style={{
@@ -125,8 +137,40 @@ const BlogPost = () => {
               <ReactMarkdown
                 children={blog[0]?.description}
                 remarkPlugins={[remarkGfm]}
+                linkTarget='_blank'
+                //  lazy load image
+                components={{
+                  img: ({ node, ...props }) => (
+                    <LazyLoadImage
+                      src={props.src}
+                      alt={props.alt}
+                      effect="blur"
+                      />
+                  ),
+                  // blackquote tag style text wrap
+                  blockquote: ({ node, ...props }) => (
+                    <blockquote
+                      className="blockquote"
+                      style={{
+                        borderLeft: "5px solid #007bff",
+                        padding: "10px 20px",
+                        color: "black",
+                        fontWeight: "bold",
+                        fontSize: "15px",
+                        textAlign: "justify",
+
+
+                      }}
+                    >
+                      {props.children}
+                    </blockquote>
+                  ),
+                }}
+
+                  
               />
             </div>
+          </div>
           </div>
         </div>
       </div>
