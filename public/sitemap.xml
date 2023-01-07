@@ -111,6 +111,42 @@
         </changefreq>
         <priority>1.0</priority>
     </url>
+    <url>
+        <loc>
+            https://evstart.netlify.app/blog/electric-scooter-sales-data-in-nov-2022
+        </loc>
+        <Lastmod>
+            Sun 25 dec 2022 10:10:00 +0000
+        </Lastmod>
+        <changefreq>
+            weekly
+        </changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>
+            https://evstart.netlify.app/blog/why-electric-scooter-is-better-than-petrol-scooter
+        </loc>
+        <Lastmod>
+            Wed 04 jan 2023 10:10:00 +0000
+        </Lastmod>
+        <changefreq>
+            weekly
+        </changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>
+            https://evstart.netlify.app/blog/ather-450x-free-non-copyright-images-download-2023
+        </loc>
+        <Lastmod>
+            Sun 8 jan 2023 10:10:00 +0000
+        </Lastmod>
+        <changefreq>
+            weekly
+        </changefreq>
+        <priority>0.8</priority>
+    </url>
 
 
     <!-- terms and condition -->
