@@ -17,7 +17,7 @@
         <changefreq>
             weekly
         </changefreq>
-        <priority>1.0</priority>
+        <priority>0.8</priority>
     </url>
 
     <url>
@@ -85,6 +85,30 @@
     <url>
         <loc>
             https://www.evstart.com/scooter/ampere-magnus-ex
+        </loc>
+        <Lastmod>
+            26 dec 2022 08:00:00
+        </Lastmod>
+        <changefreq>
+            weekly
+        </changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>
+            https://www.evstart.com/scooter/ola-s1
+        </loc>
+        <Lastmod>
+            26 dec 2022 08:00:00
+        </Lastmod>
+        <changefreq>
+            weekly
+        </changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>
+            https://www.evstart.com/scooter/bajaj-chetak
         </loc>
         <Lastmod>
             26 dec 2022 08:00:00
