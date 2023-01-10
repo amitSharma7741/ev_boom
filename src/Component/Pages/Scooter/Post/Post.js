@@ -94,7 +94,7 @@ const Post = () => {
   //  we want get the local storage data
 
   // let localData = [];
-  // console.log(localData);
+  // console.log(localData); 
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
@@ -188,7 +188,7 @@ const Post = () => {
         <img
           className="headerImg"
           src={showData[0].image}
-          alt={showData[0].company}
+          alt= {title}
         />
       </div>
 
