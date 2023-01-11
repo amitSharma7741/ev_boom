@@ -15,7 +15,7 @@ import ReactGA from "react-ga";
 import { useMediaQuery } from "react-responsive";
 import Camparsion from "../Component/Camparsion";
 import Seo from "../../../SEO/Seo";
-import RecentlyViewed from "./Component/RecentlyViewed/RecentlyViewed";
+// import RecentlyViewed from "./Component/RecentlyViewed/RecentlyViewed";
 const Post = () => {
   const { post } = useParams();
 
@@ -32,8 +32,10 @@ const Post = () => {
   const urlParam = `/scooter/${post}`;
 
   const [isreadMore, setIsreadMore] = useState(true);
-  const [localData, setLocalData] = useState([]);
+  // const [localData, setLocalData] = useState([]);
   const text = showData[0].longDescription;
+
+  const desc = `${showData[0]?.scootername} costs Rs. ${showData[0]?.price} in India. On EVSTART you can get ${showData[0]?.scootername} price, range, battery charging time, top speed, images, features, specifications, reviews, mileage, colors, variants, and other details.`;
 
   const ForMobile = () => {
     return (
@@ -62,7 +64,7 @@ const Post = () => {
     );
   };
 
-  const setLocalStorage = (item) => {
+  /* const setLocalStorage = (item) => {
     let scooters = {
       count: 1,
       dataArr: [],
@@ -88,19 +90,19 @@ const Post = () => {
     }
     //  now check what we store in the local storage
     // console.log(JSON.parse(localStorage.getItem("scooters")));
-  };
+  }; */
 
   //  we set data in local storage localStorage.setItem("scooter", JSON.stringify(item)); // convert the object to string
   //  we want get the local storage data
 
   // let localData = [];
-  // console.log(localData); 
+  // console.log(localData);
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
     // open always in top
     window.scrollTo(0, 0);
-    setLocalStorage(post);
+    /* setLocalStorage(post);
     const scooterLocalStorage = JSON.parse(localStorage.getItem("scooters"));
     // remove the data from local storage
     // localStorage.removeItem("scooters");
@@ -121,7 +123,7 @@ const Post = () => {
         // console.log(dummyData);
         setLocalData(dummyData);
       }
-    }
+    } */
     // getLocalStorage();
   }, [post]);
   const styles = {
@@ -135,7 +137,7 @@ const Post = () => {
       {/* add seo */}
       <Seo
         title={title}
-        description={showData[0].longDescription.slice(0, 150)}
+        description={desc}
         image={showData[0].image}
         url={urlParam}
       />
@@ -168,7 +170,7 @@ const Post = () => {
             transform: "translate(-50%, -50%)",
             color: "white",
             textAlign: "center",
-            fontSize: "30px",
+            fontSize:  "30px",
             fontWeight: "bold",
             textShadow: "2px 2px 4px #000000",
             backgroundColor: "rgba(0, 0, 0, 0.5)",
@@ -180,16 +182,11 @@ const Post = () => {
             backgroundPosition: "center",
           }}
         >
-          <p className="text-center">{showData[0].scootername}</p>
-          <p className="text-center">{showData[0].price}</p>
-        
+          <p className="text-center" style={{fontSize:  "30px",}}>{showData[0].scootername}</p>
+          <p className="text-center"  style={{fontSize:  "30px",}}>{showData[0].price}</p>
         </div>
 
-        <img
-          className="headerImg"
-          src={showData[0].image}
-          alt= {title}
-        />
+        <img className="headerImg" src={showData[0].image} alt={title} />
       </div>
 
       <section
@@ -198,15 +195,9 @@ const Post = () => {
       >
         <div className="container">
           <div className="rounded shadow dataContainer bg-white">
-            <div className="container mt-3">
-              <h2 className="text-start" style={{ textAlign: "justify" }}>
-                {showData[0].scootername} Price, Range, Battery Charging Time,
-                Top Speed, Images and many more
-              </h2>
-            </div>
-            <div className="row d-flex justify-content-center mt-5">
+             
+            <div className="row d-flex justify-content-center mt-2">
               <FourSpecification path={showData[0].path} />
- 
             </div>
             {/* short info */}
             {/*  <div className="mt-5">
@@ -304,17 +295,17 @@ const Post = () => {
                 Similar scooter to {showData[0].scootername}
               </h3>
               <SimilarScooter name={post} />
-            </div> 
+            </div>
 
             {/* image gallery */}
 
             <ImageGallery galleryData={showData[0].gallery} altText={title} />
             {/*  */}
             {/* get local storage items */}
-            <div className="mb-5 mt-5 py-3 shadow-sm bg-body">
+            {/* <div className="mb-5 mt-5 py-3 shadow-sm bg-body">
               <h3 className="container">Recently Viewed</h3>
               <RecentlyViewed data={localData} />
-            </div>
+            </div> */}
             {/*  */}
             {/* try new emi calculator */}
             {/* <TryEmiCalculator price={showData[0].price}  /> */}
