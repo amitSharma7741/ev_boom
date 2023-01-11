@@ -7,6 +7,8 @@ import TryHeader from "./Component/TryHeader/TryHeader";
 import EmiCalculator from "../Scooter/Post/Component/EmiCalaculator";
 import RunningCostCalculator from "../Scooter/Post/Component/RunningCostCalculator";
 import CompareTwo from "./Component/CompareTwo/CompareTwo";
+import Seo from "../../SEO/Seo";
+import HorrizontalImageScooters from "../Scooter/Component/HorrizontalImageScooters";
 const Home = () => {
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
@@ -14,6 +16,14 @@ const Home = () => {
 
   return (
     <>
+      {/* add seo */}
+      <Seo
+        title   = "EVSTART: Electric scooter price, image, specification, review, compare @evstart"
+        description  = "EVSTART is a web application that allows users to search for electric vehicles and compare them to each other. The main goal of EVSTART is to facilitate the understanding and comparison of different types of electric vehicles in order to help buyers make an informed decision"
+        image  = "https://images.unsplash.com/photo-1648204834832-78e68052c04f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+        url  = "https://evstart.netlify.app/"
+      />
+
       <TryHeader />
 
       {/*  <div className="header">
@@ -49,12 +59,17 @@ const Home = () => {
 
       {/* compare two */}
 
-      <div className="" style={{
-        padding:"15px 0 70px 0"
-      }}>
+      <div
+        className=""
+        style={{
+          padding: "15px 0 70px 0",
+        }}
+      >
         <CompareTwo />
       </div>
       {/*  */}
+
+      
 
       <div className="">
         <div
@@ -66,6 +81,10 @@ const Home = () => {
           <RunningCostCalculator />
         </div>
       </div>
+
+      {/* Horrizontal scooter */}
+      <HorrizontalImageScooters />
+      {/*  Horrizontal scooter */}
       {/* video carsoluel */}
       {/* <VideoCarousel/> */}
     </>
