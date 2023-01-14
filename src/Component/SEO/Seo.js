@@ -20,6 +20,11 @@ const Seo = (props) => {
           content="Electric scooter , Electric vehicls, electric vehicles in india , ola , ola s1 pro , ather 450x "
         />
         <meta name="author" content="EVSTART" />
+        <meta
+          rel="sitemap"
+          type="application/xml"
+          content="https://evstart.netlify.app/sitemap.xml"
+        />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
         {/* <meta name="google" content="nositelinkssearchbox" />   */}
@@ -46,6 +51,14 @@ const Seo = (props) => {
         <meta name="msapplication-wide310x150logo" content="/ms-icon-310x150.png" />
         <meta name="msapplication-square310x310logo" content="/ms-icon-310x310.png" />
         <meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed=https://evstart.netlify.appfeed/&amp;id=1;polling-uri2=http://notifications.buildmypinnedsite.com/?feed=https://evstart.netlify.appfeed/&amp;id=2;polling-uri3=http://notifications.buildmypinnedsite.com/?feed=https://evstart.netlify.appfeed/&amp;id=3;polling-uri4=http://notifications.buildmypinnedsite.com/?feed=https://evstart.netlify.appfeed/&amp;id=4;polling-uri5=http://notifications.buildmypinnedsite.com/?feed=https://evstart.netlify.appfeed/&amp;id=5;cycle=1" /> */}
+
+        {/* .................... */}
+        <meta itemprop="name" content={props.title} />
+
+        <meta itemprop="description" content={props.description} />
+        <meta itemprop="image" content={props.image} />
+
+        {/* .............. */}
         <meta name="full-screen" content="yes" />
         <meta name="browsermode" content="application" />
         <meta name="nightmode" content="enable/disable" />
