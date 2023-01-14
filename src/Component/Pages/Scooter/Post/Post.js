@@ -15,6 +15,7 @@ import ReactGA from "react-ga";
 import { useMediaQuery } from "react-responsive";
 import Camparsion from "../Component/Camparsion";
 import Seo from "../../../SEO/Seo";
+import FirstVal from "../../Compare/Component/FirstVal";
 // import RecentlyViewed from "./Component/RecentlyViewed/RecentlyViewed";
 const Post = () => {
   const { post } = useParams();
@@ -309,6 +310,13 @@ const Post = () => {
             {/*  */}
             {/* try new emi calculator */}
             {/* <TryEmiCalculator price={showData[0].price}  /> */}
+
+
+            {/*  comparing similar scooter */}
+            <div className = "mt-5">
+
+            <FirstVal name = {post} />
+            </div>
           </div>
         </div>
       </section>
