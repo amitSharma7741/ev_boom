@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import scooter from "../Databse/ScooterData.json";
+import scooter from "../../../Databse/ScooterData.json";
 import ReactGA from "react-ga";
 const AllScooter = () => {
   const navigate = useNavigate();
@@ -32,7 +32,7 @@ const AllScooter = () => {
 
   return (
     <>
-      <Tabs>
+      <Tabs className="shadow py-5">
         <TabList>
           {showData.map((item) => (
             <Tab
@@ -57,8 +57,7 @@ const AllScooter = () => {
               {item.value.map((item) => (
                 <div
                   className="col-lg-4 col-md-6 d-flex mt-3 justify-content-center col-6 d-md-flex align-items-md-stretch  text-center"
-                  key={item.id}
-                >
+                  key={item.id} >
                   <div
                     className="card shadow mb-5 bg-body rounded"
                     style={{ width: "18rem" }}
@@ -120,12 +119,12 @@ const AllScooter = () => {
                       <p className="card-text text-black mt-2">
                         {item.oneLine}
                       </p>
-                      <Link
-                        to={`/scooter/${item.path}`}
+                          <Link
+                            to={`/scooter/${item.path}`}
                         className="btn btn-primary"
-                      >
-                        Know More
-                      </Link>
+                          >
+                            Know More
+                          </Link>
                     </div>
                   </div>
                 </div>
