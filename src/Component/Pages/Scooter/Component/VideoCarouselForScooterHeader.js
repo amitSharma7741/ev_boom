@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import Scooter from "../Databse/ScooterData.json";
+import Scooter from "../../../Databse/ScooterData.json";
 const VideoCarouselForScooterHeader = () => {
   const [data, setData] = useState([]);
 

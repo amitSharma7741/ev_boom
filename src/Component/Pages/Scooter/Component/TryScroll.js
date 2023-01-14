@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Scooter from "../Databse/ScooterData.json";
+import Scooter from "../../../Databse/ScooterData.json";
 const TryScroll = () => {
   const setting = {
     dots: true,

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Post.css";
 import { useParams } from "react-router-dom";
 // how to import json file
-import scooter from "../Databse/ScooterData.json";
+import scooter from  "../../../Databse/ScooterData.json";
 import FourSpecification from "./Component/FourSpecification";
 import EmiCalaculator from "./Component/EmiCalaculator";
 import SimilarScooter from "./Component/SimilarScooter";

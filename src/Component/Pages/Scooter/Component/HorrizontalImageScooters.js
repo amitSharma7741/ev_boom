@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
-import Scooter from "../Databse/ScooterData.json";
+import Scooter from "../../../Databse/ScooterData.json";
 const HorrizontalImageScooters = () => {
   // get the month name
   const newDate = new Date();

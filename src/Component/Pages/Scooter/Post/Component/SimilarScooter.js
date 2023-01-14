@@ -1,5 +1,5 @@
 import React from "react";
-import Scooter from "../../Databse/ScooterData.json";
+import Scooter from "../../../../Databse/ScooterData.json";
 import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
 const SimilarScooter = (props) => {

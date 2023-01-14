@@ -1,5 +1,5 @@
 import React from 'react'
-import scooter from "../../Databse/ScooterData.json"
+import scooter from   "../../../../Databse/ScooterData.json"
 
 import "./Style.css"
 

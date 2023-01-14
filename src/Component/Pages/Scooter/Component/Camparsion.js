@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import scooter from "../Databse/ScooterData.json";
+import scooter from "../../../Databse/ScooterData.json";
 // imprt react-responsive
 import { useMediaQuery } from "react-responsive";
 const Camparsion = () => {
