@@ -1,9 +1,11 @@
 import React from "react";
 import Slider from "react-slick";
-import Scooter from "../../../Scooter/Databse/ScooterData.json";
+import Scooter from "../../../../Databse/ScooterData.json";
 // impoert react-responsive
 import { useMediaQuery } from "react-responsive";
+import { useNavigate } from "react-router-dom";
 const CompareTwo = () => { 
+  const navigate = useNavigate();
 
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
@@ -94,10 +96,10 @@ const CompareTwo = () => {
         {data.map((item) => {
           return (
             <>
-              <div>
+              <div   key={item.id}>
                 <div
                   className="container "
-                  key={item.id}
+                
                   style={{
                     display: "flex",
                     justifyContent: "center",
@@ -234,7 +236,11 @@ const CompareTwo = () => {
                       justifyContent:"center",
                       
                     }}>
-                      <button className="btn btn-primary mb-2 " >
+                      <button className="btn btn-primary mb-2 " 
+                      onClick={()=>{
+                        navigate(`/compare/${item.comare.toLowerCase().replace(/ /g, "-")}`)
+                      }}
+                      >
                          {item.comare}
                       </button>
                     </div>
