@@ -341,7 +341,7 @@ const RunningCostCalculator = () => {
                     fontWeight: "bold",
                   }}
                 >
-                  Petrol Scooter Save{" "}
+                  Electric Scooter Save{" "}
                   <span
                     style={{
                       color: "green",
