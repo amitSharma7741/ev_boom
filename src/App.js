@@ -14,6 +14,9 @@ import TermsAndCondition from "./Component/Pages/TermsAndCondition/TermsAndCondi
 import ReactSnowfall from "./Component/POPUP/ReactSnowfall/ReactSnowfall";
 import Popup from "./Component/POPUP/Popup";
 import Cart from "./Component/Pages/Cart/Cart";
+import FuelCostCalculator from "./Component/Pages/FuelCostCalculator/FuelCostCalculator";
+import Compare from "./Component/Pages/Compare/Compare";
+import ComparePost from "./Component/Pages/Compare/ComparePost";
 // import SnakeGame from "./Component/Pages/Games/SnakeGame/SnakeGame";
 const App = () => {
   return (
@@ -31,6 +34,19 @@ const App = () => {
             <Route path="" element={<AllBlogs />} />
             <Route path=":blogpost" element={<BlogPost />} />
           </Route>
+
+          {/* fuel cost calculator */}
+          <Route
+            path="/fuel-cost-calculator"
+            element={<FuelCostCalculator />}
+          />
+
+          {/* compare two electric scooter */}
+          <Route path="/compare" element={<Compare />}>
+            <Route path=":comparePost" element={<ComparePost />} />
+          </Route>
+
+          
           {/* cart */}
           <Route path="/cart" element={<Cart />} />
 
