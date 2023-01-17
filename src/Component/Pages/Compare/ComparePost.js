@@ -19,15 +19,22 @@ const ComparePost = () => {
   //  compare post value would be like benling-aura-vs-hero-vida-v1
   const val = comparePost.replace(/-/g, " ");
   //  we want vs before value nad after value
-  const firstVal = val.slice(0, val.indexOf("vs"));
+  const firstVal = val.slice(0, val.indexOf(" vs"));
   //  capital first letter
-  const finalFirst = firstVal.charAt(0).toUpperCase() + firstVal.slice(1);
-  const secondVal = val.slice(val.indexOf("vs") + 2);
+  const finalFirst = firstVal.charAt(0).toUpperCase() + firstVal.slice(1); 
+  //  in this path we have two vs word  eg = /tvs-iqube-electric-vs-ampere-magnus-ex
+  //  so we want second vs word 
+var secondVal;
+  if (val.slice(0,3)==="tvs") {
+     secondVal = val.slice(22);
+  } else {
+    secondVal = val.slice(val.indexOf("vs") + 2);
+  }
   const finalSecond = secondVal.charAt(0).toUpperCase() + secondVal.slice(1);
 
   const title = `${finalFirst} vs ${finalSecond}  - Know which is better - Evstart`;
   const description = `Compare ${finalFirst} vs ${finalSecond} latest prices, reviews, features, specs, mileage, images, colours, variants, performance, safety, ownership, pros and cons, and more.`;
-  console.log(firstVal, secondVal);
+  
 
   const firstData = scooter.filter(
     (item) => item.scootername.toLowerCase() === firstVal.trim()
@@ -40,7 +47,7 @@ const ComparePost = () => {
     {
       id: 1,
       name: "Price",
-      value: [firstData[0].price, secondData[0].price],
+      value: [firstData[0]?.price, secondData[0]?.price],
     },
     {
       id: 2,
