@@ -4,11 +4,11 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter  } from 'react-router-dom';
-import ReactGA from 'react-ga';
+import ReactGA from "react-ga4";
 import {  HelmetProvider } from 'react-helmet-async';
 
 
-ReactGA.initialize('UA-250993129-1');
+ReactGA.initialize('G-47SCW9BW0Y');
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
