@@ -2,6 +2,7 @@ import React from "react";
 import Scooter from "../../../../Databse/ScooterData.json";
 import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const SimilarScooter = (props) => {
   const data = Scooter.filter((item) => item.path !== props.name);
   const navigate = useNavigate();
@@ -78,13 +79,14 @@ const SimilarScooter = (props) => {
                       window.scrollTo(0, 0);
                     }}
                   >
-                    <img
+                    <LazyLoadImage
                       src={item.image}
                       alt={item.scootername}
                       className="card-img-top"
                       style={{
                         height: "180px",
                       }}
+                      effect="blur"
                     />
                     <div className="card-body">
                       <div className="card-title text-center">

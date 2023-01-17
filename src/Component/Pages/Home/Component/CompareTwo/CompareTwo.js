@@ -4,6 +4,7 @@ import Scooter from "../../../../Databse/ScooterData.json";
 // impoert react-responsive
 import { useMediaQuery } from "react-responsive";
 import { useNavigate } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const CompareTwo = () => { 
   const navigate = useNavigate();
 
@@ -127,13 +128,14 @@ const CompareTwo = () => {
                                 border: "none",
                               }}
                             >
-                              <img
+                              <LazyLoadImage
                                 src={elem.image}
                                 className="card-img-top"
                                 alt={elem.scootername}
                                 style={{
                                   height: "150px",
                                 }}
+                                effect="blur"
                               />
                               <div className="card-body">
                                 <h5
@@ -142,7 +144,10 @@ const CompareTwo = () => {
                                     textAlign: "center",
                                     fontSize: isMobile ? "12px" : "16px",
                                     fontWeight: "bold",
+                                    cursor: "pointer",
                                   }}
+                                  onClick={() => navigate(`/scooter/${elem.path}`)}
+
                                 >
                                   {elem.scootername}
                                 </h5>

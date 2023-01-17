@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Scooter from "../../../Databse/ScooterData.json";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const TryScroll = () => {
   const setting = {
     dots: true,
@@ -53,9 +54,9 @@ const TryScroll = () => {
                 
 
               }}>
-                <img src= {item.image} className="card-img-top" alt= {item.scootername} style={{
+                <LazyLoadImage src= {item.image} className="card-img-top" alt= {item.scootername} style={{
                     height: "180px"
-                }} />
+                }} effect="blur" />
                 <div className="card-body">
                   <h5 className="card-title">
                     {item.scootername}

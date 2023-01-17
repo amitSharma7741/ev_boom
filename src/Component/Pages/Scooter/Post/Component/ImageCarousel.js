@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 // import scooter from "../../Databse/ScooterData.json"
 // import { useMediaQuery } from 'react-responsive'
 const ImageCarousel = (props) => {
@@ -34,7 +35,7 @@ const ImageCarousel = (props) => {
                   }
                   key={index}
                 >
-                  <img src={item} className="d-block w-100" alt={title} />
+                  <LazyLoadImage src={item} className="d-block w-100" alt={title} effect="blur" />
                 </div>
               </>
             );
