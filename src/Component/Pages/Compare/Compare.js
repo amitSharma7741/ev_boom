@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { Outlet } from "react-router-dom";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 import Seo from "../../SEO/Seo";
 
 const Compare = () => {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+  useEffect(() => { 
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
     window.scrollTo(0, 0);
   }, []);
   return (

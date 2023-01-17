@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import ReactGa from "react-ga";
+// import ReactGA from "react-ga4";
 import { BlogsData } from "./BlogsData";
 import { useMediaQuery } from "react-responsive"; 
 import Author from "./Component/Author/Author";
@@ -16,8 +16,8 @@ const AllBlogs = () => {
     //   reverse the array to show latest blogs first
     BlogsData.reverse();
     setBlogs(BlogsData);
-    //  add location to google analytics
-    ReactGa.pageview(window.location.pathname + window.location.search);
+    //  add location to google analytics 
+    // ReactGA.send({ hitType: "pageview", page: window.location.pathname });
   }, []);
   return (
     <>

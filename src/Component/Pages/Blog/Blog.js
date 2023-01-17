@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import { Outlet } from "react-router-dom";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 import Seo from "../../SEO/Seo";
+// import Carousel from "./Component/carousel/Carousel";
 
 function Blog() {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+  useEffect(() => { 
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
     window.scrollTo(0, 0);
   }, []);
 
@@ -36,7 +37,7 @@ function Blog() {
           Blog page
         </h1>
 
-        <div className="row mt-5">
+        <div className="row my-5">
           <div className="col-12 col-md-8 col-lg-8">
             <Outlet />
           </div>
@@ -79,6 +80,8 @@ function Blog() {
                             <p className="card-text">Last updated 3 mins ago</p> */}
               </div>
             </div>
+
+            {/* <Carousel /> */}
 
             {/*    <div className="card" style={{ width: "18rem" }}>
                         <img src="https://static.autox.com/uploads/2021/11/Ola-Electric-S1-Pro.jpg" className="card-img-top" alt="..." />

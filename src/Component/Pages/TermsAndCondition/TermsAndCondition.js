@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 import "./Terms.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 const TermsAndCondition = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    window.scrollTo(0, 0); 
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
   }, []);
   return (
     <>

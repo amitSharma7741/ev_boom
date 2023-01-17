@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"; 
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 import Seo from "../../SEO/Seo";
 import "./Fuel.css"
 import { Player } from "@lottiefiles/react-lottie-player";
@@ -37,8 +37,7 @@ const FuelCostCalculator = () => {
     const electricFinalCost = electricPerYearCost / eMilage;
 
     seteFinalCost(electricFinalCost.toFixed(0));
-
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
     window.scrollTo(0, 0);
   }, [pDistPerDay, pCostPerLtr, pYear, eCostPerUnit, pMilage, eMilage]);
 

@@ -10,7 +10,7 @@ import ImageCarousel from "./Component/ImageCarousel";
 // import blob from "./Component/SVG/scooter.svg"
 import RunningCostCalculator from "./Component/RunningCostCalculator";
 import ImageGallery from "./Component/ImageGallery";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 // import TryEmiCalculator from './Component/TryEmiCalculator';
 import { useMediaQuery } from "react-responsive";
 import Camparsion from "../Component/Camparsion";
@@ -100,7 +100,7 @@ const Post = () => {
   // console.log(localData);
 
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
     // open always in top
     window.scrollTo(0, 0);
     /* setLocalStorage(post);

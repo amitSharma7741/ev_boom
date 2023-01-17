@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 const PrivacyPolicy = () => {
   const styles = {
     text: {
@@ -10,8 +10,8 @@ const PrivacyPolicy = () => {
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    window.scrollTo(0, 0); 
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
   }, []);
   return (
     <>
