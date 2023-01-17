@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import AllScooter from "../Scooter/Component/AllScooter";
 // import VideoCarousel from './Component/VideoCarousel'
 import "./Home.css";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 import TryHeader from "./Component/TryHeader/TryHeader";
 import EmiCalculator from "../Scooter/Post/Component/EmiCalaculator";
 import RunningCostCalculator from "../Scooter/Post/Component/RunningCostCalculator";
@@ -14,7 +14,7 @@ const Home = () => {
 
  
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
   }, []);
 
   return (
@@ -86,7 +86,10 @@ const Home = () => {
       </div>
 
       {/* Horrizontal scooter */}
+      <div className="mb-5">
+
       <HorrizontalImageScooters />
+      </div>
       {/*  Horrizontal scooter */}
       {/* video carsoluel */}
       {/* <VideoCarousel/> */}
