@@ -3,7 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import scooter from "../../../Databse/ScooterData.json";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const AllScooter = () => {
   const navigate = useNavigate();
 
@@ -60,23 +61,24 @@ const AllScooter = () => {
                   key={item.id} >
                   <div
                     className="card shadow mb-5 bg-body rounded"
-                    style={{ width: "18rem" }}
+                    style={{ width: "18rem",cursor:"pointer" }}
                     onClick={() => {
                       ReactGA.event({
-                        category: item.path,
-                        action: "Clicked on a scooter",
-                        label: item.company,
+                        category: `${window.location.pathname}`,
+                        action:  `Click on ${item.scootername}`,
+                        label:   "Click on scooter name"
                       });
                       navigate(`/scooter/${item.path}`);
                     }}
                   >
-                    <img
+                    <LazyLoadImage
                       src={item.image}
                       className="card-img-top"
                       alt={item.company}
                       style={{
                         height: "180px",
                       }}
+                      effect="blur"
                     />
                     <div
                       className="card-body"

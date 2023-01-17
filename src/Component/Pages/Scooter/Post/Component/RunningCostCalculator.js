@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 // import "./CSS/RunningCostCalculator.css"
 import { useMediaQuery } from "react-responsive";
+import { Link, useNavigate } from "react-router-dom";
 const RunningCostCalculator = () => {
+  const navigate = useNavigate();
   const isMobile = useMediaQuery({
     // screen width is less than 768px or greater than 450px
     query: "(max-width: 950px) and (min-width: 450px)",
@@ -23,7 +25,6 @@ const RunningCostCalculator = () => {
   const [eFinalCost, seteFinalCost] = useState(0);
   const [eMilage, seteMilage] = useState(40);
 
-
   useEffect(() => {
     const perYearDist = pDistPerDay * 365 * pYear;
     const perYearCost = perYearDist * pCostPerLtr;
@@ -35,10 +36,10 @@ const RunningCostCalculator = () => {
     // electric
     const electricPerYearDist = pDistPerDay * 365 * pYear;
     const electricPerYearCost = electricPerYearDist * eCostPerUnit;
-    const electricFinalCost = electricPerYearCost  / eMilage;
+    const electricFinalCost = electricPerYearCost / eMilage;
 
     seteFinalCost(electricFinalCost.toFixed(0));
-  }, [pDistPerDay, pCostPerLtr, pYear, eCostPerUnit , pMilage, eMilage]);
+  }, [pDistPerDay, pCostPerLtr, pYear, eCostPerUnit, pMilage, eMilage]);
 
   const styles = {
     rightInput: {
@@ -57,11 +58,23 @@ const RunningCostCalculator = () => {
   return (
     <>
       <div className="shadow p-3 mb-5 bg-body rounded">
-        <h1 className="  text-black ">Running Cost Calculator</h1>
+        <Link
+          to="/fuel-cost-calculator"
+          style={{
+            textDecoration: "none",
+          }}
+        >
+          <h1 className="  text-black  ">Running Cost Calculator</h1>
+        </Link>
 
         <div className="card mb-3">
           <div className="row g-0">
-            <div className="col-md-4 d-flex justify-content-center ">
+            <div
+              className="col-md-4 d-flex justify-content-center "
+              onClick={() => {
+                navigate("/fuel-cost-calculator");
+              }}
+            >
               <img
                 src="https://colorlib.com/etc/regform/colorlib-regform-7/images/signin-image.jpg"
                 className="img-fluid rounded-start h-100"
@@ -77,7 +90,7 @@ const RunningCostCalculator = () => {
                       backgroundColor: "",
                     }}
                   >
-                    <p className="text-center text-black ">
+                    <p className="text-center text-black fw-bold ">
                       Petrol cost Calculator
                     </p>
                     <div className="card-text">
@@ -164,30 +177,30 @@ const RunningCostCalculator = () => {
                     </div>
                     <div className="card-text">
                       <label htmlFor="myRange " style={styles.labelText}>
-                         Milage (KM/L)
+                        Milage (KM/L)
                       </label>
-                        <input
-                            type="number"
-                            className="form-control"
-                            style={styles.rightInput}
-                            value={pMilage}
-                            onChange={({ target: { value: radius } }) => {
-                                setpMilage(radius);
-                            }}
-                        />
-                        <input
-                            type="range"
-                            min={1}
-                            max={100}
-                            step={1}
-                            default={pMilage}
-                            value={pMilage}
-                            id="myRange"
-                            className="slider w-100"
-                            onChange={({ target: { value: radius } }) => {
-                                setpMilage(radius);
-                            }}
-                        />
+                      <input
+                        type="number"
+                        className="form-control"
+                        style={styles.rightInput}
+                        value={pMilage}
+                        onChange={({ target: { value: radius } }) => {
+                          setpMilage(radius);
+                        }}
+                      />
+                      <input
+                        type="range"
+                        min={1}
+                        max={100}
+                        step={1}
+                        default={pMilage}
+                        value={pMilage}
+                        id="myRange"
+                        className="slider w-100"
+                        onChange={({ target: { value: radius } }) => {
+                          setpMilage(radius);
+                        }}
+                      />
                     </div>
                     <p
                       style={{
@@ -195,12 +208,12 @@ const RunningCostCalculator = () => {
                         color: "rgb(136, 136, 136)",
                       }}
                     >
-                      Note : 1 litre petrol =  {pMilage} km
+                      Note : 1 litre petrol = {pMilage} km
                     </p>
                     <h6 className="">Petrol Cost &#8377; {pFinalCost}</h6>
                   </div>
                   <div className="col-md-6  col-xs-6 col-6">
-                    <p className="text-center text-black">
+                    <p className="text-center text-black fw-bold">
                       Electric cost Calculator
                     </p>
                     <div className="card-text">
@@ -285,31 +298,31 @@ const RunningCostCalculator = () => {
                       />
                     </div>
                     <div className="card-text">
-                        <label htmlFor="myRange " style={styles.labelText}>
-                            Milage (Unit/L)
-                        </label>
-                        <input
-                            type="number"
-                            className="form-control"
-                            style={styles.rightInput}
-                            value={eMilage}
-                            onChange={({ target: { value: radius } }) => {
-                                seteMilage(radius);
-                            }}
-                        />
-                        <input
-                            type="range"
-                            min={1}
-                            max={100}
-                            step={1}
-                            default={eMilage}
-                            value={eMilage}
-                            className="slider w-100"
-                            id="myRange"
-                            onChange={({ target: { value: radius } }) => {
-                                seteMilage(radius);
-                            }}
-                        />
+                      <label htmlFor="myRange " style={styles.labelText}>
+                        Milage (Unit/L)
+                      </label>
+                      <input
+                        type="number"
+                        className="form-control"
+                        style={styles.rightInput}
+                        value={eMilage}
+                        onChange={({ target: { value: radius } }) => {
+                          seteMilage(radius);
+                        }}
+                      />
+                      <input
+                        type="range"
+                        min={1}
+                        max={100}
+                        step={1}
+                        default={eMilage}
+                        value={eMilage}
+                        className="slider w-100"
+                        id="myRange"
+                        onChange={({ target: { value: radius } }) => {
+                          seteMilage(radius);
+                        }}
+                      />
                     </div>
 
                     <p
@@ -318,7 +331,7 @@ const RunningCostCalculator = () => {
                         color: "rgb(136, 136, 136)",
                       }}
                     >
-                      Note : 1 unit electricity =  {eMilage} km
+                      Note : 1 unit electricity = {eMilage} km
                     </p>
                     <h6 className="">Electric Cost &#8377; {eFinalCost}</h6>
                   </div>
@@ -332,6 +345,9 @@ const RunningCostCalculator = () => {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
+                }}
+                onClick={() => {
+                  navigate("/fuel-cost-calculator");
                 }}
               >
                 <p
