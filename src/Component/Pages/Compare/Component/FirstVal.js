@@ -35,7 +35,7 @@ const FirstVal = (props) => {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          // dots: true,
         },
       },
       {
@@ -158,7 +158,7 @@ const FirstVal = (props) => {
                             <div className="row">
                               <div className="col-12">
                                 <p className="float-start" style={styles.para}>
-                                  Top Speed
+                                  Range
                                 </p>
                                 <p className="float-end" style={styles.val}>
                                   {data[0]?.topSpeed}
