@@ -8,27 +8,47 @@
         <language>en-us</language>
         <lastBuildDate>Fri 6 Jan 2023</lastBuildDate>
         <atom:link href="https://evstart.netlify.app/blog.rss" rel="self" type="application/rss+xml" />
+        <item>
+            <title>
+                Different Types of EV Charging Stations and How to Use Them
+            </title>
+            <link>
+                https://evstart.netlify.app/blog/different-types-of-ev-charging-stations-and-how-to-use-them
+            </link>
+
+            <description>
+                If you’re an electric vehicle (EV) owner, you’re probably familiar with the need to
+                charge your car. To do so, you’ll need access to an EV charging station. But what
+                types of charging stations are available? How do you use them? And what else do you
+                need to know? This article will answer all of these questions and more, and provide
+                a comprehensive guide to EV charging stations.
+            </description>
+
+
+            <pubDate>
+                Thu 19 jan 2023 10:10:00 +0000
+            </pubDate>
+        </item>
 
         <item>
             <title>
-                Electric Scooter sales data in nov 2022
+                Ather 450x free non copyright images download 2023
             </title>
             <link>
-                https://evstart.netlify.app/blog/electric-scooter-sales-data-in-nov-2022
+                https://evstart.netlify.app/blog/ather-450x-free-non-copyright-images-download-2023
             </link>
+
             <description>
-                An electric vehicle (EV) is a type of vehicle that is powered by an electric motor,
-                rather than a gasoline engine. EV technology
-                has been around for over a century, but it has gained significant popularity in
-                recent years due to concerns about climate change
-                and air pollution. EVs are generally considered to be more environmentally friendly
-                than gasoline-powered vehicles,
+                An extensive and free collection of images of the Ather 450x electric scooter is
+                available to be used for various purposes. Whether it is for personal use, a
+                website, or even for commercial use, you can find an image in this collection that
+                will suit your needs.
             </description>
 
-            <pubDate>
-                Sun 25 dec 2022 10:10:00 +0000
-            </pubDate>
 
+            <pubDate>
+                Sun 8 jan 2023 10:10:00 +0000
+            </pubDate>
         </item>
 
         <item>
@@ -57,24 +77,27 @@
 
         <item>
             <title>
-                Ather 450x free non copyright images download 2023
+                Electric Scooter sales data in nov 2022
             </title>
             <link>
-                https://evstart.netlify.app/blog/ather-450x-free-non-copyright-images-download-2023
+                https://evstart.netlify.app/blog/electric-scooter-sales-data-in-nov-2022
             </link>
-
             <description>
-                An extensive and free collection of images of the Ather 450x electric scooter is
-                available to be used for various purposes. Whether it is for personal use, a
-                website, or even for commercial use, you can find an image in this collection that
-                will suit your needs.
+                An electric vehicle (EV) is a type of vehicle that is powered by an electric motor,
+                rather than a gasoline engine. EV technology
+                has been around for over a century, but it has gained significant popularity in
+                recent years due to concerns about climate change
+                and air pollution. EVs are generally considered to be more environmentally friendly
+                than gasoline-powered vehicles,
             </description>
 
-
             <pubDate>
-                Sun 8 jan 2023 10:10:00 +0000
+                Sun 25 dec 2022 10:10:00 +0000
             </pubDate>
+
         </item>
+
+
     </channel>
 
 
