@@ -5,8 +5,8 @@ One of the main benefits of electric scooters is their environmental friendlines
 ![ola s1 pro](https://images.unsplash.com/photo-1648204834832-78e68052c04f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80)
 
 Another advantage of electric scooters is their low operating costs. Electric scooters do not require expensive fuel and have much lower maintenance costs compared to petrol scooters. They do not need regular tune-ups or oil changes, and their batteries can last for many years with proper care. This can save you a significant amount of money over the long term, especially if you use your scooter frequently.
-
->[Calculate Your electric scooter cost ](/fuel-cost-calculator)
+ 
+ <div class="scooterBox"> </div>
 
 Electric scooters also offer a much quieter and smoother ride compared to petrol scooters. The lack of a combustion engine means that electric scooters do not produce the loud noise or vibration that petrol scooters do, making for a more pleasant and comfortable ride. This can be especially beneficial if you live in a densely populated area where noise pollution is a concern.
 
