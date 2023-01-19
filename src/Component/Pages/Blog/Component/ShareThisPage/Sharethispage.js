@@ -13,7 +13,7 @@ const Sharethispage = (props) => {
   const twitterUrl = `https://twitter.com/share?url=${desc}....\n\n${url}`;
   const whatsAppUrl = `whatsapp://send?text=${desc}.....\n\n${url}`;
   const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-  const googleNewsUrl = "";
+  const googleNewsUrl = "https://news.google.com/publications/CAAqBwgKMKSXxwsw17LeAw?hl=en-IN&gl=IN&ceid=IN:en";
   return (
     <>
       <div className="d-flex justify-content-center mt-3">
