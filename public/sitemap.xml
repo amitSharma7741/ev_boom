@@ -137,15 +137,29 @@
     </url>
     <url>
         <loc>
-            https://evstart.netlify.app/blog/electric-scooter-sales-data-in-nov-2022
+            https://evstart.netlify.app/blog/different-types-of-ev-charging-stations-and-how-to-use-them
         </loc>
         <Lastmod>
-            Sun 25 dec 2022 10:10:00 +0000
+            Thu 19 jan 2022 10:10:00 +0000
         </Lastmod>
         <changefreq>
             weekly
         </changefreq>
         <priority>0.7</priority>
+    </url>
+
+
+    <url>
+        <loc>
+            https://evstart.netlify.app/blog/ather-450x-free-non-copyright-images-download-2023
+        </loc>
+        <Lastmod>
+            Sun 8 jan 2023 10:10:00 +0000
+        </Lastmod>
+        <changefreq>
+            weekly
+        </changefreq>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>
@@ -161,26 +175,25 @@
     </url>
     <url>
         <loc>
-            https://evstart.netlify.app/blog/ather-450x-free-non-copyright-images-download-2023
+            https://evstart.netlify.app/blog/electric-scooter-sales-data-in-nov-2022
         </loc>
         <Lastmod>
-            Sun 8 jan 2023 10:10:00 +0000
+            Sun 25 dec 2022 10:10:00 +0000
         </Lastmod>
         <changefreq>
             weekly
         </changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
-
     <!--  compare -->
-   
+
 
     <url>
         <loc>
             https://www.evstart.netlify.app/compare/ola-s1-pro-vs-ather-450x-gen3
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -193,7 +206,7 @@
             https://www.evstart.netlify.app/compare/ola-s1-pro-vs-benling-aura
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -206,7 +219,7 @@
             https://www.evstart.netlify.app/compare/ola-s1-pro-vs-hero-vida-v1
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -219,7 +232,7 @@
             https://www.evstart.netlify.app/compare/ola-s1-pro-vs-tvs-iqube-electric
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -232,7 +245,7 @@
             https://www.evstart.netlify.app/compare/ola-s1-pro-vs-ampere-magnus-ex
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -245,7 +258,7 @@
             https://www.evstart.netlify.app/compare/ola-s1-pro-vs-ola-s1
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -258,7 +271,7 @@
             https://www.evstart.netlify.app/compare/ola-s1-pro-vs-bajaj-chetak
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -266,14 +279,13 @@
         <priority>0.8</priority>
     </url>
 
-     
 
     <url>
         <loc>
             https://www.evstart.netlify.app/compare/ather-450x-gen3-vs-ola-s1-pro
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -285,7 +297,7 @@
             https://www.evstart.netlify.app/compare/ather-450x-gen3-vs-benling-aura
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -298,7 +310,7 @@
             https://www.evstart.netlify.app/compare/ather-450x-gen3-vs-hero-vida-v1
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -311,7 +323,7 @@
             https://www.evstart.netlify.app/compare/ather-450x-gen3-vs-tvs-iqube-electric
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -324,7 +336,7 @@
             https://www.evstart.netlify.app/compare/ather-450x-gen3-vs-ampere-magnus-ex
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -338,7 +350,7 @@
             https://www.evstart.netlify.app/compare/ather-450x-gen3-vs-ola-s1
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -351,21 +363,21 @@
             https://www.evstart.netlify.app/compare/ather-450x-gen3-vs-bajaj-chetak
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
         </changefreq>
         <priority>0.8</priority>
     </url>
- 
+
 
     <url>
         <loc>
             https://www.evstart.netlify.app/compare/benling-aura-vs-ola-s1-pro
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -378,7 +390,7 @@
             https://www.evstart.netlify.app/compare/benling-aura-vs-ather-450x-gen3
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -391,7 +403,7 @@
             https://www.evstart.netlify.app/compare/benling-aura-vs-hero-vida-v1
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -404,7 +416,7 @@
             https://www.evstart.netlify.app/compare/benling-aura-vs-tvs-iqube-electric
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -417,7 +429,7 @@
             https://www.evstart.netlify.app/compare/benling-aura-vs-ampere-magnus-ex
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -431,7 +443,7 @@
             https://www.evstart.netlify.app/compare/benling-aura-vs-ola-s1
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -444,21 +456,21 @@
             https://www.evstart.netlify.app/compare/benling-aura-vs-bajaj-chetak
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
         </changefreq>
         <priority>0.8</priority>
     </url>
- 
+
 
     <url>
         <loc>
             https://www.evstart.netlify.app/compare/hero-vida-v1-vs-ola-s1-pro
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -471,7 +483,7 @@
             https://www.evstart.netlify.app/compare/hero-vida-v1-vs-ather-450x-gen3
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -484,7 +496,7 @@
             https://www.evstart.netlify.app/compare/hero-vida-v1-vs-benling-aura
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -497,7 +509,7 @@
             https://www.evstart.netlify.app/compare/hero-vida-v1-vs-tvs-iqube-electric
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -510,7 +522,7 @@
             https://www.evstart.netlify.app/compare/hero-vida-v1-vs-ampere-magnus-ex
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -518,13 +530,13 @@
         <priority>0.8</priority>
     </url>
 
-    
+
     <url>
         <loc>
             https://www.evstart.netlify.app/compare/hero-vida-v1-vs-ola-s1
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -537,21 +549,21 @@
             https://www.evstart.netlify.app/compare/hero-vida-v1-vs-bajaj-chetak
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
         </changefreq>
         <priority>0.8</priority>
     </url>
- 
+
 
     <url>
         <loc>
             https://www.evstart.netlify.app/compare/tvs-iqube-electric-vs-ola-s1-pro
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -564,7 +576,7 @@
             https://www.evstart.netlify.app/compare/tvs-iqube-electric-vs-ather-450x-gen3
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -577,7 +589,7 @@
             https://www.evstart.netlify.app/compare/tvs-iqube-electric-vs-benling-aura
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -590,7 +602,7 @@
             https://www.evstart.netlify.app/compare/tvs-iqube-electric-vs-hero-vida-v1
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -603,7 +615,7 @@
             https://www.evstart.netlify.app/compare/tvs-iqube-electric-vs-ampere-magnus-ex
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -617,7 +629,7 @@
             https://www.evstart.netlify.app/compare/tvs-iqube-electric-vs-ola-s1
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -630,21 +642,21 @@
             https://www.evstart.netlify.app/compare/tvs-iqube-electric-vs-bajaj-chetak
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
         </changefreq>
         <priority>0.8</priority>
     </url>
- 
+
 
     <url>
         <loc>
             https://www.evstart.netlify.app/compare/ampere-magnus-ex-vs-ola-s1-pro
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -657,7 +669,7 @@
             https://www.evstart.netlify.app/compare/ampere-magnus-ex-vs-ather-450x-gen3
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -670,7 +682,7 @@
             https://www.evstart.netlify.app/compare/ampere-magnus-ex-vs-benling-aura
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -683,7 +695,7 @@
             https://www.evstart.netlify.app/compare/ampere-magnus-ex-vs-hero-vida-v1
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -696,7 +708,7 @@
             https://www.evstart.netlify.app/compare/ampere-magnus-ex-vs-tvs-iqube-electric
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -709,7 +721,7 @@
             https://www.evstart.netlify.app/compare/ampere-magnus-ex-vs-ola-s1
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -722,21 +734,21 @@
             https://www.evstart.netlify.app/compare/ampere-magnus-ex-vs-bajaj-chetak
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
         </changefreq>
         <priority>0.8</priority>
     </url>
- 
+
 
     <url>
         <loc>
             https://www.evstart.netlify.app/compare/ola-s1-vs-ola-s1-pro
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -749,7 +761,7 @@
             https://www.evstart.netlify.app/compare/ola-s1-vs-ather-450x-gen3
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -762,7 +774,7 @@
             https://www.evstart.netlify.app/compare/ola-s1-vs-benling-aura
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -775,7 +787,7 @@
             https://www.evstart.netlify.app/compare/ola-s1-vs-hero-vida-v1
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -788,7 +800,7 @@
             https://www.evstart.netlify.app/compare/ola-s1-vs-tvs-iqube-electric
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -801,7 +813,7 @@
             https://www.evstart.netlify.app/compare/ola-s1-vs-ampere-magnus-ex
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -814,21 +826,21 @@
             https://www.evstart.netlify.app/compare/ola-s1-vs-bajaj-chetak
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
         </changefreq>
         <priority>0.8</priority>
     </url>
- 
+
 
     <url>
         <loc>
             https://www.evstart.netlify.app/compare/bajaj-chetak-vs-ola-s1-pro
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -841,7 +853,7 @@
             https://www.evstart.netlify.app/compare/bajaj-chetak-vs-ather-450x-gen3
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -854,7 +866,7 @@
             https://www.evstart.netlify.app/compare/bajaj-chetak-vs-benling-aura
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -867,7 +879,7 @@
             https://www.evstart.netlify.app/compare/bajaj-chetak-vs-hero-vida-v1
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -880,7 +892,7 @@
             https://www.evstart.netlify.app/compare/bajaj-chetak-vs-tvs-iqube-electric
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -893,7 +905,7 @@
             https://www.evstart.netlify.app/compare/bajaj-chetak-vs-ampere-magnus-ex
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -906,7 +918,7 @@
             https://www.evstart.netlify.app/compare/bajaj-chetak-vs-ola-s1
         </loc>
         <Lastmod>
-             15 jan 2023 08:00:00
+            15 jan 2023 08:00:00
         </Lastmod>
         <changefreq>
             weekly
@@ -914,12 +926,11 @@
         <priority>0.8</priority>
     </url>
 
-     
 
     <!-- fuel cost calculator -->
 
     <url>
-        <loc> 
+        <loc>
             https://www.evstart.netlify.app/fuel-cost-calculator
         </loc>
         <Lastmod>
