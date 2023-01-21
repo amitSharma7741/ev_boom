@@ -14,7 +14,7 @@ const AllBlogs = () => {
 
   useEffect(() => {
     //   reverse the array to show latest blogs first
-    BlogsData.reverse();
+    // BlogsData.reverse();
     setBlogs(BlogsData);
     //  add location to google analytics 
     // ReactGA.send({ hitType: "pageview", page: window.location.pathname });
