@@ -185,7 +185,7 @@ const CompareTwo = () => {
                                 <div className="row">
                                   <div className="col-12">
                                     <p className ="float-start" style={styles.para}>
-                                      Range
+                                    Speed
                                     </p>
                                     <p className="float-end" style={styles.val}>
                                     {elem.topSpeed}

@@ -5,7 +5,6 @@ import Scooter from "../../../Databse/ScooterData.json";
 import { useMediaQuery } from "react-responsive";
 import ReactGA from "react-ga4";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
 const FirstVal = (props) => {
   const navigate = useNavigate();
 
@@ -18,9 +17,17 @@ const FirstVal = (props) => {
   const data = Scooter.filter((item) => item.path === val);
   const otherScooter = Scooter.filter((item) => item.path !== val);
 
+  const styles = {
+    para: {
+      fontSize: isMobile ? "10px" : "13px",
+    },
+    val: {
+      fontSize: isMobile ? "10px" : "13px",
+      color: "brown",
+      fontWeight: "bold",
+    },
+  };
   const settings = {
-    // dots: true,
-    // arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
@@ -56,21 +63,11 @@ const FirstVal = (props) => {
     ],
   };
 
-  const styles = {
-    para: {
-      fontSize: isMobile ? "10px" : "13px",
-    },
-    val: {
-      fontSize: isMobile ? "10px" : "13px",
-      color: "brown",
-      fontWeight: "bold",
-    },
-  };
   return (
     <>
       <div className="container mt-3 shadow py-4">
         <h3 className=" container text-start mb-4">
-          Similar Scooter to {data[0]?.scootername}
+          Comparsion to {data[0]?.scootername}
         </h3>
         <Slider {...settings}>
           {otherScooter.map((item) => {
@@ -85,128 +82,138 @@ const FirstVal = (props) => {
                     }}
                   >
                     <div
-                      className="row  shadow-sm bg-body pb-3 w-100"
+                      className="card shadow-sm bg-body  w-100"
                       style={{
                         // border: "1px solid black",
                         borderRadius: "10px",
                         padding: "10px",
-                        position: "relative",
 
                         //   height: "300px",
                       }}
                     >
-                      <div className="col-6">
-                        <div
-                          className="card mb-3"
-                          style={{
-                            width: "100%",
-                            border: "none",
-                          }}
-                        >
-                          <LazyLoadImage
-                            src={data[0]?.image}
-                            className="card-img-top"
-                            alt={data[0]?.scootername}
-                            style={{
-                              height: "150px",
-                            }}
-                            effect="blur"
-                          />
-                          <div className="card-body">
-                            <h5
-                              className="card-title"
+                      <div className="card-body">
+                        <div className="row">
+                          <div className="col-6">
+                            <div
+                              className="card "
                               style={{
-                                textAlign: "center",
-                                fontSize: isMobile ? "12px" : "16px",
-                                fontWeight: "bold",
-                                textDecoration: "underline",
-                                color: "blue",
-                                cursor: "pointer",
-                              }}
-                              onClick={() => {
-                                navigate(`/scooter/${data[0]?.path}`);
-                                ReactGA.event({
-                                  category: `${window.location.pathname}`,
-                                  action: ` "Click on ${data[0]?.scootername}"`,
-                                  label: "Click on scooter name",
-                                });
+                                width: "100%",
+                                border: "none",
                               }}
                             >
-                              {data[0]?.scootername}
-                            </h5>
+                              <LazyLoadImage
+                                src={data[0]?.image}
+                                className="card-img-top"
+                                alt={data[0]?.scootername}
+                                style={{
+                                  height: "150px",
+                                }}
+                                effect="blur"
+                              />
+                              <div className="card-body">
+                                <h5
+                                  className="card-title"
+                                  style={{
+                                    textAlign: "center",
+                                    fontSize: isMobile ? "12px" : "16px",
+                                    fontWeight: "bold",
+                                    textDecoration: "underline",
+                                    color: "blue",
+                                    cursor: "pointer",
+                                  }}
+                                  onClick={() => {
+                                    navigate(`/scooter/${data[0]?.path}`);
+                                    ReactGA.event({
+                                      category: `${window.location.pathname}`,
+                                      action: ` "Click on ${data[0]?.scootername}"`,
+                                      label: "Click on scooter name",
+                                    });
+                                  }}
+                                >
+                                  {data[0]?.scootername}
+                                </h5>
 
-                            <div className="row">
-                              <div className="col-12">
-                                <p className="float-start" style={styles.para}>
-                                  Price
-                                </p>
-                                <p className="float-end" style={styles.val}>
-                                  {data[0]?.price}
-                                </p>
-                              </div>
-                            </div>
-                            <div className="row">
-                              <div className="col-12">
-                                <p className="float-start" style={styles.para}>
-                                  Range
-                                </p>
-                                <p className="float-end" style={styles.val}>
-                                  {data[0]?.araiRange}
-                                </p>
-                              </div>
-                            </div>
-                            <div className="row">
-                              <div className="col-12">
-                                <p className="float-start" style={styles.para}>
-                                  Range
-                                </p>
-                                <p className="float-end" style={styles.val}>
-                                  {data[0]?.topSpeed}
-                                </p>
+                                <div className="row">
+                                  <div className="col-12">
+                                    <p
+                                      className="float-start"
+                                      style={styles.para}
+                                    >
+                                      Price
+                                    </p>
+                                    <p className="float-end" style={styles.val}>
+                                      {data[0]?.price}
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="row">
+                                  <div className="col-12">
+                                    <p
+                                      className="float-start"
+                                      style={styles.para}
+                                    >
+                                      Range
+                                    </p>
+                                    <p className="float-end" style={styles.val}>
+                                      {data[0]?.araiRange}
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="row">
+                                  <div className="col-12">
+                                    <p
+                                      className="float-start"
+                                      style={styles.para}
+                                    >
+                                      Speed
+                                    </p>
+                                    <p className="float-end" style={styles.val}>
+                                      {data[0]?.topSpeed}
+                                    </p>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                      <div className="col">
-                        <div
-                          className="card mb-3"
-                          style={{
-                            width: "100%",
-                            border: "none",
-                          }}
-                        >
-                          <LazyLoadImage
-                            src={item.image}
-                            className="card-img-top"
-                            alt={item.scootername}
-                            style={{
-                              height: "150px",
-                            }}
-                          />
-                          <div className="card-body">
-                            <h5
-                              className="card-title"
+                          <div className="col-6">
+                            <div
+                              className="card "
                               style={{
-                                textAlign: "center",
-                                fontSize: isMobile ? "12px" : "16px",
-                                fontWeight: "bold",
-                                textDecoration: "underline",
-                                color: "blue",
-                                cursor: "pointer",
-                              }}
-                              onClick={() => {
-                                navigate(`/scooter/${data[0]?.path}`);
-                                ReactGA.event({
-                                  category: `${window.location.pathname}`,
-                                  action: ` "Click on ${item.scootername}"`,
-                                  label: "Click on scooter name",
-                                });
+                                width: "100%",
+                                border: "none",
                               }}
                             >
-                              {item.scootername}
-                            </h5>
-                            {/* <p className="card-text mb-4" style={styles.para}>
+                              <LazyLoadImage
+                                src={item.image}
+                                className="card-img-top"
+                                alt={item.scootername}
+                                style={{
+                                  height: "150px",
+                                }}
+                              />
+                              <div className="card-body">
+                                <h5
+                                  className="card-title"
+                                  style={{
+                                    textAlign: "center",
+                                    fontSize: isMobile ? "12px" : "16px",
+                                    fontWeight: "bold",
+                                    textDecoration: "underline",
+                                    color: "blue",
+                                    cursor: "pointer",
+                                  }}
+                                  onClick={() => {
+                                    navigate(`/scooter/${item.path}`);
+                                    ReactGA.event({
+                                      category: `${window.location.pathname}`,
+                                      action: ` "Click on ${item.scootername}"`,
+                                      label: "Click on scooter name",
+                                    });
+                                  }}
+                                >
+                                  {item.scootername}
+                                </h5>
+                                {/* <p className="card-text mb-4" style={styles.para}>
                                   Price :{" "}
                                   <span
                                     style={{
@@ -217,37 +224,46 @@ const FirstVal = (props) => {
                                     {item.price}
                                   </span>
                                 </p> */}
-                            <div className="row">
-                              <div className="col-12">
-                                <p className="float-start" style={styles.para}>
-                                  Price
-                                </p>
-                                <p className="float-end" style={styles.val}>
-                                  {item.price}
-                                </p>
-                              </div>
-                            </div>
-                            <div className="row">
-                              <div className="col-12">
-                                <p className="float-start" style={styles.para}>
-                                  Range
-                                </p>
-                                <p className="float-end" style={styles.val}>
-                                  {item.araiRange}
-                                </p>
-                              </div>
-                            </div>
-                            <div className="row">
-                              <div className="col-12">
-                                <p className="float-start" style={styles.para}>
-                                  Top Speed
-                                </p>
-                                <p className="float-end" style={styles.val}>
-                                  {item.topSpeed}
-                                </p>
-                              </div>
-                            </div>
-                            {/* <div className="card-text w-100" style={styles.para}> 
+                                <div className="row">
+                                  <div className="col-12">
+                                    <p
+                                      className="float-start"
+                                      style={styles.para}
+                                    >
+                                      Price
+                                    </p>
+                                    <p className="float-end" style={styles.val}>
+                                      {item.price}
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="row">
+                                  <div className="col-12">
+                                    <p
+                                      className="float-start"
+                                      style={styles.para}
+                                    >
+                                      Range
+                                    </p>
+                                    <p className="float-end" style={styles.val}>
+                                      {item.araiRange}
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="row">
+                                  <div className="col-12">
+                                    <p
+                                      className="float-start"
+                                      style={styles.para}
+                                    >
+                                      Speed
+                                    </p>
+                                    <p className="float-end" style={styles.val}>
+                                      {item.topSpeed}
+                                    </p>
+                                  </div>
+                                </div>
+                                {/* <div className="card-text w-100" style={styles.para}> 
                                     <p className="float-start" >
                                       Price
                                     </p>
@@ -258,7 +274,7 @@ const FirstVal = (props) => {
                                       {item.price}
                                     </p> 
                                 </div> */}
-                            {/* <div className="card-text w-100" style={styles.para}> 
+                                {/* <div className="card-text w-100" style={styles.para}> 
                                     <p className="float-start" >
                                       Range
                                     </p>
@@ -280,21 +296,15 @@ const FirstVal = (props) => {
                                       {item.topSpeed}
                                     </p> 
                                 </div> */}
-                            {/* <p className="card-text" style={styles.para}>
+                                {/* <p className="card-text" style={styles.para}>
                                   Top Speed : {item.topSpeed}
                                 </p> */}
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-
-                      <div
-                        style={{
-                          position: "absolute",
-                          bottom: "0",
-                          display: "flex",
-                          justifyContent: "center",
-                        }}
-                      >
+                      <div className="card-footer d-flex justify-content-center">
                         <button
                           className="btn btn-primary mb-2 "
                           onClick={() => {

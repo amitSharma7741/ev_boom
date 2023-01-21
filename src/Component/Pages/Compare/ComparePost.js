@@ -8,25 +8,25 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 const ComparePost = () => {
   const { comparePost } = useParams();
   //  if comparePost not contain vs then redirect to 404 page
-  
+
   if (!comparePost.includes("vs")) {
     return (
       <>
-      <ErrorPage />
+        <ErrorPage />
       </>
-    )
+    );
   }
   //  compare post value would be like benling-aura-vs-hero-vida-v1
   const val = comparePost.replace(/-/g, " ");
   //  we want vs before value nad after value
   const firstVal = val.slice(0, val.indexOf(" vs"));
   //  capital first letter
-  const finalFirst = firstVal.charAt(0).toUpperCase() + firstVal.slice(1); 
+  const finalFirst = firstVal.charAt(0).toUpperCase() + firstVal.slice(1);
   //  in this path we have two vs word  eg = /tvs-iqube-electric-vs-ampere-magnus-ex
-  //  so we want second vs word 
-var secondVal;
-  if (val.slice(0,3)==="tvs") {
-     secondVal = val.slice(22);
+  //  so we want second vs word
+  var secondVal;
+  if (val.slice(0, 3) === "tvs") {
+    secondVal = val.slice(22);
   } else {
     secondVal = val.slice(val.indexOf("vs") + 2);
   }
@@ -34,7 +34,6 @@ var secondVal;
 
   const title = `${finalFirst} vs ${finalSecond}  - Know which is better - Evstart`;
   const description = `Compare ${finalFirst} vs ${finalSecond} latest prices, reviews, features, specs, mileage, images, colours, variants, performance, safety, ownership, pros and cons, and more.`;
-  
 
   const firstData = scooter.filter(
     (item) => item.scootername.toLowerCase() === firstVal.trim()
@@ -70,9 +69,7 @@ var secondVal;
       value: [firstData[0].chargingTime, secondData[0].chargingTime],
     },
   ];
- 
 
-  
   return (
     <>
       <Seo
@@ -83,16 +80,14 @@ var secondVal;
       />
 
       <div className=" ">
-        <h4
-          className="text-center my-5 animate-charcter"
-          
-        >
+        <h4 className="text-center my-5 animate-charcter">
           Compare {finalFirst} and {finalSecond}
         </h4>
 
         <div className="container">
           <table className="table table-bordered table-striped">
-            <thead className="position-sticky "
+            <thead
+              className="position-sticky "
               style={{
                 /*   background: "antiquewhite",
                 border: "1px solid #ddd",
@@ -121,10 +116,8 @@ box-shadow:  -20px -20px 60px #bebebe,
                         alt={firstData[0].scootername}
                         className="img-fluid"
                         style={{
-                            height: "200px",
-                            width: "200px",
-
-
+                          height: "200px",
+                          width: "200px",
                         }}
                       />
                       <div className="card-body">
@@ -146,10 +139,8 @@ box-shadow:  -20px -20px 60px #bebebe,
                         alt={secondData[0].scootername}
                         className="img-fluid"
                         style={{
-                            height: "200px",
-                            width: "200px",
-                            
-
+                          height: "200px",
+                          width: "200px",
                         }}
                       />
                       <div className="card-body">
@@ -184,7 +175,6 @@ box-shadow:  -20px -20px 60px #bebebe,
 
         <FirstVal name={firstVal.trim().replace(/ /g, "-")} />
         <FirstVal name={secondVal.trim().replace(/ /g, "-")} />
-        
       </div>
     </>
   );
