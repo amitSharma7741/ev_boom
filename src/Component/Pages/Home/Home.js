@@ -8,7 +8,9 @@ import EmiCalculator from "../Scooter/Post/Component/EmiCalaculator";
 import RunningCostCalculator from "../Scooter/Post/Component/RunningCostCalculator";
 import CompareTwo from "./Component/CompareTwo/CompareTwo";
 import Seo from "../../SEO/Seo";
+import scooter from "../../Databse/ScooterData.json"
 import HorrizontalImageScooters from "../Scooter/Component/HorrizontalImageScooters";
+import FirstVal from "../Compare/Component/FirstVal";
 
 const Home = () => {
 
@@ -91,6 +93,21 @@ const Home = () => {
       <HorrizontalImageScooters />
       </div>
       {/*  Horrizontal scooter */}
+         {scooter.map((item) => {
+          return (
+            <>
+             <div key={item.id} >
+              <FirstVal
+              name = {item.path}
+
+              />
+             </div>
+            </>
+          );
+        })}
+      {/* Comparsion list  */}
+
+      {/* Comparsion list  */}
       {/* video carsoluel */}
       {/* <VideoCarousel/> */}
     </>
