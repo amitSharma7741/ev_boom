@@ -164,6 +164,11 @@ const BlogPost = () => {
                         alt={props.alt}
                         effect="blur"
                         className="img-fluid"
+                        width={wid}
+                        style={{
+                          display:"flex",
+                          justifyContent:"center"
+                        }}
                       />
                     ),
                     //  we one div that class scooterBox so we will add rrandom scooter
