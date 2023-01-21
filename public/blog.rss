@@ -1,13 +1,75 @@
-<rss xmlns:media="http://search.yahoo.com/mrss/"
-    xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:media="http://search.yahoo.com/mrss/"
+    xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"
+    version="2.0">
 
     <channel>
         <title>Electric Vehicle Blogs, News, Reviews, Tips and Tricks</title>
         <link>https://evstart.netlify.app/blog</link>
         <description>Electric Vehicle Blogs, News, Reviews, Tips and Tricks</description>
+        <image>
+            <url>https://evstart.netlify.app/assets/images/evstart-logo.png</url>
+            <title>Electric Vehicle Blogs, News, Reviews, Tips and Tricks</title>
+            <link>https://evstart.netlify.app/blog</link>
+        </image>
         <language>en-us</language>
-        <lastBuildDate>Fri 6 Jan 2023</lastBuildDate>
+        <lastBuildDate>Set 21 Jan 2023</lastBuildDate>
         <atom:link href="https://evstart.netlify.app/blog.rss" rel="self" type="application/rss+xml" />
+        <item>
+            <title>
+                How to maximizing efficiency and minimizing charging time of electric vehicle
+            </title>
+            <link>
+                https://evstart.netlify.app/blog/how-to-maximizing-efficiency-and-minimizing-charging-time-of-electric-vehicle
+            </link>
+            <guid
+                isPermaLink="true">
+                https://evstart.netlify.app/how-to-maximizing-efficiency-and-minimizing-charging-time-of-electric-vehicle
+            </guid>
+            <description>
+                Electric vehicles (EVs) are becoming increasingly popular as more people look to
+                reduce their carbon footprint and save money on fuel costs. However, one of the
+                biggest challenges with EVs is maximizing efficiency and minimizing charging time.
+                In this blog post, we will discuss several strategies that can help you get the most
+                out of your EV and charge it as quickly as possible.
+            </description>
+
+            <dc:creator>
+                Seth Doyle
+            </dc:creator>
+            <pubDate>
+                Sat 21 Jan 2023 10:10:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>
+                How to find and locate charging stations in india
+            </title>
+            <link>
+                https://evstart.netlify.app/blog/how-to-find-and-locate-charging-stations-in-india
+            </link>
+            <guid
+                isPermaLink="true">
+                https://evstart.netlify.app/blog/how-to-find-and-locate-charging-stations-in-india
+            </guid>
+            <description>
+                Electric vehicles (EVs) have been gaining popularity in India in recent years,
+                thanks to the government's push for cleaner and more sustainable transportation.
+                However, one of the main concerns for EV owners is the availability and
+                accessibility of charging stations. Finding a charging station can be a challenge,
+                especially when traveling long distances. In this blog post, we will discuss how to
+                find and locate charging stations in India.
+            </description>
+
+            <dc:creator>
+                Seth Doyle
+            </dc:creator>
+            <pubDate>
+                Sat 21 Jan 2023 10:10:00 +0000
+            </pubDate>
+        </item>
         <item>
             <title>
                 Different Types of EV Charging Stations and How to Use Them
@@ -15,16 +77,25 @@
             <link>
                 https://evstart.netlify.app/blog/different-types-of-ev-charging-stations-and-how-to-use-them
             </link>
-
+            <guid
+                isPermaLink="true">
+                https://evstart.netlify.app/blog/different-types-of-ev-charging-stations-and-how-to-use-them
+            </guid>
             <description>
                 If you’re an electric vehicle (EV) owner, you’re probably familiar with the need to
                 charge your car. To do so, you’ll need access to an EV charging station. But what
                 types of charging stations are available? How do you use them? And what else do you
                 need to know? This article will answer all of these questions and more, and provide
-                a comprehensive guide to EV charging stations.
+                a comprehensive guide to EV charging stations. You’ll learn about the different
+                types of charging stations, the different charging speeds, and how to use them.
+                You’ll also find out what else you need to know so you can recharge your EV safely
+                and efficiently. So, if you’re looking for everything you need to know about EV
+                charging stations, you’ve come to the right place.
             </description>
 
-
+            <dc:creator>
+                Seth Doyle
+            </dc:creator>
             <pubDate>
                 Thu 19 jan 2023 10:10:00 +0000
             </pubDate>
@@ -37,14 +108,21 @@
             <link>
                 https://evstart.netlify.app/blog/ather-450x-free-non-copyright-images-download-2023
             </link>
-
+            <guid
+                isPermaLink="true">
+                https://evstart.netlify.app/blog/ather-450x-free-non-copyright-images-download-2023
+            </guid>
             <description>
                 An extensive and free collection of images of the Ather 450x electric scooter is
                 available to be used for various purposes. Whether it is for personal use, a
                 website, or even for commercial use, you can find an image in this collection that
-                will suit your needs.
-            </description>
+                will suit your needs. With its vast selection, you can find an image that will make
+                your project stand out from the rest.
 
+            </description>
+            <dc:creator>
+                Alex Guill
+            </dc:creator>
 
             <pubDate>
                 Sun 8 jan 2023 10:10:00 +0000
@@ -58,6 +136,10 @@
             <link>
                 https://evstart.netlify.app/blog/why-electric-scooter-is-better-than-petrol-scooter
             </link>
+            <guid
+                isPermaLink="true">
+                https://evstart.netlify.app/blog/why-electric-scooter-is-better-than-petrol-scooter
+            </guid>
             <description>
                 Electric scooters are becoming an increasingly popular transportation option due to
                 their convenience, cost-effectiveness, and
@@ -69,7 +151,9 @@
                 emissions.
             </description>
 
-
+            <dc:creator>
+                Jon Snow
+            </dc:creator>
             <pubDate>
                 Wed 04 jan 2023 10:10:00 +0000
             </pubDate>
@@ -84,12 +168,19 @@
             </link>
             <description>
                 An electric vehicle (EV) is a type of vehicle that is powered by an electric motor,
-                rather than a gasoline engine. EV technology
-                has been around for over a century, but it has gained significant popularity in
-                recent years due to concerns about climate change
-                and air pollution. EVs are generally considered to be more environmentally friendly
-                than gasoline-powered vehicles,
+                rather than a gasoline engine. EV technology has been around for over a century, but
+                it has gained significant popularity in recent years due to concerns about climate
+                change and air pollution. EVs are generally considered to be more environmentally
+                friendly than gasoline-powered vehicles, as they produce zero emissions from their
+                tailpipes and have a lower overall environmental impact during their lifecycle. They
+                also tend to be more energy efficient, as they can convert a higher percentage of
+                their stored energy into motion. EVs come in a variety of shapes and sizes,
+                including cars, buses, and even airplanes.
             </description>
+
+            <dc:creator>
+                Jon Snow
+            </dc:creator>
 
             <pubDate>
                 Sun 25 dec 2022 10:10:00 +0000
