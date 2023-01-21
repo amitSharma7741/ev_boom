@@ -25,7 +25,7 @@ const BlogPost = () => {
   const blog = BlogsData.filter((blog) => blog.path === blogpost);
   const urlParam = `/blog/${blogpost}`;
   const fullUrl = `https://evstart.netlify.app${urlParam}`;
-
+  const wid = "100%"
   const randomScooter = scooter[Math.floor(Math.random() * scooter.length)];
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -95,6 +95,7 @@ const BlogPost = () => {
               className="img-fluid w-100"
               alt={blog[0].title}
               effect="blur"
+               width={wid}
               style={{
                 borderRadius: "5px 5px 0 0",
                 width:"100%"
