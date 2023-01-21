@@ -11,6 +11,7 @@ import Seo from "../../SEO/Seo";
 import scooter from "../../Databse/ScooterData.json"
 import HorrizontalImageScooters from "../Scooter/Component/HorrizontalImageScooters";
 import FirstVal from "../Compare/Component/FirstVal";
+import ShowBlogs from "../Blog/Component/ShowBlogs/ShowBlogs"
 
 const Home = () => {
 
@@ -92,6 +93,9 @@ const Home = () => {
 
       <HorrizontalImageScooters />
       </div>
+      {/* blogs */}
+       <ShowBlogs />
+      {/* blogs */}
       {/*  Horrizontal scooter */}
          {scooter.map((item) => {
           return (

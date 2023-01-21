@@ -16,6 +16,7 @@ import { useMediaQuery } from "react-responsive";
 import Camparsion from "../Component/Camparsion";
 import Seo from "../../../SEO/Seo";
 import FirstVal from "../../Compare/Component/FirstVal";
+import ShowBlogs from "../../Blog/Component/ShowBlogs/ShowBlogs";
 // import RecentlyViewed from "./Component/RecentlyViewed/RecentlyViewed";
 const Post = () => {
   const { post } = useParams();
@@ -316,6 +317,10 @@ const Post = () => {
             <div className = "mt-5">
 
             <FirstVal name = {post} />
+            </div>
+            <div className = "mt-5">
+
+             <ShowBlogs />
             </div>
           </div>
         </div>
