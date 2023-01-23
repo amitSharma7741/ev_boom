@@ -5,9 +5,12 @@ import "react-tabs/style/react-tabs.css";
 import scooter from "../../../Databse/ScooterData.json";
 import ReactGA from "react-ga4";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Player } from "@lottiefiles/react-lottie-player";
+import { useMediaQuery } from "react-responsive";
 const AllScooter = () => {
   const navigate = useNavigate();
 
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const showData = [
     {
       id: 1,
@@ -30,6 +33,18 @@ const AllScooter = () => {
       value: scooter.filter((item) => item.company === "Benling"),
     },
   ];
+
+   
+  const styles = {
+    thText: {
+      fontSize:  isMobile ? "11px":"13px",
+      fontWeight: "bold",
+    },
+    player:{
+      height:"30px",
+      width:"30px"
+    }
+  };
 
   return (
     <>
@@ -58,15 +73,16 @@ const AllScooter = () => {
               {item.value.map((item) => (
                 <div
                   className="col-lg-4 col-md-6 d-flex mt-3 justify-content-center col-6 d-md-flex align-items-md-stretch  text-center"
-                  key={item.id} >
+                  key={item.id}
+                >
                   <div
                     className="card shadow mb-5 bg-body rounded"
-                    style={{ width: "18rem",cursor:"pointer" }}
+                    style={{ width: "18rem", cursor: "pointer" }}
                     onClick={() => {
                       ReactGA.event({
                         category: `${window.location.pathname}`,
-                        action:  `Click on ${item.scootername}`,
-                        label:   "Click on scooter name"
+                        action: `Click on ${item.scootername}`,
+                        label: "Click on scooter name",
                       });
                       navigate(`/scooter/${item.path}`);
                     }}
@@ -118,15 +134,87 @@ const AllScooter = () => {
                           Estimated Price
                         </div>
                       </div>
-                      <p className="card-text text-black mt-2">
-                        {item.oneLine}
-                      </p>
-                          <Link
-                            to={`/scooter/${item.path}`}
+                      <table style={{width:"100%"}}>
+                        
+                        <tr>
+                          <th>
+                            <Player
+                              autoplay
+                              loop
+                              src="https://assets5.lottiefiles.com/packages/lf20_hbr24n88.json"
+                              style={styles.player}
+                            ></Player>
+                          </th>
+                          <th style={styles.thText}>{item.chargingTime.slice(0,1)} hrs</th>
+                          <th>
+                            <Player
+                              autoplay
+                              loop
+                              src="https://assets3.lottiefiles.com/private_files/lf30_zznbmhwf.json"
+                              style={styles.player}
+                            ></Player>
+                          </th>
+                          <th style={styles.thText}>{item.topSpeed}</th>
+                        </tr>
+                        <tr>
+                          <th>
+                            <Player
+                              autoplay
+                              loop
+                              src="https://assets3.lottiefiles.com/private_files/lf30_0oldmhje.json"
+                              style={styles.player}
+                            ></Player>
+                          </th>
+                          <th style={styles.thText}>{item.araiRange}</th>
+                          <th>
+                            <Player
+                              autoplay
+                              loop
+                              src="https://assets6.lottiefiles.com/packages/lf20_ncjjwhb5.json"
+                              style={styles.player}
+                            ></Player>
+                          </th>
+                          <th style={styles.thText}>{item.batteryCapacity}</th>
+                        </tr> 
+                      </table>
+                      {/*   <div className="card-text d-flex justify-content-between mt-2">
+                        <div>
+                          <Player
+                            autoplay
+                            loop
+                            src="https://assets5.lottiefiles.com/packages/lf20_hbr24n88.json"
+                            style={styles.player}
+                          ></Player>
+                        </div>
+                        <div>{item.chargingTime}</div>
+                      </div> */}
+                      {/* <div>
+                        <Player
+                          autoplay
+                          loop
+                          src="https://assets3.lottiefiles.com/packages/lf20_spob0nkc.json"
+                          style={styles.player}
+                        ></Player>
+                        <p>{item.topSpeed} ||</p>
+                      </div>
+                      <div>
+                        <Player
+                          autoplay
+                          loop
+                          src="https://assets5.lottiefiles.com/packages/lf20_hbr24n88.json"
+                          style={styles.player}
+                        ></Player>
+                        <p>{item.araiRange} ||</p>
+                      </div> */}
+                      {/* {item.oneLine} */}
+                    </div>
+                    <div className="card-footer d-flex justify-content-center">
+                      <Link
+                        to={`/scooter/${item.path}`}
                         className="btn btn-primary"
-                          >
-                            Know More
-                          </Link>
+                      >
+                        Know More
+                      </Link>
                     </div>
                   </div>
                 </div>
