@@ -73,6 +73,7 @@ const RunningCostCalculator = () => {
               className="col-md-4 d-flex justify-content-center "
               onClick={() => {
                 navigate("/fuel-cost-calculator");
+                window.scrollTo(0, 0);
               }}
             >
               <img
@@ -348,6 +349,7 @@ const RunningCostCalculator = () => {
                 }}
                 onClick={() => {
                   navigate("/fuel-cost-calculator");
+                  window.scrollTo(0, 0);  
                 }}
               >
                 <p
