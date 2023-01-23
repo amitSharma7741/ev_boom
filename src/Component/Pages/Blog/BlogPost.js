@@ -21,11 +21,12 @@ const BlogPost = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const [readTime, setReadTime] = useState(1);
   const [postContent, setPostcontent] = useState("");
+  const [loading, setLoading] = useState(true);
 
   const blog = BlogsData.filter((blog) => blog.path === blogpost);
   const urlParam = `/blog/${blogpost}`;
   const fullUrl = `https://evstart.netlify.app${urlParam}`;
-  const wid = "100%"
+  const wid = "100%";
   const randomScooter = scooter[Math.floor(Math.random() * scooter.length)];
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -33,7 +34,10 @@ const BlogPost = () => {
     import(`./MarkdownFile/${blogpost}.md`).then((res) => {
       fetch(res.default)
         .then((response) => response.text())
-        .then((response) => setPostcontent(response))
+        .then((response) => {
+          setPostcontent(response);
+          setLoading(false);
+        })
         .catch((err) => console.log(err));
     });
     const text = postContent;
@@ -42,30 +46,7 @@ const BlogPost = () => {
     const minutes = noOfWords / wordsPerMinute;
     const readTime = Math.ceil(minutes); // round up
     setReadTime(readTime);
-
-    //  wehave one div with class scooterBox so we will add random scooter image in it
-    /* const scooterBox = document.querySelector(".scooterBox");
-
-    // <img src=${randomScooter.img} alt=${randomScooter.title} class="img-fluid" />
-
-    scooterBox.innerHTML = `<div class="card mb-3">
-    <div class="row g-0">
-      <div class="col-md-4 col-4">
-        <img src=${randomScooter.image} class="img-fluid rounded-start" style = "height:100px" alt= ${randomScooter.scootername}>
-      </div>
-      <div class="col-md-8 col-8">
-        <div class="card-body">
-        <a href = ${randomScooter.path} style="text-decoration: none; color: black;">${randomScooter.scootername}</a>
-       
-          <p class="card-text">
-         Rs.  ${randomScooter.price} || ${randomScooter.topSpeed} || ${randomScooter.araiRange}/ charge || 
-          ${randomScooter.batteryCapacity}
-          </p>
-          
-        </div>
-      </div>
-    </div>
-  </div>`; */
+ 
   }, [blog, blogpost, postContent, randomScooter]);
 
   return (
@@ -86,19 +67,22 @@ const BlogPost = () => {
           color: "black",
         }}
       >
-        <div className=" mb-5 bg-body rounded" style={{
-           boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
-        }}>
+        <div
+          className=" mb-5 bg-body rounded"
+          style={{
+            boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+          }}
+        >
           <div className="  ">
             <LazyLoadImage
               src={blog[0]?.img}
               className="img-fluid w-100"
               alt={blog[0].title}
               effect="blur"
-               width={wid}
+              width={wid}
               style={{
                 borderRadius: "5px 5px 0 0",
-                width:"100%"
+                width: "100%",
               }}
             />
             <div
@@ -151,6 +135,7 @@ const BlogPost = () => {
                   // fontSize: "20px"
                 }}
               >
+                {loading && "loading...."}
                 <ReactMarkdown
                   children={postContent}
                   remarkPlugins={[remarkGfm]}
@@ -166,8 +151,8 @@ const BlogPost = () => {
                         className="img-fluid"
                         width={wid}
                         style={{
-                          display:"flex",
-                          justifyContent:"center"
+                          display: "flex",
+                          justifyContent: "center",
                         }}
                       />
                     ),
@@ -182,14 +167,15 @@ const BlogPost = () => {
                           <>
                             <div className="scooterBox bg-light">
                               <div
-                                className="card my-4" 
+                                className="card my-4"
                                 style={{
                                   cursor: "pointer",
                                   borderLeft: "5px solid #007bff",
-                                  boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
+                                  boxShadow:
+                                    "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
                                 }}
-                                onClick={()=>{
-                                  navigate(`/scooter/${randomScooter.path}`)
+                                onClick={() => {
+                                  navigate(`/scooter/${randomScooter.path}`);
                                 }}
                               >
                                 <div className="row g-0">
@@ -200,7 +186,6 @@ const BlogPost = () => {
                                       alt={randomScooter.scootername}
                                       style={{
                                         height: "150px",
-
                                       }}
                                     />
                                   </div>
