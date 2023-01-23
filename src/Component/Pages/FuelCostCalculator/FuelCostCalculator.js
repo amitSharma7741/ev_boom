@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from "react"; 
+import React, { useState, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
 import ReactGA from "react-ga4";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import Seo from "../../SEO/Seo";
-import "./Fuel.css"
+import "./Fuel.css";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { useMediaQuery } from "react-responsive";
 
 const FuelCostCalculator = () => {
-
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   // eslint-disable-next-line
+  const [postContent, setPostcontent] = useState("");
   const [pDistPerDay, setpDistPerDay] = useState(50);
   const [pCostPerLtr, setpCostPerLtr] = useState(100);
   const [pYear, setpYear] = useState(2);
@@ -26,7 +29,7 @@ const FuelCostCalculator = () => {
     const perYearDist = pDistPerDay * 365 * pYear;
     const perYearCost = perYearDist * pCostPerLtr;
     const finalCost = perYearCost / pMilage;
-    //  our final cost is 125302 
+    //  our final cost is 125302
 
     setpFinalCost(finalCost.toFixed(0));
     // console.log(finalCost);
@@ -38,9 +41,16 @@ const FuelCostCalculator = () => {
 
     seteFinalCost(electricFinalCost.toFixed(0));
     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-    window.scrollTo(0, 0);
   }, [pDistPerDay, pCostPerLtr, pYear, eCostPerUnit, pMilage, eMilage]);
 
+  useEffect(() => {
+    import(`./FuelCost.md`).then((res) => {
+      fetch(res.default)
+        .then((response) => response.text())
+        .then((response) => setPostcontent(response))
+        .catch((err) => console.log(err));
+    });
+  });
   const styles = {
     rightInput: {
       float: "right",
@@ -57,13 +67,12 @@ const FuelCostCalculator = () => {
   };
   return (
     <>
-
-    <Seo
-    title =  "Fuel Cost Calculator | Petrol vs Electric cost calculator | Running Cost Calculator"
-    description ="Get accurate and up-to-date fuel cost estimates with our easy-to-use fuel cost calculator. Simply enter your vehicle make and model, along with your location and desired fuel type, and our calculator will provide you with an estimate of the cost to fill up your tank. Stay budget-conscious and plan your trips with confidence using our fuel cost calculator. Try it now!"
-    image = "https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29zdHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
-    url = "/fuel-cost-calculator"
-    />
+      <Seo
+        title="Fuel Cost Calculator | Petrol vs Electric cost calculator | Running Cost Calculator"
+        description="Get accurate and up-to-date fuel cost estimates with our easy-to-use fuel cost calculator. Simply enter your vehicle make and model, along with your location and desired fuel type, and our calculator will provide you with an estimate of the cost to fill up your tank. Stay budget-conscious and plan your trips with confidence using our fuel cost calculator. Try it now!"
+        image="https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29zdHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+        url="/fuel-cost-calculator"
+      />
       <div>
         <div
           className="container"
@@ -72,16 +81,16 @@ const FuelCostCalculator = () => {
           }}
         >
           <div className="d-flex justify-content-center ">
-           
             <Player
               autoplay
               loop
-              src ="https://assets4.lottiefiles.com/packages/lf20_c21tPU/electric-car-lottie-illustradraw-download.json"
-              style={{ height: "300px", width: "300px",marginTop:"-60px" }}
+              src="https://assets4.lottiefiles.com/packages/lf20_c21tPU/electric-car-lottie-illustradraw-download.json"
+              style={{ height: "300px", width: "300px", marginTop: "-60px" }}
             />
-          </div> 
-          <h1 className="text-center  animate-charcter"  >Fuel Cost Calculator</h1>
-       
+          </div>
+          <h1 className="text-center  animate-charcter">
+            Fuel Cost Calculator
+          </h1>
 
           <p
             className=" mb-5"
@@ -99,9 +108,9 @@ const FuelCostCalculator = () => {
           </p>
 
           <div
-            className="row"
+            className="row shadow"
             style={{
-              backgroundColor: "#EEF2FA",
+              backgroundImage: "linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%)", 
               padding: "20px",
             }}
           >
@@ -113,17 +122,20 @@ const FuelCostCalculator = () => {
                     loop
                     src="https://assets4.lottiefiles.com/private_files/lf30_mtifqxx7.json"
                     style={{ height: "50px", width: "50px" }}
-                    />
-                    <div className="d-flex align-items-center " style={{
-                      marginLeft:"10px"
-                    }}>
-                    <h5  >Petrol Vehicle Cost</h5>
-                    </div>
+                  />
+                  <div
+                    className="d-flex align-items-center "
+                    style={{
+                      marginLeft: "10px",
+                    }}
+                  >
+                    <h5>Petrol Vehicle Cost</h5>
                   </div>
+                </div>
                 <div className="card-body">
                   <div className="card-text mt-3">
                     <label htmlFor="myRange" style={styles.labelText}>
-                    Petrol price / litre (INR)
+                      Petrol price / litre (INR)
                     </label>
                     <input
                       type="number"
@@ -232,7 +244,7 @@ const FuelCostCalculator = () => {
                   </div>
 
                   <div className="card-footer">
-                    Petrol final cost : {" "}
+                    Petrol final cost :{" "}
                     <span
                       style={{
                         fontWeight: "bold",
@@ -246,27 +258,33 @@ const FuelCostCalculator = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-6" style={{
-              marginTop:isMobile ? "20px" : "0px"
-            }}>
-              <div className="card"> 
-              <div class="card-header d-flex justify-content-center ">
+            <div
+              className="col-md-6"
+              style={{
+                marginTop: isMobile ? "20px" : "0px",
+              }}
+            >
+              <div className="card">
+                <div class="card-header d-flex justify-content-center ">
                   <Player
                     autoplay
                     loop
                     src="https://assets4.lottiefiles.com/packages/lf20_oiielxdi.json"
                     style={{ height: "50px", width: "50px" }}
-                    />
-                    <div className="d-flex align-items-center " style={{
-                      marginLeft:"10px"
-                    }}>
-                    <h5  >Electric Vehicle Cost</h5>
-                    </div>
+                  />
+                  <div
+                    className="d-flex align-items-center "
+                    style={{
+                      marginLeft: "10px",
+                    }}
+                  >
+                    <h5>Electric Vehicle Cost</h5>
                   </div>
+                </div>
                 <div className="card-body">
                   <div className="card-text mt-3">
                     <label htmlFor="myRange" style={styles.labelText}>
-                    Electricity price / unit
+                      Electricity price / unit
                     </label>
                     <input
                       type="number"
@@ -396,8 +414,12 @@ const FuelCostCalculator = () => {
                 style={{
                   fontSize: "20px",
                   fontWeight: "bold",
-                }} >
-                Electric vehicle Save {" "}
+                  background:"#f5f5f5",
+                  padding:"10px",
+                  borderRadius:"15px"
+                }}
+              >
+                Electric vehicle Save{" "}
                 <span
                   style={{
                     color: "green",
@@ -405,10 +427,17 @@ const FuelCostCalculator = () => {
                   }}
                 >
                   &#8377; {pFinalCost - eFinalCost}
-                </span> {" "}
+                </span>{" "}
                 in {pYear} years
               </h3>
             </div>
+          </div>
+          <div className="boxy mt-5">
+            <ReactMarkdown
+              children={postContent}
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw]}
+            />
           </div>
         </div>
       </div>
