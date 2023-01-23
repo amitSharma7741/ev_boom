@@ -38,7 +38,9 @@ const Footer = () => {
             <ul className="nav justify-content-center border-bottom pb-3 mb-3">
               {showNav.map((nav) => {
                 return (
-                  <li className="nav-item" key={nav.id}>
+                  <li className="nav-item" key={nav.id} onClick={()=>{
+                    window.scrollTo(0, 0);
+                  }}>
                     <Link to={nav.path} className="nav-link px-2 text-muted">
                       {nav.name}
                     </Link>
@@ -202,7 +204,7 @@ const Footer = () => {
                     </li>
                     <li className="text-center mt-2">
                       <Link
-                        to="/fuel-cost-calculator"
+                        to="/emi-cost-calculator"
                         style={{
                           textDecoration: "none",
                           fontWeight: "500",
