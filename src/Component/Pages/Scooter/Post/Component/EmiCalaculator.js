@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import 'chart.js/auto';
 import { Chart } from 'react-chartjs-2';
+import { useNavigate } from 'react-router-dom';
 
 
 const EmiCalaculator = (props) => {
+
+    const navigate = useNavigate()
 
     const [value, setValue] = useState(30000)
     const [month, setMonth] = useState(3)
@@ -88,7 +91,9 @@ const EmiCalaculator = (props) => {
                     <div className='row d-flex  justify-content-center '>
                         <div className='col-lg-4 col-md-6 d-flex mt-3 justify-content-center    text-center'>
                             <div className="card w-100"  >
-                                <h1 className="card-title bg-dark text-white">
+                                <h1 className="card-title bg-dark text-white" onClick={()=>
+                                    navigate(`/emi-cost-calculator`)
+                                }>
                                     EMI Calculator
                                 </h1>
                                 <div className="card-body">
@@ -178,7 +183,9 @@ const EmiCalaculator = (props) => {
                             </div>
 
                         </div>
-                        <div className='col-lg-4 col-md-6 d-flex mt-3 justify-content-center   text-center'>
+                        <div className='col-lg-4 col-md-6 d-flex mt-3 justify-content-center   text-center' onClick={()=>
+                                    navigate(`/emi-cost-calculator`)
+                                }>
                             <div className="card w-100"  >
                                 <div style={styles.textBox}>
                                     <h5 style={styles.textH4}> Loan Amount</h5>
