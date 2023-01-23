@@ -17,6 +17,7 @@ import Cart from "./Component/Pages/Cart/Cart";
 import FuelCostCalculator from "./Component/Pages/FuelCostCalculator/FuelCostCalculator";
 import Compare from "./Component/Pages/Compare/Compare";
 import ComparePost from "./Component/Pages/Compare/ComparePost";
+import EmiCostCalculator from "./Component/Pages/EmiCostCalculator/EmiCostCalculator";
 // import SnakeGame from "./Component/Pages/Games/SnakeGame/SnakeGame";
 const App = () => {
   return (
@@ -40,7 +41,8 @@ const App = () => {
             path="/fuel-cost-calculator"
             element={<FuelCostCalculator />}
           />
-
+{/* emi cost calculator */}
+<Route path="/emi-cost-calculator" element={<EmiCostCalculator />} />
           {/* compare two electric scooter */}
           <Route path="/compare" element={<Compare />}>
             <Route path=":comparePost" element={<ComparePost />} />
