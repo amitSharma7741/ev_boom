@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
@@ -11,11 +11,13 @@ const AllScooter = () => {
   const navigate = useNavigate();
 
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const [isreadMore, setIsreadMore] = useState(true);
+
   const showData = [
     {
       id: 1,
       name: "All",
-      value: scooter,
+      value: isreadMore ? scooter.slice(0, 6) : scooter,
     },
     {
       id: 2,
@@ -34,16 +36,15 @@ const AllScooter = () => {
     },
   ];
 
-   
   const styles = {
     thText: {
-      fontSize:  isMobile ? "11px":"13px",
+      fontSize: isMobile ? "11px" : "13px",
       fontWeight: "bold",
     },
-    player:{
-      height:"30px",
-      width:"30px"
-    }
+    player: {
+      height: "30px",
+      width: "30px",
+    },
   };
 
   return (
@@ -134,8 +135,7 @@ const AllScooter = () => {
                           Estimated Price
                         </div>
                       </div>
-                      <table style={{width:"100%"}}>
-                        
+                      <table style={{ width: "100%" }}>
                         <tr>
                           <th>
                             <Player
@@ -145,7 +145,9 @@ const AllScooter = () => {
                               style={styles.player}
                             ></Player>
                           </th>
-                          <th style={styles.thText}>{item.chargingTime.slice(0,1)} hrs</th>
+                          <th style={styles.thText}>
+                            {item.chargingTime.slice(0, 1)} hrs
+                          </th>
                           <th>
                             <Player
                               autoplay
@@ -175,7 +177,7 @@ const AllScooter = () => {
                             ></Player>
                           </th>
                           <th style={styles.thText}>{item.batteryCapacity}</th>
-                        </tr> 
+                        </tr>
                       </table>
                       {/*   <div className="card-text d-flex justify-content-between mt-2">
                         <div>
@@ -219,6 +221,24 @@ const AllScooter = () => {
                   </div>
                 </div>
               ))}
+              <div className="d-flex justify-content-center">
+
+              <button onClick={() => setIsreadMore(!isreadMore)} style={{
+                backgroundColor: "transparent",
+                border:  "1px solid crimson",
+                borderRadius: "15px",
+                cursor: "pointer",
+                color: "crimson",
+                fontWeight: "700",
+                fontSize: "20px",
+                marginTop: "20px",
+                marginBottom: "20px",
+
+              }}>
+                {isreadMore ? "Show More" : "Show Less"}
+              </button>
+              </div>
+
             </div>
             {/*  <div className="col-lg-4 col-md-6 d-flex mt-3 justify-content-center   text-center">
                             <div className="card" style={{ width: '18rem' }}>
