@@ -1,7 +1,21 @@
 export const BlogsData = [
   {
+    Id: "7",
+    title: "Why the Ola S1 Pro Electric Scooter is a Popular Choice in India",
+    path: "why-the-ola-s1-pro-electric-scooter-is-a-popular-choice-in-india",
+    img: "https://images.unsplash.com/photo-1516289637866-1e298d7c6a54?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Z2lybHMlMjB3aXRoJTIwJTIwc2Nvb3RlcnxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+    description:
+      "The OLA S1 Pro is a cutting-edge electric scooter that is now available in India at a starting price of Rs. 1,29,999. This scooter is the epitome of style, performance, and functionality and comes in one variant and an impressive 11 color options. The OLA S1 Pro is equipped with a powerful 5500 W motor that generates enough power to give you an exhilarating riding experience.",
+    date: "26 jan 2023",
+    author: "Seth Doyle",
+    authorImg:
+      "https://images.unsplash.com/photo-1595760780346-f972eb49709f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHByb2Zlc3Npb25hbCUyMGdpcmx8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    category: "Electric Scooter",
+  },
+  {
     Id: "6",
-    title: "How to maximizing efficiency and minimizing charging time of electric vehicle",
+    title:
+      "How to maximizing efficiency and minimizing charging time of electric vehicle",
     path: "how-to-maximizing-efficiency-and-minimizing-charging-time-of-electric-vehicle",
     img: "https://images.unsplash.com/photo-1605919993579-457ae8e08a20?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGdpcmwlMjB3aXRoJTIwY2FyfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
     description:
