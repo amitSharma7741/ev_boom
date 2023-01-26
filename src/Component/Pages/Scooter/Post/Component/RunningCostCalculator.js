@@ -57,17 +57,19 @@ const RunningCostCalculator = () => {
   };
   return (
     <>
-      <div className="shadow p-3 mb-5 bg-body rounded">
+      <div className="shadow  mb-5 bg-body rounded">
         <Link
           to="/fuel-cost-calculator"
           style={{
             textDecoration: "none",
           }}
         >
-          <h1 className="  text-black  ">Running Cost Calculator</h1>
+          <h1 className="container  text-black ps-5 py-4 ">Running Cost Calculator</h1>
         </Link>
 
-        <div className="card mb-3">
+        <div className="card pb-4" style={{
+          border: "none",
+        }}>
           <div className="row g-0">
             <div
               className="col-md-4 d-flex justify-content-center "
