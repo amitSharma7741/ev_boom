@@ -1,0 +1,13 @@
+Bounce Infinity has officially begun production of its highly-anticipated E1 e-scooter at its manufacturing plant in Bhiwadi, Rajasthan. The company has announced that deliveries for the E1 are set to begin on April 18th, and in preparation for this, Bounce is also looking to set up battery swapping stations in all of the cities where it will be operational.
+
+The E1 e-scooter was first launched last year at a price point of Rs 68,999 and boasts a number of cutting-edge features, including its unique battery-swapping technology. This innovative feature allows customers to purchase the Infinity E1 without the battery, and instead opt to pay for battery swaps only, effectively reducing the overall cost of the e-scooter to Rs 45,099.
+
+Powering the E1 is a highly efficient hub motor that is capable of producing a peak power output of 83Nm, allowing the e-scooter to reach a top speed of 65kmph. The motor is paired with a 2kWh 48V 39Ah battery that offers a claimed range of 85km, and can be fully charged in just four to five hours.
+
+In terms of design, the Bounce Infinity E1 boasts a very modern and European aesthetic, with smooth, flowing lines and a number of premium touches such as flush-fitting pillion footpegs, an aluminum finish to the swingarm, and body-colored inner apron.
+
+The e-scooter comes with a range of advanced features including an LCD console with Bluetooth connectivity, which allows the user to access functions such as geofencing, anti-theft, and tow alerts when paired with a smartphone via the accompanying app. Additionally, the E1 offers two different riding modes - Power and Eco, as well as a Reverse mode, a Drag mode that enables the e-scooter to move at walking speed in case of a puncture, and even a cruise control feature.
+
+In terms of competition, the Bounce Infinity E1 is set to rival models such as the Okinawa iPraise+, Ampere Magnus Pro, and BGauss B8. However, thanks to its unique battery-swapping feature, the price of the E1 is significantly lower than its competitors, making it an attractive option for budget-conscious consumers. Additionally, models like the Bajaj CT100 and the TVS XL100 can be purchased at a similar price point.
+
+Overall, the Bounce Infinity E1 is a highly-anticipated e-scooter that offers a range of advanced features and a unique battery-swapping technology at a competitive price point, and is expected to be a popular choice among consumers in the electric scooter market.

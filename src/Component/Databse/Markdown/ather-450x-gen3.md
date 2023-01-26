@@ -1,0 +1,15 @@
+The Ather 450X Gen 3 is an electric scooter that is currently available in India, starting at a price point of Rs. 1,32,058. This scooter comes in two different variants, with three color options to choose from, and the top variant starting at Rs. 1,53,568. The Ather 450X Gen 3 generates an impressive 3300 W of power from its motor, making it a powerful and efficient mode of transportation.
+
+One of the standout features of the Ather 450X Gen 3 is its braking system. It comes equipped with both front and rear disc brakes, and a combined braking system of both wheels. This provides the rider with maximum stopping power and control, ensuring a safe and enjoyable ride.
+
+The Ather 450X Gen 3 is the latest flagship model from Ather Energy, and it was launched in India in July. It boasts several advantages over the previous generation 450 range, including an asking price of Rs 1,55,657 (ex-showroom). The design of the 450X Gen 3 is similar to its predecessor, but it has been updated with modern features. For example, the rear-view mirrors have been re-designed for better visibility, making it easier for the rider to see what is behind them.
+
+The Ather 450X Gen 3 is powered by a 6.2kW motor and a 3.7kWh lithium-ion battery. The latter is a larger unit than before and aids the 450X Gen 3 to clock a claimed 105km range in Eco mode. Meanwhile, the 450 Plus Gen 3 can clock 85km in Eco mode. This means that the rider can travel longer distances on a single charge, making it a more convenient mode of transportation.
+
+Ather has also equipped the 450X Gen 3 with an updated 2GB RAM and 16GB ROM. This is likely to make the user interface faster than before, as the previous generation model featured 1GB RAM and 8GB ROM. Ather claims that the 450 Plus Gen 3 can fast-charge for 10km in 10 minutes whereas the 450X Gen 3 can re-charge for 15km in 10 minutes, which is quite impressive.
+
+The e-scooter also gets Bluetooth connectivity, five riding modes (four for 450 Plus) Smart Eco, Eco, Ride, Sport and Warp (only for 450X) LED illumination, parking assist (reverse gear) and a seven-inch touchscreen TFT display. All these features are designed to make the riding experience more enjoyable and convenient.
+
+The Ather 450X Gen 3 rides on telescopic front forks and a monoshock at the rear. The braking hardware comprises a single disc at both ends with regenerative braking. The Ather 450 rides on 12-inch alloys wrapped in MRF tyres. It tips the scale at 111.6kg and has a 22-liter underseat storage space. This means that the rider can store more of their belongings on the scooter, making it even more convenient.
+
+The Ather 450X and 450 Plus Gen 3 rival the Ola S1 Pro, Revolt RV400, Bajaj Chetak, and the TVS iQube Electric. These are all high-quality electric scooters that are available in India, but the Ather 450X Gen 3 stands out with its impressive power, advanced features, and modern design. If you are looking for a new mode of transportation that is both efficient and convenient, the Ather 450X Gen 3 is an excellent option to consider.
