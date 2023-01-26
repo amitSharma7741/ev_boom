@@ -10,7 +10,10 @@ import ImageCarousel from "./Component/ImageCarousel";
 // import blob from "./Component/SVG/scooter.svg"
 import RunningCostCalculator from "./Component/RunningCostCalculator";
 import ImageGallery from "./Component/ImageGallery";
+import ReactMarkdown from "react-markdown";
 import ReactGA from "react-ga4";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 // import TryEmiCalculator from './Component/TryEmiCalculator';
 import { useMediaQuery } from "react-responsive";
 import Camparsion from "../Component/Camparsion";
@@ -34,8 +37,10 @@ const Post = () => {
   const urlParam = `/scooter/${post}`;
 
   const [isreadMore, setIsreadMore] = useState(true);
+  const [postContent, setPostcontent] = useState("");
+  const [loading, setLoading] = useState(true);
   // const [localData, setLocalData] = useState([]);
-  const text = showData[0].longDescription;
+  const text = postContent;
 
   const desc = `${showData[0]?.scootername} costs Rs. ${showData[0]?.price} in India. On EVSTART you can get ${showData[0]?.scootername} price, range, battery charging time, top speed, images, features, specifications, reviews, mileage, colors, variants, and other details.`;
 
@@ -104,6 +109,15 @@ const Post = () => {
     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
     // open always in top
     window.scrollTo(0, 0);
+    import(`../../../Databse/Markdown/${post}.md`).then((res) => {
+      fetch(res.default)
+        .then((response) => response.text())
+        .then((response) => {
+          setPostcontent(response);
+          setLoading(false);
+        })
+        .catch((err) => console.log(err));
+    });
     /* setLocalStorage(post);
     const scooterLocalStorage = JSON.parse(localStorage.getItem("scooters"));
     // remove the data from local storage
@@ -128,12 +142,12 @@ const Post = () => {
     } */
     // getLocalStorage();
   }, [post]);
-  const styles = {
+/*   const styles = {
     detailText: {
       width: isMobile ? "100%" : "75%",
       textAlign: "justify",
     },
-  };
+  }; */
   return (
     <>
       {/* add seo */}
@@ -265,18 +279,24 @@ const Post = () => {
             {/* full detail */}
 
             <div
-              className=""
+              className="boxy"
               style={{
                 marginTop: "100px",
               }}
             >
               <h1>Full Detail</h1>
-              <p className="text-black" style={styles.detailText}>
+              {loading && "loading...."}
+                <ReactMarkdown
+                  children={isreadMore ? text.slice(0, 500) : text}
+                  remarkPlugins={[remarkGfm]}
+                  rehypePlugins={[rehypeRaw]} 
+                  />
+              {/*  <p className="text-black" style={styles.detailText}>
                 {isreadMore ? text.slice(0, 300) : text}
-              </p>
+              </p> */} 
               <button onClick={() => setIsreadMore(!isreadMore)}>
                 {isreadMore ? "Read More" : "Read Less"}
-              </button>
+              </button>  
             </div>
 
             {/* Running Cost Calculator */}
