@@ -3,8 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import scooter from "../../../Databse/ScooterData.json";
-import ReactGA from "react-ga4";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import ReactGA from "react-ga4"; 
 import { Player } from "@lottiefiles/react-lottie-player";
 import { useMediaQuery } from "react-responsive";
 const AllScooter = () => {
@@ -88,14 +87,13 @@ const AllScooter = () => {
                       navigate(`/scooter/${item.path}`);
                     }}
                   >
-                    <LazyLoadImage
+                    <img
                       src={item.image}
                       className="card-img-top"
                       alt={item.company}
                       style={{
                         height: "180px",
-                      }}
-                      effect="blur"
+                      }} 
                     />
                     <div
                       className="card-body"

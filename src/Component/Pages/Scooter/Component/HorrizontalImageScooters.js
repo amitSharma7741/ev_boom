@@ -1,5 +1,4 @@
-import React from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import React from "react"; 
 import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import Scooter from "../../../Databse/ScooterData.json";
@@ -99,14 +98,13 @@ const HorrizontalImageScooters = () => {
                       navigate(`/scooter/${item.path}`) 
                     }}
                   >
-                    <LazyLoadImage
+                    <img
                       src={item.image}
                       className="card-img-top w-100"
                       alt={item.scootername}
                       style={{
                         height: "180px",
-                      }}
-                      effect="blur"
+                      }} 
                     />
                     <div className="card-body">
                       <h5 className="card-title">{item.scootername}</h5>

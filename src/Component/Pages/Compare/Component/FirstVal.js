@@ -3,8 +3,7 @@ import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
 import Scooter from "../../../Databse/ScooterData.json";
 import { useMediaQuery } from "react-responsive";
-import ReactGA from "react-ga4";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import ReactGA from "react-ga4"; 
 const FirstVal = (props) => {
   const navigate = useNavigate();
 
@@ -101,14 +100,13 @@ const FirstVal = (props) => {
                                 border: "none",
                               }}
                             >
-                              <LazyLoadImage
+                              <img
                                 src={data[0]?.image}
                                 className="card-img-top"
                                 alt={data[0]?.scootername}
                                 style={{
                                   height: "150px",
-                                }}
-                                effect="blur"
+                                }} 
                               />
                               <div className="card-body">
                                 <h5
@@ -183,7 +181,7 @@ const FirstVal = (props) => {
                                 border: "none",
                               }}
                             >
-                              <LazyLoadImage
+                              <img
                                 src={item.image}
                                 className="card-img-top"
                                 alt={item.scootername}

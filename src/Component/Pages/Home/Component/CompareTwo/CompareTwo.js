@@ -3,8 +3,7 @@ import Slider from "react-slick";
 import Scooter from "../../../../Databse/ScooterData.json";
 // impoert react-responsive
 import { useMediaQuery } from "react-responsive";
-import { useNavigate } from "react-router-dom";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useNavigate } from "react-router-dom"; 
 const CompareTwo = () => {
   const navigate = useNavigate();
 
@@ -129,14 +128,13 @@ const CompareTwo = () => {
                                     border: "none",
                                   }}
                                 >
-                                  <LazyLoadImage
+                                  <img
                                     src={elem.image}
                                     className="card-img-top"
                                     alt={elem.scootername}
                                     style={{
                                       height: "150px",
-                                    }}
-                                    effect="blur"
+                                    }} 
                                   />
                                   <div className="card-body">
                                     <h5
