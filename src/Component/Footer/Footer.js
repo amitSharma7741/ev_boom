@@ -32,15 +32,19 @@ const Footer = () => {
   ];
   return (
     <>
-      <div className="bg-light" >
+      <div className="bg-light">
         <div className="container">
           <footer className="pt-5 ">
             <ul className="nav justify-content-center border-bottom pb-3 mb-3">
               {showNav.map((nav) => {
                 return (
-                  <li className="nav-item" key={nav.id} onClick={()=>{
-                    window.scrollTo(0, 0);
-                  }}>
+                  <li
+                    className="nav-item"
+                    key={nav.id}
+                    onClick={() => {
+                      window.scrollTo(0, 0);
+                    }}
+                  >
                     <Link to={nav.path} className="nav-link px-2 text-muted">
                       {nav.name}
                     </Link>
@@ -63,7 +67,7 @@ const Footer = () => {
                   <div className="row">
                     <div className="col-6">
                       <ul className="list-unstyled mb-0">
-                        {scooter.slice(0, 4).map((item, index) => {
+                        {scooter.slice(0, 5).map((item, index) => {
                           return (
                             <>
                               <li
@@ -92,7 +96,7 @@ const Footer = () => {
                     </div>
                     <div className="col-6">
                       <ul className="list-unstyled mb-0">
-                        {scooter.slice(4).map((item, index) => {
+                        {scooter.slice(5).map((item, index) => {
                           return (
                             <>
                               <li
@@ -228,9 +232,14 @@ const Footer = () => {
           {/*  */}
         </div>
         <div
-          className="text-center p-3"
+          className="text-center p-4"
           style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
-        >
+        > 
+            All images and content displayed on this website have been sourced
+            from Google and other websites. It is important to note that all
+            copyrights for these materials belong solely to their respective
+            owners.
+         {/* 
           © 2023 Copyright:
           <Link
             to="https://evstart.netlify.app/"
@@ -243,7 +252,7 @@ const Footer = () => {
             }}
           >
             EVSTART
-          </Link>
+          </Link> */}
         </div>
       </div>
     </>
