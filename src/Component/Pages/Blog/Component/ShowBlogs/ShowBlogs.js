@@ -2,8 +2,7 @@ import React from "react";
 import { BlogsData } from "../../BlogsData";
 import Slider from "react-slick";
 import { useMediaQuery } from "react-responsive"; 
-import { Link, useNavigate } from "react-router-dom";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Link, useNavigate } from "react-router-dom"; 
 import Author from "../Author/Author";
 const Showitems = () => {
    
@@ -85,14 +84,13 @@ const Showitems = () => {
                       window.scrollTo(0, 0);
                     }}
                   >
-                    <LazyLoadImage
+                    <img
                       src={item.img}
                       alt={item.title}
                       className="card-img-top"
                       style={{
                         height: "180px",
-                      }}
-                      effect="blur"
+                      }} 
                     />
                     <div className="card-body">
                       <h5
