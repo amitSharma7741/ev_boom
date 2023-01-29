@@ -1,5 +1,18 @@
 export const BlogsData = [
   {
+    Id: "8",
+    title: "Understand the Inner Workings of an Electric Vehicle: How an EV Works",
+    path: "understand-the-inner-workings-of-an-electric-vehicle-how-an-ev-works",
+    img: "https://images.unsplash.com/photo-1620365094515-7e3264e92059?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    description: 
+      "Electric vehicles (EVs) are becoming an increasingly popular alternative to traditional petrol-powered vehicles. These vehicles use electric motors and rechargeable batteries to power the car, rather than the internal combustion engine that is used in traditional cars. In this blog post, we will explore the basic mechanics of how an electric vehicle works, including how the electric motor and battery system function, and how the car is charged.",
+    date: "29 jan 2023",
+    author: "Kevin Bidwell",
+    authorImg:
+      "https://images.pexels.com/photos/2380794/pexels-photo-2380794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    category: "Electric Scooter",
+  },
+  {
     Id: "7",
     title: "Why the Ola S1 Pro Electric Scooter is a Popular Choice in India",
     path: "why-the-ola-s1-pro-electric-scooter-is-a-popular-choice-in-india",
@@ -7,9 +20,9 @@ export const BlogsData = [
     description:
       "The OLA S1 Pro is a cutting-edge electric scooter that is now available in India at a starting price of Rs. 1,29,999. This scooter is the epitome of style, performance, and functionality and comes in one variant and an impressive 11 color options. The OLA S1 Pro is equipped with a powerful 5500 W motor that generates enough power to give you an exhilarating riding experience.",
     date: "26 jan 2023",
-    author: "Seth Doyle",
+    author: "Samantha Garrote",
     authorImg:
-      "https://images.unsplash.com/photo-1595760780346-f972eb49709f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHByb2Zlc3Npb25hbCUyMGdpcmx8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "https://images.pexels.com/photos/3936894/pexels-photo-3936894.jpeg?auto=compress&cs=tinysrgb&w=600",
     category: "Electric Scooter",
   },
   {
@@ -21,9 +34,9 @@ export const BlogsData = [
     description:
       "Electric vehicles (EVs) are becoming increasingly popular as more people look to reduce their carbon footprint and save money on fuel costs. However, one of the biggest challenges with EVs is maximizing efficiency and minimizing charging time. In this blog post, we will discuss several strategies that can help you get the most out of your EV and charge it as quickly as possible.",
     date: "21 jan 2023",
-    author: "Seth Doyle",
+    author: "Samantha Garrote",
     authorImg:
-      "https://images.unsplash.com/photo-1595760780346-f972eb49709f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHByb2Zlc3Npb25hbCUyMGdpcmx8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "https://images.pexels.com/photos/3936894/pexels-photo-3936894.jpeg?auto=compress&cs=tinysrgb&w=600",
     category: "Electric Scooter",
   },
   {
@@ -45,7 +58,7 @@ export const BlogsData = [
     path: "different-types-of-ev-charging-stations-and-how-to-use-them",
     img: "https://img.freepik.com/free-photo/plugged-chargers-into-two-electric-cars-charge-station_1268-17703.jpg?w=1060&t=st=1674033618~exp=1674034218~hmac=10f70003e7dc97d45b190806f65890d44c29c4159fbe107d9dce5e9d58a2bae9",
     description:
-      "If you’re an electric vehicle (EV) owner, you’re probably familiar with the need to charge your car. To do so, you’ll need access to an EV charging station. But what types of charging stations are available? How do you use them? And what else do you need to know? This article will answer all of these questions and more, and provide a comprehensive guide to EV charging stations.",
+      "If you are an electric vehicle (EV) owner, you are probably familiar with the need to charge your car. To do so, you will need access to an EV charging station. But what types of charging stations are available? How do you use them? And what else do you need to know? This article will answer all of these questions and more, and provide a comprehensive guide to EV charging stations.",
     date: "19 jan 2023",
     author: "Seth Doyle",
     authorImg:

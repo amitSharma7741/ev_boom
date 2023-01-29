@@ -15,8 +15,37 @@
             <link>https://evstart.netlify.app/blog</link>
         </image>
         <language>en-us</language>
-        <lastBuildDate>Thu 26 Jan 2023</lastBuildDate>
+        <lastBuildDate>Sun 29 Jan 2023</lastBuildDate>
         <atom:link href="https://evstart.netlify.app/blog.rss" rel="self" type="application/rss+xml" />
+        <item>
+            <title>
+                Understand the Inner Workings of an Electric Vehicle: How an EV Works
+            </title>
+            <link>
+                https://evstart.netlify.app/blog/understand-the-inner-workings-of-an-electric-vehicle-how-an-ev-works
+            </link>
+            <guid
+                isPermaLink="true">
+                https://evstart.netlify.app/blog/understand-the-inner-workings-of-an-electric-vehicle-how-an-ev-works
+            </guid>
+            <description>
+                Electric vehicles (EVs) are becoming an increasingly popular alternative to
+                traditional petrol-powered vehicles. These vehicles use electric motors and
+                rechargeable batteries to power the car, rather than the internal combustion engine
+                that is used in traditional cars. In this blog post, we will explore the basic
+                mechanics of how an electric vehicle works, including how the electric motor and
+                battery system function, and how the car is charged.
+            </description>
+            <dc:creator>
+                Kevin Bidwell
+            </dc:creator>
+            <media:content
+                url="https://images.unsplash.com/photo-1620365094515-7e3264e92059?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80"
+                width="1170" height="780" />
+            <pubDate>
+                Sun 29 Jan 2023 10:10:00 +0000
+            </pubDate>
+        </item>
         <item>
             <title>
                 Why the Ola S1 Pro Electric Scooter is a Popular Choice in India
@@ -36,7 +65,7 @@
                 give you an exhilarating riding experience.
             </description>
             <dc:creator>
-                Seth Doyle
+                Samantha Garrote
             </dc:creator>
             <media:content
                 url="https://images.unsplash.com/photo-1516289637866-1e298d7c6a54?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Z2lybHMlMjB3aXRoJTIwJTIwc2Nvb3RlcnxlbnwwfDB8MHx8&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
@@ -65,7 +94,7 @@
             </description>
 
             <dc:creator>
-                Seth Doyle
+                Samantha Garrote
             </dc:creator>
             <media:content
                 url="https://images.unsplash.com/photo-1605919993579-457ae8e08a20?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGdpcmwlMjB3aXRoJTIwY2FyfGVufDB8MHwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
@@ -116,15 +145,16 @@
                 https://evstart.netlify.app/blog/different-types-of-ev-charging-stations-and-how-to-use-them
             </guid>
             <description>
-                If you’re an electric vehicle (EV) owner, you’re probably familiar with the need to
-                charge your car. To do so, you’ll need access to an EV charging station. But what
+                If you are an electric vehicle (EV) owner, you are probably familiar with the need
+                to
+                charge your car. To do so, you will need access to an EV charging station. But what
                 types of charging stations are available? How do you use them? And what else do you
                 need to know? This article will answer all of these questions and more, and provide
-                a comprehensive guide to EV charging stations. You’ll learn about the different
+                a comprehensive guide to EV charging stations. You will learn about the different
                 types of charging stations, the different charging speeds, and how to use them.
-                You’ll also find out what else you need to know so you can recharge your EV safely
-                and efficiently. So, if you’re looking for everything you need to know about EV
-                charging stations, you’ve come to the right place.
+                You will also find out what else you need to know so you can recharge your EV safely
+                and efficiently. So, if you are looking for everything you need to know about EV
+                charging stations, you have come to the right place.
             </description>
 
             <dc:creator>
@@ -182,13 +212,11 @@
             </guid>
             <description>
                 Electric scooters are becoming an increasingly popular transportation option due to
-                their convenience, cost-effectiveness, and
-                environmental benefits. When compared to petrol scooters, electric scooters offer
-                many advantages that make them a better choice
-                for many people.\n\nOne of the main benefits of electric scooters is their
-                environmental friendliness. Unlike petrol scooters,
-                which emit harmful pollutants into the air, electric scooters do not produce any
-                emissions.
+                their convenience, cost-effectiveness, and environmental benefits. When compared to
+                petrol scooters, electric scooters offer many advantages that make them a better
+                choice for many people. One of the main benefits of electric scooters is their
+                environmental friendliness. Unlike petrol scooters, which emit harmful pollutants
+                into the air, electric scooters do not produce any emissions.
             </description>
 
             <dc:creator>
