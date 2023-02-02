@@ -6,7 +6,7 @@ import ReactGA from "react-ga4";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw"; 
 import { useMediaQuery } from "react-responsive";
-
+import ShowBlogs from "../Blog/Component/ShowBlogs/ShowBlogs";
 const EmiCostCalculator = () => {
   const [postContent, setPostcontent] = useState("");
   const isMobile = useMediaQuery({
@@ -26,8 +26,8 @@ const EmiCostCalculator = () => {
   return (
     <>
       <Seo
-        title="Emi cost calculator | get accurate and up-to-date emi cost estimates with our easy-to-use emi cost calculator."
-        description=" Get accurate and up-to-date emi cost estimates with our easy-to-use emi cost calculator."
+        title="EMI cost calculator | EMI for Home Loan, Car Loan & Personal Loan"
+        description="Get accurate and up-to-date emi cost estimates with our easy-to-use emi cost calculator. Calculate EMI for Home Loan, Car Loan & Personal Loan"
         image="https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29zdHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
         url="/emi-cost-calculator"
       />
@@ -78,6 +78,9 @@ const EmiCostCalculator = () => {
             />
           </div>
         </div>
+        {/* blogs */}
+       <ShowBlogs />
+      {/* blogs */}
       </div>
     </>
   );

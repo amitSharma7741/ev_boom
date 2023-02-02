@@ -7,6 +7,7 @@ import Seo from "../../SEO/Seo";
 import "./Fuel.css";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { useMediaQuery } from "react-responsive";
+import ShowBlogs from "../Blog/Component/ShowBlogs/ShowBlogs";
 
 const FuelCostCalculator = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
@@ -68,8 +69,8 @@ const FuelCostCalculator = () => {
   return (
     <>
       <Seo
-        title="Fuel Cost Calculator | Petrol vs Electric cost calculator | Running Cost Calculator"
-        description="Get accurate and up-to-date fuel cost estimates with our easy-to-use fuel cost calculator. Simply enter your vehicle make and model, along with your location and desired fuel type, and our calculator will provide you with an estimate of the cost to fill up your tank. Stay budget-conscious and plan your trips with confidence using our fuel cost calculator. Try it now!"
+        title="Fuel Cost Compare | Petrol vs Electric | Running Cost Estimator"
+        description="Effortlessly estimate fuel costs with our fuel calculator. Enter vehicle info, location & fuel type for an estimate. Plan trips with confidence. Try it now!"
         image="https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29zdHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
         url="/fuel-cost-calculator"
       />
@@ -78,6 +79,7 @@ const FuelCostCalculator = () => {
           className="container"
           style={{
             maxWidth: "1000px",
+            marginBottom: "50px",
           }}
         >
           <div className="d-flex justify-content-center ">
@@ -439,6 +441,9 @@ const FuelCostCalculator = () => {
               rehypePlugins={[rehypeRaw]}
             />
           </div>
+          {/* blogs */}
+       <ShowBlogs />
+      {/* blogs */}
         </div>
       </div>
     </>
