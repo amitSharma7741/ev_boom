@@ -4,12 +4,12 @@ An electric vehicle (EV) is a type of vehicle that is powered by an electric mot
 
  
 <!-- horizontal ads for blog -->
-<ins class="adsbygoogle"
+<!-- <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-5852688625693261"
      data-ad-slot="1706405702"
      data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+     data-full-width-responsive="true"></ins> -->
 
 
 ---
