@@ -1,10 +1,24 @@
 export const BlogsData = [
   {
+    Id: "9",
+    title: "Record-Breaking Electric Two-Wheeler Sales in January 2023",
+    path: "record-breaking-electric-two-wheeler-sales-in-january-2023",
+    img: "https://images.pexels.com/photos/14666627/pexels-photo-14666627.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "The electric scooter market in India has seen a significant growth in the past few years. The increasing demand for eco-friendly modes of transportation and the government's push for electric vehicles have contributed to this growth. January 2023 was no exception, as the electric scooter sales data for the month showed impressive results.",
+    date: "2 feb 2023",
+    author: "Kevin Bidwell",
+    authorImg:
+      "https://images.pexels.com/photos/2380794/pexels-photo-2380794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    category: "Electric Scooter",
+  },
+  {
     Id: "8",
-    title: "Understand the Inner Workings of an Electric Vehicle: How an EV Works",
+    title:
+      "Understand the Inner Workings of an Electric Vehicle: How an EV Works",
     path: "understand-the-inner-workings-of-an-electric-vehicle-how-an-ev-works",
     img: "https://images.unsplash.com/photo-1620365094515-7e3264e92059?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    description: 
+    description:
       "Electric vehicles (EVs) are becoming an increasingly popular alternative to traditional petrol-powered vehicles. These vehicles use electric motors and rechargeable batteries to power the car, rather than the internal combustion engine that is used in traditional cars. In this blog post, we will explore the basic mechanics of how an electric vehicle works, including how the electric motor and battery system function, and how the car is charged.",
     date: "29 jan 2023",
     author: "Kevin Bidwell",
