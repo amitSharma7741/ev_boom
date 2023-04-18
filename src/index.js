@@ -7,8 +7,8 @@ import { BrowserRouter  } from 'react-router-dom';
 import ReactGA from "react-ga4";
 import {  HelmetProvider } from 'react-helmet-async';
 
-
-ReactGA.initialize('G-47SCW9BW0Y');
+const GA4ID = process.env.REACT_APP_GA4_ID;
+ReactGA.initialize(GA4ID);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
