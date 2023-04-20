@@ -1,3 +1,15 @@
+[build]
+  command = "npm run build:all"
+  publish = "build"
+  functions = "functions"
+
+[dev]
+  command = "npm run start:lambda"
+  port = 9000
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  
 [[redirects]]
 from = "/*"
 to = "/index.html"
