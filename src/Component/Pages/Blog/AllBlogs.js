@@ -21,7 +21,7 @@ const AllBlogs = () => {
   }, []);
   return (
     <>
-      <div className="container">
+      <div className="">
         <div className="">
           {blogs.map((blog) => {
             return (

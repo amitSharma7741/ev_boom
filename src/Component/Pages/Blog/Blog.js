@@ -21,10 +21,8 @@ function Blog() {
       />
       {/*  */} 
       <div
-        class="container"
-        style={{
-          maxWidth: "1000px",
-        }}
+        class="container pt-4"
+        
       >
         <h1
           className="text-center pt-5 "
@@ -38,12 +36,12 @@ function Blog() {
         </h1>
 
         <div className="row my-5">
-          <div className="col-12 col-md-8 col-lg-8">
+          <div className="col-12 d-flex justify-content-center col-md-8 col-lg-8">
             <Outlet />
           </div>
           <div
             className="col-12 col-md-4 col-lg-4 d-flex justify-content-center"
-            style={{}}
+            
           >
             <div
               className="card w-100  text-white"
