@@ -33,8 +33,8 @@ The electric scooter market in India has seen a significant growth in the past f
 Again Ola Electric has come in first with **18,212 units** sold in January 2023. The company has been selling its electric scooters under the brand name of **<a href="/scooter/ola-s1">Ola S1**</a> and **<a href="/scooter/ola-s1-pro">Ola S1 Pro</a>**. The company has also launched the **Ola S1 Air** in the Indian market.
 
 TVS Motor Company has come in second with **10,378 units** sold in January 2023. The company has been selling its electric scooters under the brand name of **TVS iQube**. The company has also launched the **TVS iQube Electric** in the Indian market.
-
-Ather Energy has come in third with **9,110 units** sold in January 2023. The company has been selling its electric scooters under the brand name of **Ather 450X** and **Ather 450 Plus**. The company has also launched the **Ather 450X Pro** in the Indian market.
+ 
+Ather Energy came in third with **9,110 units** sold in January 2023. The company has been selling its electric scooters under the brand names of **Ather 450X** and **Ather 450 Plus** and has recently launched the **Ather 450X Pro** in the Indian market.
 
 Hero Electric has come in fourth with **6,392 units** sold in January 2023. The company has been selling its electric scooters under the brand name of **Hero Electric Optima** and **Hero Electric Flash**. The company has also launched the Hero Electric Flash Pro in the Indian market.
 
